@@ -13,3 +13,81 @@ b{
     opacity: .1;
     background-color: currentColor;
 }
+.box-day{
+    border: 1px solid #1e73be !important;
+    color: #1e73be !important;
+    padding: 5px;
+    background-color: white !important;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+.min-height{
+    min-height: 170px !important;
+    max-height: 175px !important;
+}
+.text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Thay thế giới hạn chiều rộng bằng giá trị mong muốn */
+}
+.min-height2{
+    min-height: 330px !important;
+    max-height:  335px !important;
+}
+.image-container {
+    width: 400px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('duong-dan-den-anh.jpg');
+}
+.w100{
+    width: 100% !important;
+}
+.thuvien-content-anh{
+    max-height: 350px !important;
+}
+.thuvien-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo-nhan {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-nhan-img {
+    width: 150px;
+    height: 100px;
+    margin-right: 10px; /* Khoảng cách giữa các logo (có thể điều chỉnh theo ý muốn) */
+}
+
+.logo-nhan-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Đảm bảo ảnh không bị biến đổi tỉ lệ */
+}
+.footer{
+    background-color: rgb(231, 247, 248) !important;
+    font-family: "initial", sans-serif;
+}
+.f-wapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-body{
+    margin: 10px 0px !important;
+    padding: 10px !important;
+    color: black !important ;
+}
+.f-height{
+    height: 200px !important;
+}
+.f-red{
+    color: red !important;
+}
