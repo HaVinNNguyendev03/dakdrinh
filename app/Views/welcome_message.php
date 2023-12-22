@@ -42,13 +42,13 @@
                     <div class="flex items-center">
                         <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                             <li>
-                                <a href="#" class="text-gray-900 text-white hover:underline" aria-current="page">Giới
-                                    Thiệu</a>
+                                <a href="#" class="text-gray-900 text-white hover:underline" aria-current="page">GIỚI
+                                    THIỆU</a>
                             </li>
                             <li>
                                 <a id="dropdownDefaultButton1" data-dropdown-toggle="dropdown1"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    type="button">Tin Tức&Sự Kiện<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                    type="button">TIN TỨC & SỰ KIỆN<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" d="m1 1 4 4 4-4" />
@@ -84,7 +84,7 @@
                             <li>
                                 <a id="dropdownDefaultButton2" data-dropdown-toggle="dropdown2"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    type="button">Hoạt Động SX-KD<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                    type="button">HOẠT ĐỘNG SX-KD<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" d="m1 1 4 4 4-4" />
@@ -120,7 +120,7 @@
                             <li>
                                 <a id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    type="button">Thông Báo<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                    type="button">THÔNG BÁO<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" d="m1 1 4 4 4-4" />
@@ -156,7 +156,7 @@
                             <li>
                                 <a id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                    type="button">Thông Báo<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                    type="button">QUAN HỆ CỔ ĐÔNG<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                             stroke-width="2" d="m1 1 4 4 4-4" />
@@ -188,6 +188,40 @@
                                     </ul>
                                 </div>
                             </li>
+                            <li>
+                            <a id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3"
+                                    class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    type="button">THƯ VIỆN<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
+                                    </svg>
+                                </a>
+
+                                <!-- Dropdown menu -->
+                                <div id="dropdown3"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDefaultButton3">
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
+                                                out</a>
+                                        </li>
+                                    </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -211,12 +245,12 @@
                     </div>
                     <!-- Item 3 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide1.jpg"
+                        <img src="<?php echo base_url(); ?>assets/img/sxkd.jpg"
                             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 4 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide3.jpg"
+                        <img src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
                             class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                     </div>
                     <!-- Item 5 -->
@@ -1356,11 +1390,11 @@
         <!-- footer -->
         <footer class="bg-body-tertiary text-center text-lg-start bg-primary footer">
             <!-- Grid container -->
-            <div class="container p-4 col-12 f-wapper">
+            <div class=" p-4 col-12 f-wapper">
                 <!--Grid row-->
-                <div class="row col-12 f-height">
+                <div class="row2 col-12 f-height">
                     <!--Grid column-->
-                    <div class=" col-4 mb-4 mb-md-0 p-4 mx-2">
+                    <div class=" col-4 mb-4 mb-md-0 p-2 ">
                         <h5 class="text-uppercase font-bold text-blue-700 text-blue">LIÊN HỆ</h5>
 
                         <ul class="list-unstyled mb-0">
@@ -1382,7 +1416,7 @@
                     <!--Grid column-->
 
                     <!--Grid column-->
-                    <div class="mb-4 col-4 mb-md-0 p-4 mx-2">
+                    <div class="mb-4 col-4 mb-md-0 p-2 ">
                         <h5 class="text-uppercase font-bold text-blue-700 mb-0">MENU</h5>
                         <div class="d-flex justify-content-around">
                         <ul class="list-unstyled">
@@ -1418,7 +1452,7 @@
                     <!--Grid column-->
 
                     <!--Grid column-->
-                    <div class=" mb-4 col-3 mb-md-0 p-4 mx-2">
+                    <div class=" mb-4 col-4 mb-md-0 p-2">
                         <h5 class="text-uppercase font-bold text-blue-700">THỐNG KÊ TRUY CẬP</h5>
 
                         <ul class="list-unstyled mb-0">
