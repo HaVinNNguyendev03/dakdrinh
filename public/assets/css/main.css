@@ -102,3 +102,12 @@ b{
     align-items: center !important;
     justify-content: space-between !important;
 }
+.row {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .row {
+        display: block;
+    }
+}

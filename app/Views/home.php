@@ -339,6 +339,53 @@
                     </div>
                 </div>
             </div>
+            <!-- mau them            -->
+            <!-- quanhecodong -->
+            <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">
+                <b></b>
+                <span style="color:rgb(0, 137, 225);" class="text-center text-2xl font-bold mx-2">TIN TỨC-SỰ KIỆN</span>
+                <b></b>
+            </div>
+            <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">     
+    <div class="row">
+        <!-- Ảnh lớn bên trái -->
+        <div class="col-md-8">
+            <img src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" class="img-fluid" alt="Large Image">
+            <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
+            <h2>Category Title</h2>
+            <p>Brief description goes here.</p>
+        </div>
+        
+        <!-- 4 ảnh nhỏ và nội dung bên trái -->
+        <div class="col-md-4">
+            <div class="row">
+            <div class="col-md-12 d-flex flex-row">
+                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 1">
+                    <p>Short description 1</p>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 d-flex flex-row">
+                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 2">
+                    <p>Short description 2</p>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 d-flex flex-row">
+                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 3">
+                    <p>Short description 3</p>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 d-flex flex-row">
+                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 4">
+                    <p>Short description 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- end-->
             <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
                 <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
                     <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
@@ -823,381 +870,18 @@
                     </button>
                 </div>
                 <!-- caro 5 -->
-                <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
-                    <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
-                    <img class="" src="<?php echo base_url(); ?>assets/img/TIN-NOI-BO.png" alt="" srcset="">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-56 overflow-hidden md:h-80">
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a class="static" href="#">
-                                    <img class="min-height" src="<?php echo base_url(); ?>assets/img/noibo.jpg"
-                                        alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Họp định kỳ quý IV năm 2023
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg"
-                                        alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Kế hoạch chuyển đổi số năm 2024
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg" src="<?php echo base_url(); ?>assets/img/capcuu.jpg"
-                                        alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Đảm Bảo việc sửa chữa
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slider indicators -->
-
-                    <!-- Slider controls -->
-                    <button type="button"
-                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-prev>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M5 1 1 5l4 4" />
-                            </svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button"
-                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-next>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 9 4-4-4-4" />
-                            </svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
-                </div>
+                
                 <!-- caro 6 -->
-                <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
-                    <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
-                    <img class="" src="<?php echo base_url(); ?>assets/img/KHOA-HOC-CONG-NGHE.png" alt="" srcset="">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-56 overflow-hidden md:h-80">
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a class="static" href="#">
-                                    <img class="" src="<?php echo base_url(); ?>assets/img/traidat.jpg" alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Chiến lược phát triển xanh và chuyển đổi số
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg min-height"
-                                        src="<?php echo base_url(); ?>assets/img/nganhdien.jpg" alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Kế hoạch chuyển đổi số năm 2024
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg min-height"
-                                        src="<?php echo base_url(); ?>assets/img/traidat.jpg" alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Kế hoạch chuyển đổi số năm 2024
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slider indicators -->
-
-                    <!-- Slider controls -->
-                    <button type="button"
-                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-prev>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M5 1 1 5l4 4" />
-                            </svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button"
-                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-next>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 9 4-4-4-4" />
-                            </svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
-                </div>
+                
                 <!-- caro 7 -->
-                <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
-                    <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
-                    <img class="" src="<?php echo base_url(); ?>assets/img/DANG-DOAN-THE.png" alt="" srcset="">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-56 overflow-hidden md:h-80">
-                        <!-- Item 1 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a class="static" href="#">
-                                    <img class="" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Tổng Kết Đảng năm 2023
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg" src="<?php echo base_url(); ?>assets/img/thuvien.jpg"
-                                        alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Kế hoạch chuyển đổi số năm 2024
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                            <div
-                                class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
-                                    <img class="rounded-t-lg" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg"
-                                        alt="" />
-                                    <div class="absolute left-0 top-0 box-day ">
-                                        <h1 class="font-bold">23</h1>
-                                        <p class="font-bold">Th11</p>
-                                    </div>
-                                </a>
-                                <div class="my-8 mx-4  text-center   ">
-                                    <div class="my-8">
-                                        <a class="" href="#">
-                                            <h5
-                                                class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                                Kế hoạch chuyển đổi số năm 2024
-                                            </h5>
-                                        </a>
-                                    </div>
-                                    <a href="#"
-                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        XEM THÊM
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slider indicators -->
-
-                    <!-- Slider controls -->
-                    <button type="button"
-                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-prev>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M5 1 1 5l4 4" />
-                            </svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button"
-                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-next>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 9 4-4-4-4" />
-                            </svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
-                </div>
+                
                 <!-- caro 8 -->
-                <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
-                    <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
-                    <img class="" src="<?php echo base_url(); ?>assets/img/THONG-BAO.png" alt="" srcset="">
-                    <!-- Carousel wrapper -->
-                    <div class="relative h-56 overflow-hidden md:h-80">
-                        <!-- Item 1 -->
-                        <img src="<?php echo base_url(); ?>assets/img/caro8.jpg" alt="">
-                    </div>
-                </div>
+                
             </div>
             <!-- quanhecodong -->
             <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">
                 <b></b>
-                <span style="color:rgb(0, 137, 225);" class="text-center text-2xl font-bold mx-2">Quan Hệ Cổ Đông</span>
+                <span style="color:rgb(0, 137, 225);" class="text-center text-2xl font-bold mx-2">QUAN HỆ CỔ ĐÔNG</span>
                 <b></b>
             </div>
             <div class="col-sm-10 d-sm-flex p-sm-2 mx-auto my-2">
@@ -1269,7 +953,7 @@
                 </div>
                 <div class="thuvien-flex col-10 mx-auto">
                     <div class="thuvien-content-anh col-5">
-                        <h1 class="text-center text-2xl">Thư Viện Ảnh</h1>
+                        <h1 class="text-center text-2xl">TTHƯ VIỆN ẢNH</h1>
                         <div id="default-carousel" class="relative w-full -z-10" data-carousel="slide">
                             <!-- Carousel wrapper -->
                             <div class="relative h-56 overflow-hidden rounded-lg h-80">
@@ -1348,7 +1032,7 @@
                         </div>
                     </div>
                     <div class="thuvien-content col-5">
-                        <h1 class="text-center text-2xl mb-2">Thư Viện Video</h1>
+                        <h1 class="text-center text-2xl mb-2">THƯ VIỆN VIDEO</h1>
                         <div class="">
                         <iframe width="560" height="300" src="https://www.youtube.com/embed/AoPiLg8DZ3A" frameborder="0"
                             allowfullscreen title="YouTube Video"></iframe>
