@@ -347,7 +347,7 @@
                 <b></b>
             </div>
             <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">     
-    <div class="row">
+    <div class="row col-12">
         <!-- Ảnh lớn bên trái -->
         <div class="col-md-8">
             <img src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" class="img-fluid" alt="Large Image">
@@ -382,11 +382,17 @@
                     <p>Short description 4</p>
                 </div>
             </div>
+            <div class="row">
+            <div class="col-md-12 d-flex flex-row">
+                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 4">
+                    <p>Short description 4</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
             <!-- end-->
-            <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
+            <div class="col-sm-10 d-sm-flex flex-wrap  mx-auto my-2">
                 <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
                     <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
                     <img class="" src="<?php echo base_url(); ?>assets/img/TIN-TU-SU-KIEN.png" alt="" srcset="">
