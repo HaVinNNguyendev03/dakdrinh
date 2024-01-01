@@ -174,15 +174,15 @@
                                         aria-labelledby="dropdownDefaultButton3">
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông tin/Tài liệu cổ đông</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Đại hội cổ đông</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Báo cáo tài chinh</a>
                                         </li>
                                         <li>
                                             <a href="#"
