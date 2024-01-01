@@ -16,6 +16,8 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     </head>
 
     <body>
@@ -349,43 +351,55 @@
             <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">     
     <div class="row col-12">
         <!-- Ảnh lớn bên trái -->
-        <div class="col-md-8">
-            <img src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" class="img-fluid" alt="Large Image">
+        <div class="col-md-6 "style="
+    height: 100%;
+">
+        <div class="card bg-dark text-white" style="
+    height: 100%;
+">
+  <img class="tintuc-imglon card-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" alt="Card image">
+  <div class="card-img-overlayfix">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div>
+            
             <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
-            <h2>Category Title</h2>
-            <p>Brief description goes here.</p>
+           
         </div>
         
         <!-- 4 ảnh nhỏ và nội dung bên trái -->
-        <div class="col-md-4">
+        <div class="col-md-6" >
             <div class="row">
-            <div class="col-md-12 d-flex flex-row">
-                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 1">
-                    <p>Short description 1</p>
+                 <!-- item 1 -->
+                 <div class="col-md-12 d-flex flex-row py-2" style="
+    padding-top: 0px !important;
+">
+                    <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="" alt="Small Image 1"></div>
+                    <div class="col-8 m-2">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-            <div class="col-md-12 d-flex flex-row">
-                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 2">
-                    <p>Short description 2</p>
+                <div class="col-md-12 d-flex flex-row py-2">
+                    <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="" alt="Small Image 1"></div>
+                    <div class="col-8 m-2">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-            <div class="col-md-12 d-flex flex-row">
-                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 3">
-                    <p>Short description 3</p>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-md-12 d-flex flex-row">
-                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 4">
-                    <p>Short description 4</p>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-md-12 d-flex flex-row">
-                    <img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="img-fluid img-thumbnail" alt="Small Image 4">
-                    <p>Short description 4</p>
+                <div class="col-md-12 d-flex flex-row py-2" style="
+    padding-bottom: 0px !important;
+">
+                    <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="" alt="Small Image 1"></div>
+                    <div class="col-8 m-2">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -925,29 +939,70 @@
                     </div>
                 </div>
                 <div class=" mx-auto max-w-sm bg-white">
-                    <img class="" src="<?php echo base_url(); ?>assets/img/DAI-HOI-CONG-DONG.png" alt="" srcset="">
+                    <img class="" src="<?php echo base_url(); ?>assets/img/THONG-TIN-TAI-LIEU-CO-DONG.png" alt=""
+                        srcset="">
                     <a href="#">
                         <div class="relative">
-                            <img class="w100 rounded-t-lg" src="<?php echo base_url(); ?>assets/img/thuvien.jpg"
-                                alt="" />
+                            <img class=" rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
                             <div class="absolute left-0 top-0 box-day ">
                                 <h1 class="font-bold">23</h1>
                                 <p class="font-bold">Th11</p>
                             </div>
                         </div>
                     </a>
+                    <div class="p-5">
+                        <a href="#">
+
+
+                        </a>
+                        <div class="my-8 mx-4  text-center   ">
+                            <div class="my-8">
+                                <a class="" href="#">
+                                    <h5
+                                        class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Nơi Lưu Trữ Dữ Liệu Cổ Đông
+                                    </h5>
+                                </a>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                XEM THÊM
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class=" mx-auto max-w-sm bg-white">
-                    <img class="" src="<?php echo base_url(); ?>assets/img/BAO-CAO-TAI-CHINH.png" alt="" srcset="">
+                    <img class="" src="<?php echo base_url(); ?>assets/img/THONG-TIN-TAI-LIEU-CO-DONG.png" alt=""
+                        srcset="">
                     <a href="#">
                         <div class="relative">
-                            <img class="w100 rounded-t-lg" src="<?php echo base_url(); ?>assets/img/bctc.jpg" alt="" />
+                            <img class=" rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
                             <div class="absolute left-0 top-0 box-day ">
                                 <h1 class="font-bold">23</h1>
                                 <p class="font-bold">Th11</p>
                             </div>
                         </div>
                     </a>
+                    <div class="p-5">
+                        <a href="#">
+
+
+                        </a>
+                        <div class="my-8 mx-4  text-center   ">
+                            <div class="my-8">
+                                <a class="" href="#">
+                                    <h5
+                                        class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                        Nơi Lưu Trữ Dữ Liệu Cổ Đông
+                                    </h5>
+                                </a>
+                            </div>
+                            <a href="#"
+                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                XEM THÊM
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- thuvien -->
@@ -1047,9 +1102,15 @@
                 </div>
             </div>
             <!-- logo-nhan -->
-            <div class="logo-nhan my-8">
+            <div class="container h-100 my-4">
+  <div class="row align-items-center h-100">
+    <div class="container rounded">
+      
+      <div class="slider">
+        <div class="logos">
+        <div class="logo-nhan">
                 <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/logonhan.png" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
                 </div>
                 <div class="logo-nhan-img">
                     <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
@@ -1061,21 +1122,30 @@
                     <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
                 </div>
             </div>
-            <!-- gg map -->
-            <div class="text-center my-8" style="
-    display: flex;
-    justify-content: center;
-">
-            <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3853.5679121200474!2d108.38866307500706!3d15.01667218552055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31699fd7707726ef%3A0xf45b9ec6ef1ee1b7!2zTmjDoCBtw6F5IHRo4buneSDEkWnhu4duIMSQYWvEkXJpbmg!5e0!3m2!1svi!2s!4v1701413083097!5m2!1svi!2s"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe><br>
-                <style>
-                #text-1926228692 {
-                    text-align: center;
-                }
-                </style>
+        </div>
+        <div class="logos">
+        <div class="logo-nhan">
+                <div class="logo-nhan-img">
+                <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                </div>
+                <div class="logo-nhan-img">
+                    <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                </div>
+                <div class="logo-nhan-img">
+                    <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
+                </div>
+                <div class="logo-nhan-img">
+                    <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
+                </div>
             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+            <!-- gg map -->
+           
         </main>
         <!-- footer -->
         <footer class="bg-body-tertiary text-center text-lg-start bg-primary footer">
@@ -1179,5 +1249,6 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js">
 </html>
