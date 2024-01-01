@@ -308,10 +308,88 @@
                 </button>
             </div>
             <!--page detail -->
-            <div class="row my-3">
+            <div class="col-sm-10 mx-auto row-pagedetail my-3">
                 <div class="col-lg-8 content">
-                    <h3>test commit phuc</h3>
-                    <h3>test commit phuc 123</h3>
+                    <h3 class="pagedetail-title">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy bay</h3>
+                    <div class="pagedetail-day">
+                        <div class="text-capitalize">chủ nhật, 31 tháng 12 năm 2023 20:26</div>
+                    </div>
+                    <div class="pagedetail-header my-4">
+                    Cùng với mục tiêu đa dạng hóa chế biến nguồn dầu thô, nguyên liệu mới trong và ngoài nước, chủ động linh hoạt, tối ưu hóa trong việc điều chỉnh công suất Nhà máy, cơ cấu sản phẩm theo nhu cầu thị trường và giá sản phẩm có giá trị cao; NMLD Dung Quất luôn vận hành ở công suất tối ưu và đánh giá các cơ hội cải tiến nhằm khai thác tối đa công suất cận biên các phân xưởng công nghệ để mang lại hiệu quả kinh tế lớn cho Công ty cổ phần Lọc hóa dầu Bình Sơn (BSR).
+                        </div>
+                    <div class="pagedetail-content">
+                        <div class="pagedetail-content-img"><img src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
+                                class="" alt="" srcset=""></div>
+                        <div class="pagedetail-content-text my-4">
+                            Những ngày cuối tháng 12/2023, để đáp ứng nhu cầu sản phẩm nhiên liệu bay (Jet A1) trên thị
+                            trường tăng cao trong giai đoạn Tết Nguyên đán cận kề, cũng như tận dụng cơ hội giá sản phẩm
+                            này đang rất tốt, BSR đã đánh giá và khai thác thành công tăng công suất phân xưởng KTU từ
+                            135% lên 140% công suất thiết kế. Hiệu quả tăng thêm cho BSR ước khoảng 1,8 triệu USD/năm.
+                        </div>
+
+                        <div class="pagedetail-content-text my-4">
+                            Trước đó vào tháng 6/2023, phân xưởng KTU đã được nâng từ 130% lên 135% công suất thiết kế
+                            và luôn duy trì vận hành phân xưởng ở công suất cao nhằm tối đa sản phẩm Jet A1 và Jet A1-K,
+                            sản phẩm hiện đang có hiệu quả tốt nhất của Nhà máy hiện nay.
+                        </div>
+
+                        <div class="pagedetail-content-text my-4">
+                            Năm 2023 cùng với đánh giá nâng công suất KTU lên 140%, BSR đã triển khai đánh giá và khai
+                            thác tối đa công suất khả dụng các phân xưởng công nghệ của NMLD Dung Quất như CDU 114%, NHT
+                            137%, CCR 112% và SRU2 110% đã góp phần phá vỡ các kỷ lục mới: vận hành Nhà máy ở công suất
+                            trung bình đạt trên 111%, chế biến khoảng 7,8 triệu tấn dầu thô và sản xuất hơn 7,3 triệu
+                            tấn sản phẩm các loại và hoàn thành xuất sắc, vượt mức tất cả các chỉ tiêu sản xuất kinh
+                            doanh của BSR.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                   <div class="col-lg-10 col-md-10 header-pagedetail mx-auto mb-2">
+                       <span class="title">Tin Mới Nhất</span>
+                    </div>
+                    <div class="row" style="margin: 0px 25px 0px;">
+                            <!-- item 1 -->
+                            <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
+                                <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy bay</h5>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
+                                <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy bay</h5>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
+                                <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy bay</h5>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
+                                <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy bay</h5>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
+                                <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy bay</h5>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </main>

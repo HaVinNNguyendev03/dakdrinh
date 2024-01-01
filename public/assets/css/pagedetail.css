@@ -4,3 +4,68 @@
     position: relative;
     min-height: 100vh;
 }
+.pagedetail-title{
+    color: #3f3f3f;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.pagedetail-day{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.pagedetail-header{
+    font-size: 14pt;
+    font-family: "Times New Roman";
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+.pagedetail-day > div{
+    font-size: .95rem;
+}
+.pagedetail-content{
+
+}
+.header-pagedetail {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #6f6f6f;
+}
+
+.header-pagedetail  > .title {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 130%;
+    color: #6f6f6f;
+}
+.row-pagedetail{
+    display: flex;
+    align-items: flex-start;
+}
+.pagedetail-content-text{
+    font-size: 14pt;
+    font-family: "Times New Roman";
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+.pagedetail-content-img{
+    max-width: 100%!important;
+    border-radius: 5px;
+}
+.pagedetail-componet-img img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 90px;   border-radius: 3px;
+}
+.card-title-pagedetail{
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    min-height: 60px;
+    display: block;
+    overflow: hidden;
+}
