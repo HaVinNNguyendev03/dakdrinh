@@ -16,8 +16,10 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
     </head>
 
     <body>
@@ -31,16 +33,18 @@
                             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
                     </a>
                     <div class="flex items-center space-x-6 rtl:space-x-reverse">
-                        <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline"><i class="fa-solid fa-phone"></i> (555)
+                        <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline"><i
+                                class="fa-solid fa-phone"></i> (555)
                             412-1234</a>
                         <a href="tel:5541251234" class="text-sm  text-gray-500 dark:text-white hover:underline"><i
                                 class="fa-regular fa-envelope"></i> contact</a>
-                        <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline"><i class="fa-solid fa-clock"></i> 7h00-17h00</a>
+                        <a href="#" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline"><i
+                                class="fa-solid fa-clock"></i> 7h00-17h00</a>
                     </div>
                 </div>
             </nav>
             <nav class="bg-primary bg-gray-50 dark:bg-gray-700">
-                <div class="max-w-screen-xl px-4 py-3 mx-auto">
+                <div class="max-w-screen-xl px-3 py-2 mx-auto">
                     <div class="flex items-center">
                         <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                             <li>
@@ -64,19 +68,19 @@
                                         aria-labelledby="dropdownDefaultButton1">
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hoạt động cộng đồng</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hoạt động của ngành điện</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tin tức PV Power DHC</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tin tức PV Power</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
                                                 out</a>
                                         </li>
                                     </ul>
@@ -100,7 +104,7 @@
                                         aria-labelledby="dropdownDefaultButton2">
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tin tức PV Power DHC</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
                                         </li>
                                         <li>
                                             <a href="#"
@@ -191,7 +195,7 @@
                                 </div>
                             </li>
                             <li>
-                            <a id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3"
+                                <a id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">THƯ VIỆN<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -234,7 +238,7 @@
             <!-- carousel -->
             <div id="default-carousel" class="relative w-full -z-10" data-carousel="slide">
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96 h-30rem">
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96 h-35rem">
                     <!-- Item 1 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
                         <img src="<?php echo base_url(); ?>assets/img/slide1.jpg"
@@ -341,71 +345,74 @@
                     </div>
                 </div>
             </div>
-            <!-- mau them            -->
-            <!-- quanhecodong -->
+            <!-- tintuc -->
+            <div class="col-lg-10 col-md-10 new-header-tintuc mx-auto">
+               <span class="title">Tin Mới Nhất</span>
+            </div>
+            <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
+                <div class="row col-12">
+                    <!-- Ảnh lớn bên trái -->
+                    <div class="col-md-6 " style="height: 100%;">
+                        <div class="card bg-dark text-white" style="height: 100%;">
+                            <img class="tintuc-imglon card-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg"
+                                alt="Card image">
+                            <div class="card-img-overlayfix">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text">Last updated 3 mins ago</p>
+                            </div>
+                        </div>
+
+                        <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
+
+                    </div>
+
+                    <!-- 4 ảnh nhỏ và nội dung bên trái -->
+                    <div class="col-md-6">
+                        <div class="row">
+                            <!-- item 1 -->
+                            <div class="col-md-12 d-flex flex-row py-2" style="padding-top: 0px !important;">
+                                <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row py-2">
+                                <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12 d-flex flex-row py-2" style="padding-bottom: 0px !important;">
+                                <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
+                                        class="" alt="Small Image 1"></div>
+                                <div class="col-8 m-2">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <p class="card-text">Last updated 3 mins ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end-->
+            <!-- tintucvasukien -->
             <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">
                 <b></b>
                 <span style="color:rgb(0, 137, 225);" class="text-center text-2xl font-bold mx-2">TIN TỨC-SỰ KIỆN</span>
                 <b></b>
             </div>
-            <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">     
-    <div class="row col-12">
-        <!-- Ảnh lớn bên trái -->
-        <div class="col-md-6 "style="
-    height: 100%;
-">
-        <div class="card bg-dark text-white" style="
-    height: 100%;
-">
-  <img class="tintuc-imglon card-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" alt="Card image">
-  <div class="card-img-overlayfix">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <p class="card-text">Last updated 3 mins ago</p>
-  </div>
-</div>
-            
-            <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
-           
-        </div>
-        
-        <!-- 4 ảnh nhỏ và nội dung bên trái -->
-        <div class="col-md-6" >
-            <div class="row">
-                 <!-- item 1 -->
-                 <div class="col-md-12 d-flex flex-row py-2" style="
-    padding-top: 0px !important;
-">
-                    <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row py-2">
-                    <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row py-2" style="
-    padding-bottom: 0px !important;
-">
-                    <div class="col-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text text-justify">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            <!-- end-->
             <div class="col-sm-10 d-sm-flex flex-wrap  mx-auto my-2">
                 <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
                     <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
@@ -890,13 +897,13 @@
                     </button>
                 </div>
                 <!-- caro 5 -->
-                
+
                 <!-- caro 6 -->
-                
+
                 <!-- caro 7 -->
-                
+
                 <!-- caro 8 -->
-                
+
             </div>
             <!-- quanhecodong -->
             <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">
@@ -917,7 +924,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-5">
+                    <div class="px-5">
                         <a href="#">
 
 
@@ -950,7 +957,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-5">
+                    <div class="px-5">
                         <a href="#">
 
 
@@ -983,7 +990,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="p-5">
+                    <div class="px-5">
                         <a href="#">
 
 
@@ -1095,57 +1102,57 @@
                     <div class="thuvien-content col-5">
                         <h1 class="text-center text-2xl mb-2">THƯ VIỆN VIDEO</h1>
                         <div class="">
-                        <iframe width="560" height="300" src="https://www.youtube.com/embed/AoPiLg8DZ3A" frameborder="0"
-                            allowfullscreen title="YouTube Video"></iframe>
+                            <iframe width="560" height="300" src="https://www.youtube.com/embed/AoPiLg8DZ3A"
+                                frameborder="0" allowfullscreen title="YouTube Video"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- logo-nhan -->
             <div class="container h-100 my-4">
-  <div class="row align-items-center h-100">
-    <div class="container rounded">
-      
-      <div class="slider">
-        <div class="logos">
-        <div class="logo-nhan">
-                <div class="logo-nhan-img">
-                <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
-                </div>
-                <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
-                </div>
-                <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
-                </div>
-                <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="logos">
-        <div class="logo-nhan">
-                <div class="logo-nhan-img">
-                <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
-                </div>
-                <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
-                </div>
-                <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
-                </div>
-                <div class="logo-nhan-img">
-                    <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
+                <div class="row align-items-center h-100">
+                    <div class="container rounded">
 
-</div>
+                        <div class="slider">
+                            <div class="logos">
+                                <div class="logo-nhan">
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                                    </div>
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                                    </div>
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
+                                    </div>
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="logos">
+                                <div class="logo-nhan">
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                                    </div>
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                                    </div>
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
+                                    </div>
+                                    <div class="logo-nhan-img">
+                                        <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <!-- gg map -->
-           
+
         </main>
         <!-- footer -->
         <footer class="bg-body-tertiary text-center text-lg-start bg-primary footer">
@@ -1159,16 +1166,21 @@
 
                         <ul class="list-unstyled mb-0">
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-bold f-red"><i class="fa-solid fa-building"></i> CÔNG TY CỔ PHẦN THỦY ĐIỆN ĐAKĐRINH</a>
+                                <a href="#!" class="text-body text-base font-bold f-red"><i
+                                        class="fa-solid fa-building"></i> CÔNG TY CỔ PHẦN THỦY ĐIỆN ĐAKĐRINH</a>
                             </li>
                             <li class="h-8">
-                                <a href="#!" class="text-body font-medium text-sm"><i class="fa-solid fa-location-dot"></i> Thôn Ra Nhua, xã Sơn Tân, huyện Sơn Tây, tỉnh Quảng Ngãi</a>
+                                <a href="#!" class="text-body font-medium text-sm"><i
+                                        class="fa-solid fa-location-dot"></i> Thôn Ra Nhua, xã Sơn Tân, huyện Sơn Tây,
+                                    tỉnh Quảng Ngãi</a>
                             </li>
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-phone"></i> 0976496014</a>
+                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-phone"></i>
+                                    0976496014</a>
                             </li>
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-envelope"></i> nguyenvanphucdev03@gmail.com</a>
+                                <a href="#!" class="text-body text-base font-medium"><i
+                                        class="fa-solid fa-envelope"></i> nguyenvanphucdev03@gmail.com</a>
                             </li>
                         </ul>
                     </div>
@@ -1179,34 +1191,42 @@
                     <div class="mb-4 col-4 mb-md-0 p-2 ">
                         <h5 class="text-uppercase font-bold text-blue-700 mb-0">MENU</h5>
                         <div class="d-flex justify-content-around">
-                        <ul class="list-unstyled">
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-newspaper"></i> Tin Tức</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-arrow-trend-up"></i> Phát Triển Bềnh Vững</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-boxes-stacked"></i> Quan Hệ Cổ Đông</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-photo-film"></i> Video</a>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled">
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-industry"></i> Hoạt Động Sản Xuất</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-bell"></i> Thông Báo</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-image"></i> Hình Ảnh</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-regular fa-id-card"></i> Liên Hệ</a>
-                            </li>
-                        </ul>
+                            <ul class="list-unstyled">
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-newspaper"></i> Tin Tức</a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-arrow-trend-up"></i> Phát Triển Bềnh Vững</a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-boxes-stacked"></i> Quan Hệ Cổ Đông</a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-photo-film"></i> Video</a>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-industry"></i> Hoạt Động Sản Xuất</a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-bell"></i> Thông Báo</a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-solid fa-image"></i> Hình Ảnh</a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base font-medium"><i
+                                            class="fa-regular fa-id-card"></i> Liên Hệ</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -1217,22 +1237,26 @@
 
                         <ul class="list-unstyled mb-0">
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-user"></i> Đang online: 1</a>
+                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-user"></i>
+                                    Đang online: 1</a>
                             </li>
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-user"></i> Hôm Nay: 20</a>
+                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-user"></i>
+                                    Hôm Nay: 20</a>
                             </li>
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-user"></i> Tuần Này: 300</a>
+                                <a href="#!" class="text-body text-base font-medium"><i class="fa-solid fa-user"></i>
+                                    Tuần Này: 300</a>
                             </li>
                             <li class="h-8">
-                                <a href="#!" class="text-body text-base font-medium"><i class="fa-regular fa-user"></i> Tổng Lượt Truy Cập: 1000</a>
+                                <a href="#!" class="text-body text-base font-medium"><i class="fa-regular fa-user"></i>
+                                    Tổng Lượt Truy Cập: 1000</a>
                             </li>
                         </ul>
                     </div>
                     <!--Grid column-->
 
-                    
+
                 </div>
                 <!--Grid row-->
             </div>
@@ -1249,6 +1273,6 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
-   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js">
-</html>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js">
+    < /html>
