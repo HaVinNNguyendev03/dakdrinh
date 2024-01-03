@@ -106,11 +106,11 @@
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tình hình SXKD</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tình hình sản xuất kinh doanh</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kế hoạch SXKD</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kế hoạch sản xuất kinh doanh</a>
                                         </li>
                                         <li>
                                             <a href="#"
@@ -158,7 +158,39 @@
 
                             </li>
                             <li>
-                                <a id="dropdownDefaultButton4" data-dropdown-toggle="dropdown4"
+                                <a id="dropdownDefaultButton5" data-dropdown-toggle="dropdown5"
+                                    class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    type="button">AT-SK-MT<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
+                                    </svg>
+                                </a>
+
+                                <!-- Dropdown menu -->
+                                <div id="dropdown5"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDefaultButton3">
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cộng đồng</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Người lao động</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Các chính sách môi trường</a>
+                                        </li>
+                                        <li>
+                                      
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <a id="dropdownDefaultButton4" data-dropdown-toggle="dropdown4"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">QUAN HỆ CỔ ĐÔNG<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -186,13 +218,10 @@
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                                out</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign                                               out</a>
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li>
                                 <a id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">THƯ VIỆN<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
@@ -209,15 +238,15 @@
                                         aria-labelledby="dropdownDefaultButton3">
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thư viện ảnh</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thư viện video</a>
                                         </li>
                                         <li>
                                             <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sổ tay văn hóa</a>
                                         </li>
                                         <li>
                                             <a href="#"
@@ -912,7 +941,7 @@
             <div class="col-sm-10 d-sm-flex p-sm-2 mx-auto my-2">
                 <div class=" mx-auto max-w-sm bg-white">
                   <div class="col-12 bg-blue-700 qhcd-top">
-                    <P class="qhcd-text">THÔNG TIN CỔ ĐÔNG</P>
+                    <P class="qhcd-text">TÀI LIỆU CỔ ĐÔNG</P>
                   </div> 
                     <a href="#">
                         <div class="relative">
