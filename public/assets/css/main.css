@@ -208,3 +208,9 @@
         line-height: 130%;
         color: #6f6f6f;
     }
+    .card{
+        border: none;
+    }
+    a:hover {
+        color: inherit !important;
+    }

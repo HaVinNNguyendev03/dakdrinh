@@ -27,7 +27,6 @@
                     </div>
 
                     <!--Grid column-->
-
                     <!--Grid column-->
                     <div class="mb-4 col-4 mb-md-0 p-2 ">
                         <h5 class="text-uppercase font-bold text-blue-700 mb-0">MENU</h5>
@@ -96,8 +95,6 @@
                         </ul>
                     </div>
                     <!--Grid column-->
-
-
                 </div>
                 <!--Grid row-->
             </div>

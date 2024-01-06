@@ -3,6 +3,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * Client
  */
+//demo
+$routes->get('/pagedetail', 'Home::pagedetail');
 //trang chu
 $routes->get('/', 'Client\CHome::index');
 // Tin tuc va su kien
