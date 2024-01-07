@@ -28,7 +28,7 @@
      <main>
         <?= $this->renderSection('DakDrinh') ;?>
      </main>
-     <footer class="bg-body-tertiary text-center text-lg-start bg-primary footer">
+     <footer class="bg-body-tertiary text-center text-lg-start bg-primary footer footer-bg">
         <?= $this->include('Client/Layout/Footer') ;?>
      </footer>
 </body>

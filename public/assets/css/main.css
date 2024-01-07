@@ -214,3 +214,12 @@
     a:hover {
         color: inherit !important;
     }
+    .logofooter{
+        width: 200px;
+    }
+   .trang{
+        color: #ffffff !important;
+    }
+    .footer-bg{
+        background-color: #151f41 !important;
+    }
