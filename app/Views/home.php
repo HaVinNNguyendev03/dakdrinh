@@ -185,7 +185,7 @@
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Các chính sách môi trường</a>
                                         </li>
                                         <li>
-                                      
+                                    
                                         </li>
                                     </ul>
                                 </div>
@@ -249,9 +249,8 @@
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sổ tay văn hóa</a>
                                         </li>
                                         <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                                out</a>
+                                           
+                                    </a>
                                         </li>
                                     </ul>
                             </li>
