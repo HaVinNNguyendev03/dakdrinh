@@ -1,5 +1,7 @@
+
 <?= $this->extend('Client/Layout/Base') ;?>
 <?= $this->section('DakDrinh') ;?>
+
             <!-- carousel -->
             <div id="default-carousel" class="relative w-full -z-10" data-carousel="slide">
                 <!-- Carousel wrapper -->
