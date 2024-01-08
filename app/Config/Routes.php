@@ -23,3 +23,11 @@ $routes->group('gioithieu', function ($routes) {
     $routes->get('duan', 'Client\GioiThieu\CDuAn::index');
     $routes->get('thongtindoanhnghiep', 'Client\GioiThieu\CThongTinDoanhNghiep::index');
 });
+//Thu Vien
+$routes->group('thuvien', function ($routes) {
+    $routes->get('/', 'Client\ThuVien\CThuVienAnh::index');
+    $routes->get('thuvienanh', 'Client\ThuVien\CThuVienAnh::index');
+    $routes->get('banlanhdao', 'Client\GioiThieu\CBanLanhDao::index');
+    $routes->get('duan', 'Client\GioiThieu\CDuAn::index');
+    $routes->get('thongtindoanhnghiep', 'Client\GioiThieu\CThongTinDoanhNghiep::index');
+});
