@@ -15,3 +15,11 @@ $routes->group('tintuc', function ($routes) {
     $routes->get('tintucpvpower', 'Client\TinTucSuKien\CTinTucPVPower::index');
     $routes->get('tintucpvpowerdhc', 'Client\TinTucSuKien\CTinTucPVPowerDHC::index');
 });
+//Gioi Thieu
+$routes->group('gioithieu', function ($routes) {
+    $routes->get('/', 'Client\GioiThieu\CGioiThieuChung::index');
+    $routes->get('gioithieuchung', 'Client\GioiThieu\CGioiThieuChung::index');
+    $routes->get('banlanhdao', 'Client\GioiThieu\CBanLanhDao::index');
+    $routes->get('duan', 'Client\GioiThieu\CDuAn::index');
+    $routes->get('thongtindoanhnghiep', 'Client\GioiThieu\CThongTinDoanhNghiep::index');
+});

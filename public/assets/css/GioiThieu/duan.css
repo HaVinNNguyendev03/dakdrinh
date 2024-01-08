@@ -1,0 +1,23 @@
+.duan-title{
+    line-height: 1.5;
+    position: absolute;
+    top: 50%;
+    width: 207px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.74);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -23px;
+    background: rgba(0,0,0,.4);
+    padding: 13px 0;
+    font-size: 14px;
+}
+.duan-title a{
+    color: aliceblue;
+}
+.duan-ttsk-img{
+    float: left;
+    clear: right;
+    margin-right: 10px;
+}

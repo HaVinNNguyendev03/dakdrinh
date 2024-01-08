@@ -43,7 +43,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12 text-center">
+                    <div class="mx-auto">
                         <img src="<?php echo base_url() ?>assets/img/line-bottom-footer.jpg" alt="">
                     </div>
                     <!--Grid column-->

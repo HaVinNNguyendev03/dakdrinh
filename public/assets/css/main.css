@@ -211,8 +211,8 @@
     .card{
         border: none;
     }
-    a:hover {
-        color: inherit !important;
+    li > a:hover {
+        color: #0c4ca3 !important;
     }
     .logofooter{
         width: 200px;
