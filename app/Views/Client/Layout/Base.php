@@ -20,6 +20,9 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/TinTucSuKien/home.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/GioiThieu/home.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/GioiThieu/banlanhdao.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/GioiThieu/duan.css">
 </head>
 <body class="w-100">
      <head>

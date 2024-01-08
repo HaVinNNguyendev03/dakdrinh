@@ -1,0 +1,46 @@
+.banlanhdao{
+    background-size: cover;
+    padding-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px #08c solid;
+}
+.banlanhdao .leaderGroup {
+    position: relative;
+    border: 2px #08c dotted;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.banlanhdao .leaderGroup h1 {
+    position: absolute;
+    margin: 0;
+    top: -20px;
+    background: #FFF;
+    font-size: 25px;
+    left: 38%;
+    color: #08c;
+    font-weight: 700;
+    font-family: "Arial";
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.banlanhdao .leaderGroup .leaderRow .leader .name {
+    font-size: 14px;
+    color: #08c;
+    font-family: "Arial";
+    font-weight: 700;
+    padding: 3px 0;
+}
+.banlanhdao .leaderGroup .leaderRow .leader .position {
+    font-size: 13px;
+    color: #08c;
+    font-family: "Arial";
+}
+.td-boder{
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    border-left-width: 0 !important;
+    border-right-width: 0 !important;
+}

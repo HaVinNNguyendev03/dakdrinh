@@ -1,7 +1,7 @@
 
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
-                    <a href="https://flowbite.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <a href="<?php echo base_url(); ?>" class="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="<?php echo base_url(); ?>assets/img/Logo.png" class="h-16" alt="Flowbite Logo" />
                         <!-- <span  
                             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
@@ -22,8 +22,37 @@
                     <div class="flex items-center">
                         <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
                             <li>
-                                <a href="#" class="text-gray-900 text-white hover:underline" aria-current="page">GIỚI
-                                    THIỆU</a>
+                            <a href="<?php echo base_url() ?>gioithieu" id="dropdownDefaultButton10" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown10"
+                                    class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                    type="button">GIỚI THIỆU<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
+                                    </svg>
+                                </a>
+                                <!-- Dropdown menu -->  
+                                <div id="dropdown10"
+                                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                                        aria-labelledby="dropdownDefaultButton10">
+                                        <li>
+                                            <a href="<?php echo base_url() ?>gioithieu/gioithieuchung"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Giới thiệu chung</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo base_url() ?>gioithieu/banlanhdao"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ban lãnh đạo</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo base_url() ?>tintuc/tintucpvpower"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dự án</a>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo base_url() ?>tintuc/tintucpvpowerdhc"
+                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông tin doanh nghiệp</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <a href="<?php echo base_url() ?>tintuc" id="dropdownDefaultButton1" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown1"

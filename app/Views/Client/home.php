@@ -178,7 +178,7 @@
                 <span style="color:rgb(0, 137, 225);" class="text-center text-2xl font-bold mx-2">TIN TỨC-SỰ KIỆN</span>
                 <b></b>
             </div>
-            <div class="col-sm-10 d-sm-flex flex-wrap  mx-auto my-2">
+            <div class="col-sm-10 d-sm-flex flex-wrap  mx-auto my-2 pb-4">
                 <div id="default-carousel" class="relative w-25 px-2 mb-8" data-carousel="slide">
                     <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
                     <img class="" src="<?php echo base_url(); ?>assets/img/TIN-TU-SU-KIEN.png" alt="" srcset="">
@@ -661,14 +661,6 @@
                         </span>
                     </button>
                 </div>
-                <!-- caro 5 -->
-
-                <!-- caro 6 -->
-
-                <!-- caro 7 -->
-
-                <!-- caro 8 -->
-
             </div>
             <!-- quanhecodong -->
             <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">
