@@ -224,7 +224,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <a id="dropdownDefaultButton3" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown3"
+                                <a href="<?php echo base_url() ?>thuvien/thuvienanh" id="dropdownDefaultButton3" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown3"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">THƯ VIỆN<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -239,7 +239,7 @@
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                         aria-labelledby="dropdownDefaultButton3">
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>thuvien/thuvienanh"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thư viện ảnh</a>
                                         </li>
                                         <li>

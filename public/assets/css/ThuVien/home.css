@@ -1,0 +1,135 @@
+/* .swiper {
+    position: relative;
+    width: 240px;
+    height: 320px;
+  }
+  
+  .swiper-slide {
+    border-radius: 18px;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    height: 100%;
+  }
+  
+  .heading {
+    padding-top: 3rem;
+    text-align: center;
+  } */
+  /* .swiper-container {
+    width: 600px;
+    height: 300px;
+}
+.eedee-background-div {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    grid-area: 1/1;
+}
+.eedee-background-div .eedee-background-div__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.eedee-background-div video, .eedee-background-div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.slide-content {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: column;
+    grid-area: 1/1;
+}
+.slide-content > :first-child {
+    margin-top: 0;
+}
+.slide-content > :last-child {
+    margin-bottom: 0;
+}
+.slide-content > * {
+    max-width: 100%;
+}
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+ul.swiper-wrapper {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  /* Swiper container */
+  .swiper {
+    max-width: 100%;
+    height: auto;
+  }
+  /* 
+  /* swiper responive image */
+  .swiper img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  /* Swiper custom pagination */
+  .swiper-pagination-bullet {
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease, color 0.5s ease;
+  }
+  
+  /* Swiper custom pagination */
+  .swiper-pagination-bullet:hover {
+    transition: background-color 0.5s ease;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+  }
+  
+  /* Swiper custom pagination active state */
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: black;
+  }
+  
+  /* override zoom cursor */
+  .pswp__img {
+    cursor: pointer !important;
+  }
+.content h1 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+  color: #0056a8;
+  margin-top: 5px;
+  display: block;
+}
+.content span{
+  padding: 5px 0;
+    font-weight: 400;
+    font-style: italic;
+    color: #7F7F7F;
+    font-size: 24px;
+}
