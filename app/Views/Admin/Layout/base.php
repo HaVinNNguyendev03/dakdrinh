@@ -83,8 +83,7 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="module" src="<?php echo base_url();?>assets/js/Client/thuvienanh.js"></script>
  <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="<?php echo base_url() ?>Admin/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- ============================================================== --> 
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url() ?>Admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url() ?>Admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
@@ -112,7 +111,8 @@
     <script src="<?php echo base_url() ?>Admin/assets/libs/jquery-minicolors/jquery.minicolors.min.js"></script>
     <script src="<?php echo base_url() ?>Admin/assets/libs/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <script src="<?php echo base_url() ?>Admin/assets/libs/quill/dist/quill.min.js"></script>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/Left.js"></script>
-    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
+    
+    <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
 </html>
