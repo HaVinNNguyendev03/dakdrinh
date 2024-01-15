@@ -43,3 +43,5 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('danhsachdangtin', 'Admin\CDanhSachDangTin::index');
     $routes->get('dangtin', 'Admin\CDangTin::index');
 });
+//api
+$routes->post('api/admin/addbaiviet', 'Admin\CDangTin::addbaiviet');
