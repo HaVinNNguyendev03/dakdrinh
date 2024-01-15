@@ -22,7 +22,7 @@ class CAuth extends BaseController
     $userData = $UserModel->where('tentaikhoan', $tentaikhoan)->first(); // Query database
     
     if ($userData) {
-        if ($matkhau = $userData['matkhau']) {
+        if ($matkhau === $userData['matkhau']) {
             // Authentication success, save data in session
             $sessionData = [
                 'id' => $userData['iduser'],
