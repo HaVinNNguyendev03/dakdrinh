@@ -34,9 +34,9 @@
                     <h1 style="text-align: left;">Hội đồng Quản trị</h1>
                     <div class="row leaderRow clearfix my-4" style="text-align: left;"> 
                         <div class="leader col-sm-12 ">
-                            <div class="thumb"><img class="mx-auto" src="<?php echo base_url() ?>assets/img/banlanhdao.jpg" alt=""
+                            <div class="thumb"><img class="mx-auto" src="<?php echo base_url() ?>assets/img/ct.nguyenngochai.png" alt=""
                                     width="118" height="122">
-                                <div class="name text-center">Ông Hoàng Văn Quang</div>
+                                <div class="name text-center">Ông Nguyễn Ngọc Hải</div>
                                 <div class="position text-center">Chủ tịch Hội đồng Quản trị</div>
                                 <div class="position text-center"></div>
                                 <div class="scrollable mx-auto">
@@ -46,31 +46,18 @@
                                             <tr style="height: 175px;">
                                                 <td class="td-boder" style="width: 25%; text-align: center; height: 175px;">
                                                     <div class="position text-center"><img class="mx-auto" 
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="position text-center">Ông Lê Như Linh</div>
-                                                    <div class="position text-center">Thành viên HĐQT</div>
+                                                            src="<?php echo base_url() ?>assets/img/uvhdqt-doxuanbinh.png" alt=""
+                                                            width="118" height="122">
+                                                    <div class="position text-center">Ông Đỗ Xuân Bình</div>
+                                                    <div class="position text-center">Ủy viên HĐQT</div>
                                                 </td>
-                                                <td class="td-boder" style="width: 25%; text-align: center; height: 175px;">
-                                                    <div class="position text-center"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="position text-center">Ông Nguyễn Anh Tuấn</div>
-                                                    <div class="position text-center">Thành viên HĐQT</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 26.783061%; text-align: center; height: 175px;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Bà Nguyễn Thị Ngọc Bích</div>
-                                                    <div class="position text-center">Thành viên HĐQT</div>
-                                                </td>
+                                               
                                                 <td class="td-boder" style="width: 23.216939%; text-align: center; height: 175px;">
                                                     <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
+                                                            src="<?php echo base_url() ?>assets/img/uvhdqt.lequanghao.jpg"
                                                             alt=""></div>
-                                                    <div class="name text-center">Bà Vũ Thị Tố Nga</div>
-                                                    <div class="position text-center">Thành viên HĐQT</div>
+                                                    <div class="name text-center">Ông Lê Quang Hào</div>
+                                                    <div class="position text-center">Ủy viên HĐQT</div>
                                                 </td>
                                             </tr>
                                             <tr style="height: 183px;">
