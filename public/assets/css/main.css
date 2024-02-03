@@ -97,6 +97,14 @@
         height: 100%;
         object-fit: contain; /* Đảm bảo ảnh không bị biến đổi tỉ lệ */
     }
+    .logo-text{
+        width: 2000px;
+        /* height: 100px; */
+        margin-right: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #2563eb;
+    }
     .footer{
         background-color: rgb(231, 247, 248) !important;
         font-family: "initial", sans-serif;
@@ -223,4 +231,33 @@
     .footer-bg{
         background-color: #151f41 !important;
     }
-   
+   /* qhcd */
+   .section-heading .heading {
+    text-align: center;
+    color: #0056a8;
+    font-size: 26px;
+    margin-bottom: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+}   
+.font-white {
+    color: #fff;
+}
+.heading-icon-1, .heading-icon-2, .heading-icon-3 {
+    position: relative;
+}
+.heading-icon-2::before {
+    position: absolute;
+    top: 0;
+    background: url(../img/qhcdicon.png) no-repeat;
+    content: '';
+    width: 50px;
+    height: 50px;
+    left: -58px;
+}
+.cate-item {
+    height: 292px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

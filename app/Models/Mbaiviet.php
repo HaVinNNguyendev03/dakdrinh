@@ -29,4 +29,8 @@ class Mbaiviet extends Model{
     {
         return $this->delete($id);
     }
+    public function getbaivietByDanhMuc($iddanhmuc)
+{
+    return $this->where('iddanhmuc', $iddanhmuc)->orderBy('idbaiviet', 'DESC')->findAll();
+}
 }

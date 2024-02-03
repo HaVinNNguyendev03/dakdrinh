@@ -1,93 +1,87 @@
-$(document).ready(function() {
-  var quill = new Quill("#editor", {
-    theme: "snow",
-    modules: {
-      toolbar: [
-        // Các nút cơ bản
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-        ['bold', 'italic', 'underline', 'strike'],
-        ['link', 'image', 'video'],
-        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-        [{ 'align': [] }],
-  
-        // Các tùy chọn mở rộng
-        ['blockquote', 'code-block'],
-        [{ 'indent': '-1' }, { 'indent': '+1' }],
-        [{ 'color': [] }, { 'background': [] }],
-        ['clean'],
-      ],
-      // Module cho việc chèn hình ảnh
-      imageUploader: {
-        upload: file => {
-          return yourImageUploadFunction(file);
-        },
-      },
-    },
+
+$(function () {
+  CKEDITOR.replace("content", {
+    height: 300,
+
+    // Configure your file manager integration. This example uses CKFinder 3 for PHP.
+    filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+    filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+    ckfinder: {
+      uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
+  },
+    filebrowserWindowWidth: '1000',
+    filebrowserWindowHeight: '700',
+    removeButtons: 'PasteFromWord',
+    language: 'vi'
   });
-var delta = quill.getContents();
-console.log(delta);
-// Hàm xử lý tải lên hình ảnh
-function yourImageUploadFunction(file) {
-  return new Promise((resolve, reject) => {
-    // Tạo một đối tượng FileReader để đọc file hình ảnh
-    const reader = new FileReader();
+})  
+// Gửi yêu cầu Ajax để lấy thông tin từ session
 
-    reader.onload = function (event) {
-      // Tạo một hình ảnh mới để thực hiện các thay đổi
-      const img = new Image();
-      img.src = event.target.result;
+function submitForm() {
+  //  Lấy giá trị từ các trường input
+  var id = document.querySelector('h1[name="id"]').innerText;
+var tentaikhoan = document.querySelector('h1[name="tentaikhoan"]').innerText;
+   var tieudebaiviet = document.querySelector('input[name="tieudebaiviet"]').value;
+   var iddanhmuc = document.querySelector('select[name="iddanhmuc"]').value;
+   var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
+   var ngaydang = document.querySelector('input[name="ngaydang"]').value;
+   var noidungbaiviet = CKEDITOR.instances['content'].getData(); // Lấy nội dung từ CKEditor
+   // Lấy giá trị của trường input cho việc tải lên ảnh đại diện
+   var anhrthumnailInput = document.querySelector('input[name="anhrthumnail"]');
+   var anhrthumnailFile = anhrthumnailInput.files[0]; // Lấy tệp đã chọn
+  //  $.ajax({
+  //   type: 'GET',
+  //   url: 'api/getSessionInfo',
+  //   success: function(response) {
+  //       if (response) {
+  //            id = response.id;
+  //            tentaikhoan = response.tentaikhoan;
 
-      // Thực hiện các thay đổi (chỉnh kích thước, thêm ghi chú, ...)
-      img.onload = function () {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
+  //           // Sử dụng thông tin từ session
+  //           console.log("ID: " + id);
+  //           console.log("Tên tài khoản: " + tentaikhoan);
+  //       } else {
+  //           // Xử lý khi không có session
+  //           console.log("Người dùng chưa đăng nhập.");
+  //       }
+  //   },
+  //   error: function(error) {
+  //       console.log('Lỗi Ajax: ', error);
+  //   }
+  // });
+   // In ra để kiểm tra
+   console.log("Tiêu đề bài viết: " + tieudebaiviet);
+   console.log("ID danh mục: " + iddanhmuc);
+   console.log("Tóm tắt bài viết: " + tomtatbaiviet);
+   console.log("Ngày đăng: " + ngaydang);
+   console.log("Nội dung bài viết: " + noidungbaiviet);
+   console.log("Ảnh đại diện: " + anhrthumnailFile);
 
-        // Chuyển đổi canvas thành dạng base64 để tải lên
-        const editedImageData = canvas.toDataURL('image/jpeg');
-
-        // Trả về URL của hình ảnh đã chỉnh sửa
-        resolve(editedImageData);
-      };
-    };
-
-    // Đọc file hình ảnh
-    reader.readAsDataURL(file);
-  });
-};
-$('#dangbai').on('click', function() {
-  submitForm();
-})
-function submitForm() { 
- 
+        // thêm dữ liệu từ form
+        let formData = new FormData();
+        formData.append('iduser',id);
+        formData.append('tieudebaiviet', tieudebaiviet);
+        formData.append('iddanhmuc', iddanhmuc);
+        formData.append('tomtatbaiviet', tomtatbaiviet);
+        formData.append('ngaydang', ngaydang);
+        formData.append('noidungbaiviet', noidungbaiviet);
+        formData.append('anhrthumnail', anhrthumnailFile);
+        formData.append('tennguoidung',tentaikhoan);
+        // Gửi Ajax request
+        $.ajax({
+            type: 'POST',
+            url: 'api/addbaiviet', // Thay thế ĐƯỜNG_DẪN_CONTROLLER bằng đường dẫn đến controller của bạn
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function(response) {
+                alert('đã gửi');
+                // Xử lý kết quả nếu cần
+                console.log(response);
+            },
+            error: function(error) {
+                console.log('Lỗi Ajax: ', error);
+            }
+        });
 }
-    // Lấy nội dung từ trình soạn thảo Quill
 
-    var content = quill.getContents();
-    var jsoncontent = JSON.stringify(content);
-    var iduser =  "<?php echo json_encode($session->get('iduser')); ?>";
-    var tennguoidung = "<?php echo json_encode($session->get('iduser')); ?>";
-    console.log(iduser);
-    //call api
-    // $ajax({
-    //   type: 'POST',
-    //   url : 'api/admin/addbaiviet',
-    //   data: {
-    //     'iddanhmuc': $('select[name="iddanhmuc"]').val(),
-    //     'iduser':
-    //     'tieudebaiviet': $('input[name="tieudebaiviet"]').val(),
-    //     'tomtatbaiviet': $('input[name="tomtatbaiviet"]').val(),
-    //     'anhrthumnail': $('input[name="anhrthumnail"]').val(),
-    //     'noidungbaiviet': jsoncontent,
-    //     'ngaydang': $('input[name="ngaydang"]').val(),
-    //   },
-    //   success: function(response) {
-    //     // Xử lý phản hồi từ server (nếu cần)
-    //     console.log(response);  
-    // },
-    // error: function(error) {
-    //     // Xử lý lỗi (nếu có)
-    //     console.log(error);
-    // }
-    // });
-
-});

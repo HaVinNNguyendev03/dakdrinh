@@ -54,35 +54,11 @@
                                                
                                                 <td class="td-boder" style="width: 23.216939%; text-align: center; height: 175px;">
                                                     <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/uvhdqt.lequanghao.jpg"
-                                                            alt=""></div>
+                                                            src="<?php echo base_url() ?>assets/img/uvhdqt-lequanghao.png"
+                                                            alt=""  width="118" height="122"></div>
                                                     <div class="name text-center">Ông Lê Quang Hào</div>
                                                     <div class="position text-center">Ủy viên HĐQT</div>
                                                 </td>
-                                            </tr>
-                                            <tr style="height: 183px;">
-                                                <td class="td-boder" style="width: 25%; text-align: center; height: 183px;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Bà Nguyễn Hoàng Yến</div>
-                                                    <div class="position text-center">Thành viên HĐQT</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 25%; text-align: center; height: 183px;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Ông Vũ Chí Cường</div>
-                                                    <div class="position text-center">Thành viên độc lập HĐQT</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 26.783061%; text-align: center; height: 183px;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Ông Nguyễn Bá Phước</div>
-                                                    <div class="position text-center">Thành viên độc lập HĐQT</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 23.216939%; text-align: center; height: 183px;"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -93,13 +69,9 @@
                     </div>
                 </div>
                 <div class="leaderGroup" style="text-align: left;">
-                    <h1>Ban Tổng Giám đốc</h1>
+                    <h1>Ban Giám đốc</h1>
                     <div class="row leaderRow clearfix">
                         <div class="leader   col-sm-12 ">
-                            <div class="thumb"><img class="mx-auto" src="<?php echo base_url() ?>assets/img/banlanhdao.jpg" alt="">
-                            </div>
-                            <div class="name text-center">Ông Lê Như Linh</div>
-                            <div class="position text-center">Tổng Giám đốc</div>
                             <div class="position text-center">
                                 <div class="scrollable">
                                     <table border="0" style="width: 100%; border-collapse: collapse;">
@@ -107,53 +79,20 @@
                                             <tr>
                                                 <td class="td-boder" style="width: 25%;">
                                                     <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Ông Phan Ngọc Hiền</div>
-                                                    <div class="position text-center">Phó Tổng giám đốc</div>
+                                                            src="<?php echo base_url() ?>assets/img/uvhdqt-doxuanbinh.png"
+                                                            alt=""  width="118" height="122"></div>
+                                                    <div class="name text-center">Ông Đỗ Xuân Bình</div>
+                                                    <div class="position text-center">Giám đốc</div>
                                                 </td>
                                                 <td class="td-boder" style="width: 25%;">
                                                     <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Ông Nguyễn Minh Đạo</div>
-                                                    <div class="position text-center">Phó Tổng Giám đốc</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 25%;">
-                                                    <div class="position text-center"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            width="118" height="128" alt=""></div>
-                                                    <div class="position text-center">
-                                                        <div class="name text-center">Ông Ngô Văn Chiến</div>
-                                                        <div class="position text-center">Phó Tổng Giám đốc</div>
-                                                    </div>
+                                                            src="<?php echo base_url() ?>assets/img/pgd-lenang.jpg"
+                                                            alt=""  width="118" height="122"></div>
+                                                    <div class="name text-center">Ông Lê Năng</div>
+                                                    <div class="position text-center">Phó Giám đốc</div>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td class="td-boder" style="width: 25%;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Ông Nguyễn Duy Giang</div>
-                                                    <div class="position text-center">Phó Tổng Giám đốc</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 25%;">
-                                                    <div class="position text-center"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            width="125" height="125" alt=""></div>
-                                                    <div class="position text-center">
-                                                        <div class="name text-center">Ông Trương Việt Phương</div>
-                                                        <div class="position text-center">Phó Tổng Giám đốc</div>
-                                                    </div>
-                                                </td>
-                                                <td class="td-boder" style="width: 25%;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Ông Nguyễn Kiên</div>
-                                                    <div class="position text-center">Phó Tổng Giám đốc</div>
-                                                </td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -170,9 +109,9 @@
                     <h1 style="text-align: left;">Ban kiểm soát</h1>
                     <div class="row leaderRow clearfix" style="text-align: left;">
                         <div class="leader   col-sm-12 ">
-                            <div class="thumb"><img class="mx-auto" src="<?php echo base_url() ?>assets/img/banlanhdao.jpg" alt=""
+                            <div class="thumb"><img class="mx-auto" src="<?php echo base_url() ?>assets/img/bks-nguyenthanhkhiet.jpg" alt=""
                                     width="118" height="122"></div>
-                            <div class="name text-center">Ông Phạm Minh Đức</div>
+                            <div class="name text-center">Ông Nguyễn Thanh Khiết</div>
                             <div class="position text-center">Trưởng Ban kiểm soát</div>
                             <div class="position text-center">
                                 <div class="scrollable">
@@ -181,35 +120,17 @@
                                             <tr>
                                                 <td class="td-boder" style="width: 33.333333%; text-align: center;">
                                                     <div class="position text-center"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
+                                                            src="<?php echo base_url() ?>assets/img/bks-nguyentrungtuan.jpg"
                                                             width="118" height="122" alt=""></div>
-                                                    <div class="position text-center">Bà Nguyễn Thị Thanh Hương</div>
-                                                    <div class="position text-center">Kiểm soát viên</div>
+                                                    <div class="position text-center">Ông Nguyễn Trung Tấn </div>
+                                                    <div class="position text-center">Thành Viên BKS</div>
                                                 </td>
                                                 <td class="td-boder" style="width: 33.333333%; text-align: center;">
                                                     <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Bà Vũ Thị Ngọc Dung</div>
-                                                    <div class="position text-center">Kiểm soát viên</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td-boder" style="width: 33.333333%; text-align: center;">
-                                                    <div class="thumb"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""></div>
-                                                    <div class="name text-center">Bà Hà Thị Minh Nguyệt</div>
-                                                    <div class="position text-center">Kiểm soát viên</div>
-                                                </td>
-                                                <td class="td-boder" style="width: 33.333333%; text-align: center;">
-                                                    <div class="thumb" style="text-align: left;"><img class="mx-auto"
-                                                            src="<?php echo base_url() ?>assets/img/banlanhdao.jpg"
-                                                            alt=""
-                                                            style="display: block; margin-left: auto; margin-right: auto;">
-                                                    </div>
-                                                    <div class="name text-center">Bà Đoàn Thị Thu Hà</div>
-                                                    <div class="position text-center">Kiểm soát viên</div>
+                                                            src="<?php echo base_url() ?>assets/img/bks-nguyenthihonghanh.png"
+                                                            alt="" width="118" height="122"></div>
+                                                    <div class="name text-center">Bà Nguyễn Thị Hồng Hạnh</div>
+                                                    <div class="position text-center">Thành Viên BKS</div>
                                                 </td>
                                             </tr>
                                         </tbody>

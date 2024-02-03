@@ -64,7 +64,6 @@ class Cookie extends BaseConfig
      * Cookie will only be accessible via HTTP(S) (no JavaScript).
      */
     public bool $httponly = true;
-
     /**
      * --------------------------------------------------------------------------
      * Cookie SameSite

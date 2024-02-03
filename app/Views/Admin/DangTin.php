@@ -33,20 +33,28 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" enctype="multipart/form-data">
                         <div class="card-body">
-                            <h4 class="card-title">Đăng Tin</h4>
+                            <h4 class="card-title">Đăng Tin</h4>    
+                            <h1 name="id" style="
+    display: none;
+"><?php echo session()->get('id'); ?></h1>
+                            <h1 name="tentaikhoan" style="
+    display: none;
+"><?php echo session()->get('tentaikhoan'); ?></h1>
                             <div class="form-group row">
                                 <label for="fname" class="col-sm-3 text-end control-label col-form-label">Tiêu Đề Bài
                                     Viết</label>
                                 <div class="col-sm-9">
-                                    <input name="tieudebaiviet" type="text" class="form-control" id="fname" placeholder="First Name Here" />
+                                    <input name="tieudebaiviet" type="text" class="form-control" id="fname"
+                                        placeholder="First Name Here" />
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-3 text-end control-label col-form-label">Danh Mục Bài Viết</label>
                                 <div class="col-md-9">
-                                    <select name="iddanhmuc"  class="select2 form-select shadow-none" style="width: 100%; height: 36px">
+                                    <select name="iddanhmuc" class="select2 form-select shadow-none"
+                                        style="width: 100%; height: 36px">
                                         <option>Chọn Danh Mục</option>
                                         <optgroup label="Giới Thiệu">
                                             <option value="101">Thông Tin Doanh Nghiệp</option>
@@ -85,15 +93,16 @@
                             <label for="lname" class="col-sm-3 text-end control-label col-form-label">Tóm Tắt Bài
                                 Viết</label>
                             <div class="col-sm-9">
-                                <input name="tomtatbaiviet" type="text" class="form-control" id="lname" placeholder="Last Name Here" />
+                                <input name="tomtatbaiviet" type="text" class="form-control" id="lname"
+                                    placeholder="Last Name Here" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-3 text-end control-label col-form-label">Ảnh Đại Diện</label>
                             <div class="col-md-9">
                                 <div class="custom-file">
-                                    <input name="anhrthumnail" type="file" class="custom-file-input" id="validatedCustomFile" required
-                                        style="border: 1px solid;" />
+                                    <input name="anhrthumnail" type="file" class="custom-file-input"
+                                        id="validatedCustomFile" required style="border: 1px solid;" />
                                 </div>
                             </div>
                         </div>
@@ -101,7 +110,8 @@
                             <label for="email1" class="col-sm-3 text-end control-label col-form-label">Ngày
                                 Đăng</label>
                             <div class="col-sm-9">
-                                <input type="text" name="ngaydang" class="form-control" id="email1" placeholder="Company Name Here" />
+                                <input type="text" name="ngaydang" class="form-control" id="email1"
+                                    placeholder="Company Name Here" />
                             </div>
                         </div>
 
@@ -114,24 +124,23 @@
                                         <div class="card">
                                             <div class="card-body " style="padding: 5px !important;">
                                                 <h4 class="card-title">Trình Soạn Thảo Văn Bản</h4>
-                                                <!-- Create the editor container -->
-                                                <div  id="editor" style="height: 300px">
-                                                </div>
+                                                <textarea name="content" id="content" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                </div>
-                <div class="border-top">
-                    <div class="card-body text-end">
-                        <button id="dangbai" type="button" class="btn btn-primary">
-                           Đăng
+                        <div class="border-top">
+                          <div class="card-body text-end">
+                        <button id="dangbai" type="button" class="btn btn-primary" onclick="submitForm()">
+                            Đăng
                         </button>
-                    </div>
+                        </div>
+                    </form>
                 </div>
-                </form>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -148,9 +157,10 @@
 </div>
 <!-- end content-->
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script> -->
 <script>
-// </script>
+// 
+</script>
 <!-- end pagewrapper -->
 <?= $this->endSection() ;?>

@@ -29,8 +29,10 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/GioiThieu/banlanhdao.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/GioiThieu/duan.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/ThuVien/home.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/pagedetail.css">
         <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="w-100">
      <head>
@@ -53,4 +55,5 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script type="module" src="<?php echo base_url();?>assets/js/Client/thuvienanh.js"></script>
+<script type="module" src="<?php echo base_url();?>assets/js/Client/home.js"></script>
 </html>

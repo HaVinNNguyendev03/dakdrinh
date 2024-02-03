@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var CodeIgniter\View\View $this
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +41,8 @@
     
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/Admin.css">
     <link rel="stylesheet"type="text/css"href="<?php echo base_url()?>Admin/assets/libs/quill/dist/quill.snow.css"/>
-</head>
+    
+</head>     
 <body class="w-100">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
@@ -114,5 +120,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/Left.js"></script>
     
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="<?php echo base_url()?>ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
+    <script src="<?php echo base_url()?>ckfinder/ckfinder.js"></script>
 </html>
