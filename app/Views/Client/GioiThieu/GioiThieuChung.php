@@ -26,19 +26,21 @@
 ">
     <div class="container col-10 mx-auto">
         <p>
-            <strong>TỔNG CÔNG TY ĐIỆN LỰC DẦU KHÍ VIỆT NAM - CÔNG TY CỔ PHẦN</strong>
+            <strong>CÔNG TY CỔ PHẦN THỦY ĐIỆN ĐAKĐRINH</strong>
         </p>
-        <p>Tên giao dịch bằng tiếng Anh:<span>&nbsp;</span><strong>PETROVIETNAM POWER CORPORATION</strong></p>
-        <p>Tên viết tắt bằng tiếng Anh:<span>&nbsp;</span><strong>PV POWER</strong></p>
+        <p>Tên giao dịch bằng tiếng Anh:<span>&nbsp;</span><strong></strong></p>
+        <p>Tên viết tắt bằng tiếng Anh:<span>&nbsp;</span><strong>PV POWER DHC</strong></p>
         <p>Biểu tượng:</p>
         <p><img class="aligncenter size-full wp-image-3368" src="<?php echo base_url() ?>assets/img/Logo.png" alt="" width="200" height="181"></p>
     </div>
     <div class="container">
-<p>Mã chứng khoán:<span>&nbsp;</span><strong>POW</strong></p>
-<p>Vốn điều lệ:<strong>&nbsp;23.418.716.000.000 đồng&nbsp;</strong><span>&nbsp;</span><em>(Bằng chữ: Hai mươi ba nghìn, bốn trăm mười tám tỷ, bẩy trăm mười sáu triệu đồng)</em></p>
-<p>Số lượng cổ phần:<span>&nbsp;</span><strong>2,341,871,600 cổ phần</strong></p>
-<p>Tiền thân là Tổng Công ty mẹ – Công ty TNHH một thành viên do Tập Đoàn Dầu khí Quốc Gia Việt Nam đầu tư 100% vốn, được thành lập theo Quyết định 1468/QĐ-DKVN ngày 17/5/2007 của Hội đồng quản trị Tập đoàn Dầu khí Quốc gia Việt Nam.</p>
-<p>Cổ phần hóa theo Quyết định số 1977/QĐ-TTg ngày 8/12/2017 của Thủ tướng Chính phủ về việc phê duyệt Phương án cổ phần hóa Công ty mẹ - Tổng công ty Điện lực Dầu khí Việt Nam (trực thuộc Tập đoàn Dầu khí Việt Nam).</p>
+<p>Mã chứng khoán:<span>&nbsp;</span><strong></strong></p>
+<p>Vốn điều lệ:<strong>&nbsp;930.000.000.000.đồng&nbsp;</strong><span>&nbsp;</span><em></em></p>
+<p>Số lượng cổ phần:<span>&nbsp;</span><strong></strong></p>
+<p>Công ty Cổ phần Thủy điện Đakđrinh được thành lập ngày 16/3/2007 bởi 4 cổ đông sáng lập: Tập đoàn Dầu khí quốc gia Việt Nam nay chuyển quyền cho Tổng Công ty Điện lực Dầu khí Việt Nam - CTCP (PV Power), Ngân hàng TMCP Đầu tư và Phát triển Việt Nam (BIDV), Tổng Công ty Sông Đà - CTCP (Sông Đà) và Tổng Công ty LICOGI - CTCP (LICOGI), theo Giấy chứng nhận đăng ký kinh doanh Công ty cổ phần số 4300350203 do Sở Kế hoạch và Đầu tư tỉnh Quảng Ngãi cấp lần đầu ngày 21/03/2007, với số vốn điều lệ là 930.000.000.000 đồng.</p>
+<p>Công ty Cổ phần Thủy điện Đakđrinh là chủ đầu tư Dự án thủy điện Đakđrinh, dự án được bố trí ở lưu vực sông Đakđrinh thuộc huyện Sơn Tây tỉnh Quảng Ngãi và huyện Kon Plông tỉnh Kon Tum cách thành phố Quảng Ngãi khoảng 70km về phía tây. Đây là dự án nằm trong chương trình trọng điểm phát triển Kinh tế - Xã hội, An ninh năng lượng của Quốc gia nói chung và tỉnh Quảng Ngãi nói riêng.</p>
+<p>Nhà máy thủy điện Đakđrinh có công suất thiết kế 125MW, bao gồm 02 tổ máy với tổng mức đầu tư 5.921 tỷ đồng, sản lượng điện trung bình hàng năm là 540,925 triệu KWh.</p>
+<p>Nhà máy vận hành phát điện thương mại hòa vào mạng lưới Quốc gia tổ máy số 1 vào tháng 6 năm 2014, tổ máy số 2 vào tháng 9 năm 2014. Nhà máy thủy điện Đakđrinh còn tham gia phòng chống lũ vào mùa mưa và bổ sung nước mùa hạn cho hạ du.</p>
 <div class="scrollable"><table border="1" width="700" cellspacing="0" cellpadding="10">
 <tbody>
 <tr>
@@ -110,7 +112,7 @@
 </tbody>
 </table></div>
 <p><img src="<?php echo base_url() ?>assets/img/sodotochuc.jpg" width="1920" height="1311" alt=""></p>
-<p>Địa điểm tiếp dân: Phòng Khánh tiết, Tầng 9, Trụ sở Tổng công ty Điện lực Dầu khí Việt Nam, số 167 Trung Kính, Yên Hòa, Cầu Giấy, Hà Nội.</p>
+<p>Địa điểm tiếp dân: Trụ sở Công ty cổ phần thủy điện Đakđrinh, Thôn Ra Nhua, xã Sơn Tân, huyện Sơn Tây, tỉnh Quảng Ngãi.</p>
 <p>Thời gian tiếp dân định kỳ: Ngày 15 hàng tháng.</p>
 </div>  
 </section>

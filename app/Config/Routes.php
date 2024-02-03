@@ -44,4 +44,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('dangtin', 'Admin\CDangTin::index');
 });
 //api
-$routes->post('api/admin/addbaiviet', 'Admin\CDangTin::addbaiviet');
+$routes->post('admin/api/addbaiviet', 'Admin\CDangTin::addbaiviet');
+$routes->get('admin/api/getSessionInfo', 'Admin\CAuth::getSessionInfo');
+//baivietchitiet
+$routes->get('bai-viet/(:num)', 'Client\CBaivietchitiet::index/$1', ['as' => 'bai-viet.chi-tiet']);

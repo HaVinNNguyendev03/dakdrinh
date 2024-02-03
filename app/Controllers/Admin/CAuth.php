@@ -27,14 +27,13 @@ class CAuth extends BaseController
         if ($userData) {
             if ($password === $userData['matkhau']) {
                 // Authentication success, save data in session
-                $sessionData = [
-                    'id' => $userData['iduser'],
-                    'tentaikhoan' => $userData['tentaikhoan'],
-                    // Add other user data as needed
-                    'isLoggedIn' => true,
-                ];
-                $session->set($sessionData);
-               
+                    $sessionData = [
+                        'id' => $userData['iduser'],
+                        'tentaikhoan' => $userData['tentaikhoan'],
+                        // Add other user data as needed
+                        'isLoggedIn' => true,
+                    ];
+                    $session->set($sessionData);
                 // Redirect to home page
                 return redirect()->to('/admin/trangchu');
             } else {
@@ -57,9 +56,24 @@ class CAuth extends BaseController
         $session->set($sessionData);
         $session->destroy(); //logout session
         var_dump($sessionData);
+        
         return redirect()->to('/dangnhap');
     }
+    public function getSessionInfo()
+{
+    if (session()->has('id')) {
+        $sessionData = [
+            'id' => session('id'),
+            'tentaikhoan' => session('tentaikhoan'),
+            // Thêm dữ liệu người dùng khác nếu cần
+            'isLoggedIn' => true,
+        ];
 
-
-
+        // Trả về dữ liệu session dưới dạng JSON
+        return $this->response->setJSON($sessionData);
+    } else {
+        // Nếu không có session hoặc người dùng chưa đăng nhập, trả về null
+        return $this->response->setJSON(null);
+    }
+}
 }

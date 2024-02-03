@@ -46,7 +46,6 @@ class Format extends BaseConfig
         'application/xml'  => XMLFormatter::class,
         'text/xml'         => XMLFormatter::class,
     ];
-
     /**
      * --------------------------------------------------------------------------
      * Formatters Options
