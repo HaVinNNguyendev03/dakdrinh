@@ -1,5 +1,5 @@
-<?= $this->extend('Client/Layout/Base') ;?>
-<?= $this->section('DakDrinh') ;?>
+<?= $this->extend('Client/Layout/Base'); ?>
+<?= $this->section('DakDrinh'); ?>
 <?php
 $ngayHienTai = date("d-m-Y");
 ?>
@@ -116,29 +116,32 @@ $ngayHienTai = date("d-m-Y");
     </div>
 
 </div>
-<div class="col-sm-12 p-sm-2 mx-auto my-2">
-    <h5 class="mb-2 text-center text-sm font-bold tracking-tight text-blue-600 dark:text-white">
-        TÌNH HÌNH SẢN XUẤT NĂM 2024</h5>
-    <div class="col-sm-10 d-sm-flex  p-sm-2 mx-auto my-2">
-
-        <div class=" col-sm-6 ">
-            <div
-                class=" block h-56 m-2  bg-white border-top  border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 class="mb-2 text-center text-sm font-bold tracking-tight text-blue-600 dark:text-white">
-                    Biểu Đồ Đường</h5>
-                <div style="width: 100%;">
-                    <canvas id="lineChart"></canvas>
-                </div>
-            </div>
-
-        </div>
-        <div class=" col-sm-6 ">
-            <div
-                class=" block h-56 m-2  bg-white border-top  border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                <h5 class="mb-2 text-center text-sm font-bold tracking-tight text-blue-600 dark:text-white">
-                    Biểu Đồ Cột</h5>
-                <div style="width: 100%;">
-                    <canvas id="barChart"></canvas>
+<div class="col-sm-10 d-sm-flex  p-sm-2 mx-auto my-2" style="min-height: 220px;">
+    <div class=" col-sm-6">
+        <a href="#" class="block h-56 p-6 bg-white border-top border-r  border-gray-200   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue-600 dark:text-white text-right">PV POWER DHC
+            </h5>
+            <p class="font-normal text-gray-700 dark:text-gray-400">PV POWER DHC dưới sự chỉ đạo điều
+                hành quyết liệt của Ban lãnh đạo, đồng bộ các khâu từ quản lý sản xuất, kỹ thuật đến nắm bắt
+                thị trường chào giá cạnh tranh, xây dựng hệ thống quản lý công ty theo tiêu chuẩn ISO
+                9001-2008 nên hiệu quả sản xuất kinh doanh lũy kế lợi nhuận các năm 2014, 2015, 2016,
+                2017, 2018, 2019, 2020, 2021 và 2022 đạt 863 tỷ đồng..</p>
+        </a>
+    </div>
+    <div class="col-sm-6">
+        <div
+            class=" block h-56 m-2  bg-white border-top  border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="mb-2 text-center text-sm font-bold tracking-tight text-blue-600 dark:text-white">
+                TÌNH HÌNH SẢN
+                XUẤT NĂM2024</h5>
+            <div class="col-sm-12  p-sm-2 mx-auto my-2">
+                <div class="col-sm-12">
+                    <div
+                        class=" block h-56 m-2  bg-white border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                        <div style="width: 100%;">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,58 +692,59 @@ $ngayHienTai = date("d-m-Y");
 </div>
 <!-- quanhecodong -->
 <section class="section mb-0 pb-0" style="background-color: #898fa3;">
-        <div class="">
-            <div class="newest-post">
-                <div class="section-heading">
-                    <h2 class="heading"><span class="heading-icon-2 font-white">Quan hệ cổ đông</span></h2>
+    <div class="">
+        <div class="newest-post">
+            <div class="section-heading">
+                <h2 class="heading"><span class="heading-icon-2 font-white">Quan hệ cổ đông</span></h2>
+            </div>
+            <div class="section-content row m-0">
+
+                <div class="col-md-4 p-0">
+                    <a href="/vi/tag/thong-tin-tai-lieu-co-dong-20.htm">
+                        <div class="cate-item" style="background-color: #069dd8">
+                            <div class="text-center">
+                                <div class="image">
+                                    <img src="<?php echo base_url(); ?>assets/img/qhcdtl.jpg" class="img-fluid">
+                                </div>
+                                <div class="title text-uppercase font-white">Thông tin/Tài liệu cổ đông</div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="section-content row m-0">
-                                                                    
-                                                    <div class="col-md-4 p-0">
-                                <a href="/vi/tag/thong-tin-tai-lieu-co-dong-20.htm">
-                                    <div class="cate-item" style="background-color: #069dd8">
-                                        <div class="text-center">
-                                            <div class="image">
-                                                <img src="<?php echo base_url(); ?>assets/img/qhcdtl.jpg" class="img-fluid">
-                                            </div>
-                                            <div class="title text-uppercase font-white">Thông tin/Tài liệu cổ đông</div>
-                                        </div>
-                                    </div>
-                                </a>
+
+                <div class="col-md-4 p-0">
+                    <a href="/vi/tag/dai-hoi-co-dong-23.htm">
+                        <div class="cate-item" style="background-color: #0063af">
+                            <div class="text-center">
+                                <div class="image">
+                                    <img src="<?php echo base_url(); ?>assets/img/qhcddhcd.jpg">
+                                </div>
+                                <div class="title text-uppercase font-white">Đại hội cổ đông</div>
                             </div>
-                                                                                            
-                                                    <div class="col-md-4 p-0">
-                                <a href="/vi/tag/dai-hoi-co-dong-23.htm">
-                                    <div class="cate-item" style="background-color: #0063af">
-                                        <div class="text-center">
-                                            <div class="image">
-                                                <img src="<?php echo base_url(); ?>assets/img/qhcddhcd.jpg" >
-                                            </div>
-                                            <div class="title text-uppercase font-white">Đại hội cổ đông</div>
-                                        </div>
-                                    </div>
-                                </a>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 p-0">
+                    <a href="/vi/tag/bao-cao-tai-chinh-10.htm">
+                        <div class="cate-item" style="background-color: #151f41">
+                            <div class="text-center">
+                                <div class="image">
+                                    <img src="<?php echo base_url(); ?>assets/img/qhcdbctc.jpg" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="title text-uppercase font-white">Báo cáo tài chính/Báo cáo thường niên</div>
                             </div>
-                                                                                            
-                                                    <div class="col-md-4 p-0">
-                                <a href="/vi/tag/bao-cao-tai-chinh-10.htm">
-                                    <div class="cate-item" style="background-color: #151f41">
-                                        <div class="text-center">
-                                            <div class="image">
-                                            <img src="<?php echo base_url(); ?>assets/img/qhcdbctc.jpg" alt="" class="img-fluid">
-                                            </div>
-                                            <div class="title text-uppercase font-white">Báo cáo tài chính/Báo cáo thường niên</div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>  
-                                                                                            
-                                                                                            
-                                                                                            
-                                                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <!-- thuvien -->
 <div class="">
     <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">
@@ -873,4 +877,4 @@ $ngayHienTai = date("d-m-Y");
     </div>
 
 </div>
-<?= $this->endSection() ;?>
+<?= $this->endSection(); ?>
