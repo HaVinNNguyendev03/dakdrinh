@@ -46,5 +46,12 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
 //api
 $routes->post('admin/api/addbaiviet', 'Admin\CDangTin::addbaiviet');
 $routes->get('admin/api/getSessionInfo', 'Admin\CAuth::getSessionInfo');
-//baivietchitiet
+/**crud baiviet */
+//baivietchitiet,xembaiviet
 $routes->get('bai-viet/(:num)', 'Client\CBaivietchitiet::index/$1', ['as' => 'bai-viet.chi-tiet']);
+//suabaiviet baiviet/updateBaiviet/
+$routes->get('sua-bai-viet/api/getbaiviet/(:num)', 'Admin\CSuaTin::getbaiviet/$1');
+$routes->post('sua-bai-viet/api/updateBaiviet/(:num)', 'Admin\CSuaTin::updateBaiviet/$1');
+$routes->get('sua-bai-viet/(:num)', 'Admin\CSuaTin::index/$1', ['as' => 'sua-bai-viet']);
+//xoabaiviet
+$routes->delete('api/xoabaiviet/(:num)', 'Admin\CXoaTin::xoabaiviet/$1');

@@ -2,7 +2,7 @@
 namespace App\Controllers\Client;
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
-class CBaivietchitiet extends BaseController
+class CBaivietchitiet extends BaseController 
 {
     public function index($idbaiviet): string
     {

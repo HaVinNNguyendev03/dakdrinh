@@ -33,4 +33,16 @@ class Mbaiviet extends Model{
 {
     return $this->where('iddanhmuc', $iddanhmuc)->orderBy('idbaiviet', 'DESC')->findAll();
 }
+public function getBaivietByDanhMucPaginated($iddanhmuc, $page, $perPage)
+    {
+        return $this->where('iddanhmuc', $iddanhmuc)
+                    ->orderBy('idbaiviet', 'DESC')
+                    ->paginate($perPage, 'trangbaiviet', $page);
+    }
+    public function getBaivietByDanhMucsPagianted($iddanhmuc, $page, $perPage)
+    {
+        return $this->whereIn('iddanhmuc', $iddanhmuc)
+                    ->orderBy('idbaiviet', 'DESC')
+                    ->paginate($perPage, 'trangbaiviet', $page);
+    }
 }

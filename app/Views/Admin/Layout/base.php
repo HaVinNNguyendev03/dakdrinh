@@ -119,7 +119,9 @@
     <script src="<?php echo base_url() ?>Admin/assets/libs/quill/dist/quill.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/Left.js"></script>
-    
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DanhSachDangTin.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaTin.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaTin.js"></script>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="<?php echo base_url()?>ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>

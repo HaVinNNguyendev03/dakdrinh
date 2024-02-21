@@ -704,7 +704,7 @@ $ngayHienTai = date("d-m-Y");
                         <div class="cate-item" style="background-color: #069dd8">
                             <div class="text-center">
                                 <div class="image">
-                                    <img src="<?php echo base_url(); ?>assets/img/qhcdtl.jpg" class="img-fluid">
+                                    <img src="<?php echo base_url(); ?>assets/img/qhcdtl.jpg" class="img-fluid mx-auto">
                                 </div>
                                 <div class="title text-uppercase font-white">Thông tin/Tài liệu cổ đông</div>
                             </div>
@@ -731,7 +731,7 @@ $ngayHienTai = date("d-m-Y");
                             <div class="text-center">
                                 <div class="image">
                                     <img src="<?php echo base_url(); ?>assets/img/qhcdbctc.jpg" alt=""
-                                        class="img-fluid">
+                                        class="img-fluid mx-auto">
                                 </div>
                                 <div class="title text-uppercase font-white">Báo cáo tài chính/Báo cáo thường niên</div>
                             </div>
@@ -745,6 +745,10 @@ $ngayHienTai = date("d-m-Y");
         </div>
     </div>
 </section>
+<!-- thongtinduan -->
+<div class="">
+    
+</div>
 <!-- thuvien -->
 <div class="">
     <div class="col-sm-10 mt-1 d-flex mx-auto align-items-center">

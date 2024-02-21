@@ -1,5 +1,5 @@
-<?= $this->extend('Admin/Layout/base') ;?>
-<?= $this->section('Admin') ;?>
+<?= $this->extend('Admin/Layout/base'); ?>
+<?= $this->section('Admin'); ?>
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
 <div class="page-wrapper">
@@ -35,13 +35,13 @@
                 <div class="card">
                     <form class="form-horizontal" enctype="multipart/form-data">
                         <div class="card-body">
-                            <h4 class="card-title">Đăng Tin</h4>    
-                            <h1 name="id" style="
-    display: none;
-"><?php echo session()->get('id'); ?></h1>
-                            <h1 name="tentaikhoan" style="
-    display: none;
-"><?php echo session()->get('tentaikhoan'); ?></h1>
+                            <h4 class="card-title">Đăng Tin</h4>
+                            <h1 name="id" style="display: none;">
+                                <?php echo session()->get('id'); ?>
+                            </h1>
+                            <h1 name="tentaikhoan" style="display: none;">
+                                <?php echo session()->get('tentaikhoan'); ?>
+                            </h1>
                             <div class="form-group row">
                                 <label for="fname" class="col-sm-3 text-end control-label col-form-label">Tiêu Đề Bài
                                     Viết</label>
@@ -132,35 +132,34 @@
                             </div>
                         </div>
                         <div class="border-top">
-                          <div class="card-body text-end">
-                        <button id="dangbai" type="button" class="btn btn-primary" onclick="submitForm()">
-                            Đăng
-                        </button>
-                        </div>
+                            <div class="card-body text-end">
+                                <button id="dangbai" type="button" class="btn btn-primary" onclick="submitForm()">
+                                    Đăng
+                                </button>
+                            </div>
                     </form>
                 </div>
-                </div>
-                
             </div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- End PAge Content -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Right sidebar -->
-    <!-- ============================================================== -->
-    <!-- .right-sidebar -->
-    <!-- ============================================================== -->
-    <!-- End Right sidebar -->
-    <!-- ============================================================== -->
+</div>
+<!-- ============================================================== -->
+<!-- End PAge Content -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- Right sidebar -->
+<!-- ============================================================== -->
+<!-- .right-sidebar -->
+<!-- ============================================================== -->
+<!-- End Right sidebar -->
+<!-- ============================================================== -->
 </div>
 <!-- end content-->
 </div>
 
 <!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script> -->
 <script>
-// 
+    // 
 </script>
 <!-- end pagewrapper -->
-<?= $this->endSection() ;?>
+<?= $this->endSection(); ?>

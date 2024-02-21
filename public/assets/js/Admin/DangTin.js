@@ -17,71 +17,52 @@ $(function () {
 })  
 // Gửi yêu cầu Ajax để lấy thông tin từ session
 
-function submitForm() {
-  //  Lấy giá trị từ các trường input
-  var id = document.querySelector('h1[name="id"]').innerText;
-var tentaikhoan = document.querySelector('h1[name="tentaikhoan"]').innerText;
-   var tieudebaiviet = document.querySelector('input[name="tieudebaiviet"]').value;
-   var iddanhmuc = document.querySelector('select[name="iddanhmuc"]').value;
-   var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
-   var ngaydang = document.querySelector('input[name="ngaydang"]').value;
-   var noidungbaiviet = CKEDITOR.instances['content'].getData(); // Lấy nội dung từ CKEditor
-   // Lấy giá trị của trường input cho việc tải lên ảnh đại diện
-   var anhrthumnailInput = document.querySelector('input[name="anhrthumnail"]');
-   var anhrthumnailFile = anhrthumnailInput.files[0]; // Lấy tệp đã chọn
-  //  $.ajax({
-  //   type: 'GET',
-  //   url: 'api/getSessionInfo',
-  //   success: function(response) {
-  //       if (response) {
-  //            id = response.id;
-  //            tentaikhoan = response.tentaikhoan;
+  function submitForm() {
+    //  Lấy giá trị từ các trường input
+    var id = document.querySelector('h1[name="id"]').innerText;
+  var tentaikhoan = document.querySelector('h1[name="tentaikhoan"]').innerText;
+    var tieudebaiviet = document.querySelector('input[name="tieudebaiviet"]').value;
+    var iddanhmuc = document.querySelector('select[name="iddanhmuc"]').value;
+    var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
+    var ngaydang = document.querySelector('input[name="ngaydang"]').value;
+    var noidungbaiviet = CKEDITOR.instances['content'].getData(); // Lấy nội dung từ CKEditor
+    // Lấy giá trị của trường input cho việc tải lên ảnh đại diện
+    var anhrthumnailInput = document.querySelector('input[name="anhrthumnail"]');
+    var anhrthumnailFile = anhrthumnailInput.files[0]; // Lấy tệp đã chọn
+    
+    // In ra để kiểm tra
+    console.log("Tiêu đề bài viết: " + tieudebaiviet);
+    console.log("ID danh mục: " + iddanhmuc);
+    console.log("Tóm tắt bài viết: " + tomtatbaiviet);
+    console.log("Ngày đăng: " + ngaydang);
+    console.log("Nội dung bài viết: " + noidungbaiviet);
+    console.log("Ảnh đại diện: " + anhrthumnailFile);
 
-  //           // Sử dụng thông tin từ session
-  //           console.log("ID: " + id);
-  //           console.log("Tên tài khoản: " + tentaikhoan);
-  //       } else {
-  //           // Xử lý khi không có session
-  //           console.log("Người dùng chưa đăng nhập.");
-  //       }
-  //   },
-  //   error: function(error) {
-  //       console.log('Lỗi Ajax: ', error);
-  //   }
-  // });
-   // In ra để kiểm tra
-   console.log("Tiêu đề bài viết: " + tieudebaiviet);
-   console.log("ID danh mục: " + iddanhmuc);
-   console.log("Tóm tắt bài viết: " + tomtatbaiviet);
-   console.log("Ngày đăng: " + ngaydang);
-   console.log("Nội dung bài viết: " + noidungbaiviet);
-   console.log("Ảnh đại diện: " + anhrthumnailFile);
-
-        // thêm dữ liệu từ form
-        let formData = new FormData();
-        formData.append('iduser',id);
-        formData.append('tieudebaiviet', tieudebaiviet);
-        formData.append('iddanhmuc', iddanhmuc);
-        formData.append('tomtatbaiviet', tomtatbaiviet);
-        formData.append('ngaydang', ngaydang);
-        formData.append('noidungbaiviet', noidungbaiviet);
-        formData.append('anhrthumnail', anhrthumnailFile);
-        formData.append('tennguoidung',tentaikhoan);
-        // Gửi Ajax request
-        $.ajax({
-            type: 'POST',
-            url: 'api/addbaiviet', // Thay thế ĐƯỜNG_DẪN_CONTROLLER bằng đường dẫn đến controller của bạn
-            data: formData,
-            contentType: false,
-            processData: false,
-            success: function(response) {
-                alert('đã gửi');
-                // Xử lý kết quả nếu cần
-                console.log(response);
-            },
-            error: function(error) {
-                console.log('Lỗi Ajax: ', error);
-            }
-        });
-}
+          // thêm dữ liệu từ form
+          let formData = new FormData();
+          formData.append('iduser',id);
+          formData.append('tieudebaiviet', tieudebaiviet);
+          formData.append('iddanhmuc', iddanhmuc);
+          formData.append('tomtatbaiviet', tomtatbaiviet);
+          formData.append('ngaydang', ngaydang);
+          formData.append('noidungbaiviet', noidungbaiviet);
+          formData.append('anhrthumnail', anhrthumnailFile);
+          formData.append('tennguoidung',tentaikhoan);
+          // Gửi Ajax request
+          $.ajax({
+              type: 'POST',
+              url: 'api/addbaiviet', // Thay thế ĐƯỜNG_DẪN_CONTROLLER bằng đường dẫn đến controller của bạn
+              data: formData,
+              contentType: false,
+              processData: false,
+              success: function(response) {
+                  alert('đã gửi');
+                  // Xử lý kết quả nếu cần
+                  console.log(response);
+              },
+              error: function(error) {
+                  console.log('Lỗi Ajax: ', error);
+              }
+          });
+  }
 

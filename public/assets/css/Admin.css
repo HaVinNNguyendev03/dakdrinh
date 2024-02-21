@@ -1,3 +1,16 @@
 .collapse {
     visibility: visible !important;
   }
+.textwith{
+  max-height: 60px; /* Đặt độ cao tối đa tương ứng với khoảng 2 dòng văn bản */
+  overflow: hidden;
+}
+/* .expand-text {
+  display: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.expand-text:hover {
+  text-decoration: underline;
+} */

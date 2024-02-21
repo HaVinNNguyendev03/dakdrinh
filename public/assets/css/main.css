@@ -261,3 +261,22 @@
     justify-content: center;
     align-items: center;
 }
+.title-baiviet{
+    font-weight: 400;
+    letter-spacing: .75px;
+    font-family: 'Roboto',sans-serif;
+    font-size: 20px;
+}
+.content-baiviet{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: #6c757d!important;
+}
+.date-baiviet{
+    font-weight: 400;
+    font-style: italic;
+    color: #7F7F7F;
+    font-size: 12px;
+}
