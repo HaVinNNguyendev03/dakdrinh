@@ -52,13 +52,28 @@
               </li>
               <li class="sidebar-item">
                 <a
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="tables.html"
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
                   aria-expanded="false"
-                  ><i class="mdi mdi-border-inside"></i
-                  ><span class="hide-menu">Thư Viện Ảnh</span></a
+                  ><i class="mdi mdi-receipt"></i
+                  ><span class="hide-menu">Thư Viện </span></a
                 >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="<?php echo base_url() ?>admin/thuvienanh" class="sidebar-link"
+                      ><i class="mdi mdi-note-outline"></i
+                      ><span class="hide-menu">Thư Viện Ảnh</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu">Thư Viện Video</span></a
+                    >
+                  </li>
+                </ul>
               </li>
+              
               <!-- <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"

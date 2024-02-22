@@ -32,7 +32,7 @@ $routes->group('thuvien', function ($routes) {
     $routes->get('duan', 'Client\GioiThieu\CDuAn::index');
     $routes->get('thongtindoanhnghiep', 'Client\GioiThieu\CThongTinDoanhNghiep::index');
 });
-//admin
+//admin menu
 $routes->get('/dangnhap', 'Admin\CAuth::index');
 $routes->post('loginauth','Admin\CAuth::loginAuth');
 $routes->get('logout','Admin\CAuth::logout');
@@ -42,6 +42,8 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('bieudo', 'Admin\CBieuDo::index');
     $routes->get('danhsachdangtin', 'Admin\CDanhSachDangTin::index');
     $routes->get('dangtin', 'Admin\CDangTin::index');
+    $routes->get('thuvienanh', 'Admin\CThuVienAnh::index'); 
+    $routes->get('danghinhanh', 'Admin\CThuVienAnh::ViewAddHinhAnh');
 });
 //api
 $routes->post('admin/api/addbaiviet', 'Admin\CDangTin::addbaiviet');
@@ -55,3 +57,5 @@ $routes->post('sua-bai-viet/api/updateBaiviet/(:num)', 'Admin\CSuaTin::updateBai
 $routes->get('sua-bai-viet/(:num)', 'Admin\CSuaTin::index/$1', ['as' => 'sua-bai-viet']);
 //xoabaiviet
 $routes->delete('api/xoabaiviet/(:num)', 'Admin\CXoaTin::xoabaiviet/$1');
+/**crud anh,video */
+$routes->post('admin/api/danghinhanh', 'Admin\CThuVienAnh::AddHinhAnh');

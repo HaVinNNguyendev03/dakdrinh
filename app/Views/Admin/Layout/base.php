@@ -19,6 +19,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css"
             integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet"
+            href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
+            
         <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css">
         <link rel="stylesheet"
@@ -87,6 +90,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js" integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.dataTables.js"></script>
 <script type="module" src="<?php echo base_url();?>assets/js/Client/thuvienanh.js"></script>
  <!-- All Jquery -->
     <!-- ============================================================== --> 
@@ -122,7 +128,8 @@
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/DanhSachDangTin.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaTin.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaTin.js"></script>
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/ThuVienAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangHinhAnh.js"></script>
 <script src="<?php echo base_url()?>ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
     <script src="<?php echo base_url()?>ckfinder/ckfinder.js"></script>

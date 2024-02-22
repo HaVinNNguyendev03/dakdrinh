@@ -5,12 +5,30 @@
   max-height: 60px; /* Đặt độ cao tối đa tương ứng với khoảng 2 dòng văn bản */
   overflow: hidden;
 }
-/* .expand-text {
-  display: none;
-  color: blue;
-  cursor: pointer;
+.sidebar-link1{
+  background: #e34927;
+  opacity: 1;
+}
+/* datatable */
+table.dataTable {
+  border: 1px solid;
+}
+td{
+  border: 1px solid !important;
+  text-align: center !important;
+}
+td>p{
+  margin: 0;
+}
+td>p>img{
+  max-width: 200px; max-height: 100px; margin: auto; object-fit: contain;
 }
 
-.expand-text:hover {
-  text-decoration: underline;
-} */
+th{
+  
+  text-align: center !important;
+}
+.highlight{
+  background-color: blue !important;
+  color: aliceblue !important;
+}

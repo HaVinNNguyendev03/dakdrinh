@@ -1,5 +1,5 @@
-<?= $this->extend('Client/Layout/Base') ;?>
-<?= $this->section('DakDrinh') ;?>
+<?= $this->extend('Client/Layout/Base'); ?>
+<?= $this->section('DakDrinh'); ?>
 
 <!-- Slider main container -->
 <!-- Swiper & Photoswipe-->
@@ -11,7 +11,7 @@
                 <li class="my-4">
                     <a href="<?php echo base_url() ?>thuvien/thuvienanh" data-toggle="tab">Thư Viện Ảnh</a>
                 </li>
-                <li class="mx-4 my-4">  
+                <li class="mx-4 my-4">
                     <a href="<?php echo base_url() ?>gioithieu/banlanhdao" data-toggle="tab">Ban Lãnh Đạo</a>
                 </li>
                 <li class="mx-4 my-4">
@@ -25,114 +25,40 @@
         </div>
     </div>
 </div>
-<div class="col-10 mx-auto my-4">
-    <div class="container d-flex flex-wrap mx-auto justify-content-center">
-        <div class="content text-start col-12 my-2">
-            <h1>Năm 2024</h1>
-            <span>08.08.2024</span>
-        </div>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
+<div class="col-10 mx-auto my-4 d-flex flex-wrap">
+    <?php foreach ($thuvienanh as $danhmucnamanh => $data): ?>
+        <div class="col-5 px-4 mx-auto container-block">
+            <div class="container-top">
+                <h1>Danh Mục Ảnh Năm <?php echo $danhmucnamanh; ?></h1>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="content text-start col-12 my-2">
-            <h1>Năm 2023</h1>
-            <span>08.08.2023</span>
-        </div>
-        <div class="swiper mySwiper1">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
+            <div id="carouselExampleCaptions_<?php echo $danhmucnamanh; ?>" class="carousel slide">
+                <div class="carousel-inner">
+                    <?php foreach ($data as $key => $item): ?>
+                        <div class="carousel-item <?php echo ($key == 0) ? 'active' : ''; ?>">
+                            <?php echo $item['hinhanh'] ?>
+                            <div class="carousel-caption d-none d-md-block">
+                                <p><?php echo $item['chuthichanh']; ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions_<?php echo $danhmucnamanh; ?>" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions_<?php echo $danhmucnamanh; ?>" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
         </div>
-        <div class="content text-start col-12 my-2">
-            <h1>Năm 2022</h1>
-            <span>08.08.2022</span>
-        </div>
-        <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="content text-start col-12 my-2">
-            <h1>Năm 2021</h1>
-            <span>08.08.2021</span>
-        </div>
-        <div class="swiper mySwiper3">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo base_url() ?>assets/img/capcuu.jpg" alt=""></div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
+    <?php endforeach; ?>
 </div>
+
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
     integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-var swiper = new Swiper(".mySwiper", {
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    zoom: {
-        toggle: true,
-    },
-});
-var swiper1 = new Swiper(".mySwiper1", {
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-var swiper2 = new Swiper(".mySwiper2", {
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-var swiper3 = new Swiper(".mySwiper3", {
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-</script>
-<?= $this->endSection() ;?>
+
+<?= $this->endSection(); ?>

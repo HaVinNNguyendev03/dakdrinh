@@ -51,7 +51,7 @@ $(function () {
           // Gửi Ajax request
           $.ajax({
               type: 'POST',
-              url: 'api/addbaiviet', // Thay thế ĐƯỜNG_DẪN_CONTROLLER bằng đường dẫn đến controller của bạn
+              url: 'api/addbaiviet', 
               data: formData,
               contentType: false,
               processData: false,

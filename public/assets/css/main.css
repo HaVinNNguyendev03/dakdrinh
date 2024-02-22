@@ -280,3 +280,12 @@
     color: #7F7F7F;
     font-size: 12px;
 }
+/* thuvienanh */
+.carousel-item>p>img{
+    width: 100%!important;
+     display: block!important;
+     height: 500px!important;
+}
+.carousel{
+    height: 500px !important;
+}

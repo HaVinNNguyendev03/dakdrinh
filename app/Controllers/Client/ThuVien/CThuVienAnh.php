@@ -1,10 +1,14 @@
 <?php
 namespace App\Controllers\Client\ThuVien;
 use App\Controllers\BaseController;
+use App\Models\Mthuvienanh;
 class CThuVienAnh extends BaseController
 {
     public function index(): string
     {
-        return view('Client/ThuVien/ThuVienAnh');
+        $thuvienanhModel = new Mthuvienanh();
+        $data['thuvienanh'] = $thuvienanhModel->groupByDanhMucNam();
+
+        return view('Client/ThuVien/ThuVienAnh',$data); 
     }
 }
