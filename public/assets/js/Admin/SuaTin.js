@@ -34,7 +34,6 @@ $(document).ready(function () {
             console.log('Lỗi Ajax khi lấy dữ liệu bài viết: ', error);
         }
     });
-    
 });
 $('#dangbai').click(function() {
     submitFormUpdate();

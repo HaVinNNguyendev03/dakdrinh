@@ -44,7 +44,9 @@
     
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/Admin.css">
     <link rel="stylesheet"type="text/css"href="<?php echo base_url()?>Admin/assets/libs/quill/dist/quill.snow.css"/>
-    
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>     
 <body class="w-100">
     <!-- ============================================================== -->
@@ -130,6 +132,9 @@
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaTin.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/ThuVienAnh.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangHinhAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaHinhAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaHinhAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/BieuDo.js"></script>
 <script src="<?php echo base_url()?>ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
     <script src="<?php echo base_url()?>ckfinder/ckfinder.js"></script>

@@ -2,7 +2,7 @@
 <?= $this->section('Admin'); ?>
 <!-- Page wrapper  -->
 <!-- ============================================================== -->
-<p id="idurl"><?= $baiviet['idbaiviet'] ?></p>
+<p style="display:none;" id="idurl"><?= $baiviet['idbaiviet'] ?></p>
 <div class="page-wrapper">
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->

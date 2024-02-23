@@ -8,6 +8,7 @@ use App\Controllers\Admin;
 $routes->get('/pagedetail', 'Home::pagedetail');
 //trang chu
 $routes->get('/', 'Client\CHome::index');
+$routes->get('admin/bieudo/getData', 'Admin\CBieuDo::getdata');
 // Tin tuc va su kien
 $routes->group('tintuc', function ($routes) {
     $routes->get('/', 'Client\TinTucSuKien\CHome::index');
@@ -44,6 +45,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('dangtin', 'Admin\CDangTin::index');
     $routes->get('thuvienanh', 'Admin\CThuVienAnh::index'); 
     $routes->get('danghinhanh', 'Admin\CThuVienAnh::ViewAddHinhAnh');
+    $routes->post('import/import', 'Admin\CBieuDo::import', ['as' => 'import']);
 });
 //api
 $routes->post('admin/api/addbaiviet', 'Admin\CDangTin::addbaiviet');
@@ -58,4 +60,8 @@ $routes->get('sua-bai-viet/(:num)', 'Admin\CSuaTin::index/$1', ['as' => 'sua-bai
 //xoabaiviet
 $routes->delete('api/xoabaiviet/(:num)', 'Admin\CXoaTin::xoabaiviet/$1');
 /**crud anh,video */
-$routes->post('admin/api/danghinhanh', 'Admin\CThuVienAnh::AddHinhAnh');
+$routes->post('admin/api/danghinhanh', 'Admin\CThuVienAnh::AddHinhAnh');        
+$routes->get('thuvienanh/gethinhanh/(:num)', 'Admin\CThuVienAnh::EditHinhAnh/$1');
+$routes->get('thuvienanh/gethinhanh/api/gethinhanh/(:num)', 'Admin\CSuaHinhAnh::gethinhanh/$1');
+$routes->post('thuvienanh/gethinhanh/api/edithinhanh/(:num)', 'Admin\CSuaHinhAnh::edithinhanh/$1');
+$routes->delete('api/deletedhinhanh/(:num)', 'Admin\CThuVienAnh::Deletehinhanh/$1');

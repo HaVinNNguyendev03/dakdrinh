@@ -3,12 +3,27 @@
  * @var CodeIgniter\View\View $this
  */
 ?>
-<!-- <img class="tintuc-imglon card-img" src=""
-                            alt="Card image"
-                            style="max-width: 200px; max-height: 100px; margin: auto; object-fit: contain;"> -->
 <?= $this->extend('Admin/Layout/base'); ?>
 <?= $this->section('Admin'); ?>
 <div class="page-wrapper">
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa Ảnh này không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
     <div class="page-breadcrumb">
@@ -60,25 +75,35 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($thuvienanh as $ha) : ?>
+                <?php foreach ($thuvienanh as $ha): ?>
                     <tr>
-                    <td><?= $ha['idthuvienanh'] ?></td>
-                    <td><?= $ha['danhmucnamanh'] ?></td>
-                    <td><?= $ha['ngaydanganh'] ?></td>
-                    <td><?= $ha['hinhanh'] ?></td>
-                    <td><?= $ha['chuthichanh'] ?></td>
-                    <td><a class="btn text-white" data-mdb-ripple-init style="background-color: #55acee;" role="button">
-                            Xem
-                        </a></td>
-                    <td><a class="btn text-white" data-mdb-ripple-init style="background-color: #ffac44;" role
-                            role="button">
-                            Sửa
-                        </a></td>
-                    <td><a class="btn Baiviet-xoa text-white" data-mdb-ripple-init style="background-color: #dd4b39;"
-                            role="button">
-                            Xóa
-                        </a></td>
-                </tr>
+                        <td>
+                            <?= $ha['idthuvienanh'] ?>
+                        </td>
+                        <td>
+                            <?= $ha['danhmucnamanh'] ?>
+                        </td>
+                        <td>
+                            <?= $ha['ngaydanganh'] ?>
+                        </td>
+                        <td>
+                            <?= $ha['hinhanh'] ?>
+                        </td>
+                        <td>
+                            <?= $ha['chuthichanh'] ?>
+                        </td>
+                        <td><a class="btn text-white" data-mdb-ripple-init style="background-color: #55acee;" role="button">
+                                Xem
+                            </a></td>
+                        <td><a class="btn text-white" href="<?= base_url('thuvienanh/gethinhanh/' . $ha['idthuvienanh']) ?>"
+                                data-mdb-ripple-init style="background-color: #ffac44;" role role="button">
+                                Sửa
+                            </a></td>
+                        <td><a class="btn Hinhanh-xoa text-white" data-idthuvienanh= "<?= $ha['idthuvienanh'] ?>" style="background-color: #dd4b39;"
+                                role="button">
+                                Xóa
+                            </a></td>
+                    </tr>
                 <?php endforeach ?>
             </tbody>
             <tfoot>
