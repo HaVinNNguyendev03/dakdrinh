@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers\Client\TinTucSuKien;
+namespace App\Controllers\Client\HoatDongSXKD;
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
 class CHome extends BaseController
@@ -12,7 +12,7 @@ class CHome extends BaseController
         $perPage = 4; // Số bài viết trên mỗi trang
 
         // Lấy dữ liệu bài viết phân trang
-        $iddanhmuc = [201,202,203,204];
+        $iddanhmuc = [301,302,303];
         $baiviets = $baivietModel->getBaivietByDanhMucsPagianted($iddanhmuc, $page, $perPage);
         $total = $baivietModel->whereIn('iddanhmuc', $iddanhmuc)->countAllResults();
         $data = [
@@ -22,6 +22,6 @@ class CHome extends BaseController
             'perPage' => $perPage, // Truyền số bài viết trên mỗi trang
             'total' => $total, // Truyền tổng số bài viết
         ];
-        return view('Client/TinTucSuKien/home',$data);
+        return view('Client/HoatDongSKKD/Home',$data);
     }
 }

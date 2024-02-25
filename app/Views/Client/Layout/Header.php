@@ -86,10 +86,9 @@
                                         </li>
                                     </ul>
                                 </div>
-
                             </li>
                             <li>
-                                <a id="dropdownDefaultButton2" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown2"
+                                <a href="<?php echo base_url() ?>hdsx" id="dropdownDefaultButton2" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown2"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">HOẠT ĐỘNG SX-KD<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -103,28 +102,23 @@
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                         aria-labelledby="dropdownDefaultButton2">
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>hdsx/chienluocmuctieu"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Chiến lược mục tiêu</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>hdsx/tinhhinhsx"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tình hình sản xuất kinh doanh</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>hdsx/kehoachsx"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kế hoạch sản xuất kinh doanh</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                                out</a>
                                         </li>
                                     </ul>
                                 </div>
 
                             </li>
                             <li>
-                                <a id="dropdownDefaultButton" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown"
+                                <a href="<?php echo base_url() ?>thongbao" id="dropdownDefaultButton" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">THÔNG BÁO<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -139,28 +133,23 @@
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                         aria-labelledby="dropdownDefaultButton">
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>thongbao/thongbaodauthau"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông báo đấu thầu</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>thongbao/thongbaotuyendung"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông báo tuyển dụng</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>thongbao/thongbaobaochi"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông báo báo chí</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                                                out</a>
                                         </li>
                                     </ul>
                                 </div>
 
                             </li>
                             <li>
-                                <a id="dropdownDefaultButton5" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown5"
+                                <a href="<?php echo base_url() ?>at-sk-mt" id="dropdownDefaultButton5" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown5"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">AT-SK-MT<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -175,15 +164,15 @@
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                         aria-labelledby="dropdownDefaultButton3">
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>at-sk-mt/congdong"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cộng đồng</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>at-sk-mt/nguoilaodong"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Người lao động</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>at-sk-mt/chinhsach"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Các chính sách môi trường</a>
                                         </li>
                                         <li>
@@ -192,7 +181,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <a id="dropdownDefaultButton4" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown4"
+                            <a href="<?php echo base_url() ?>quanhecodong" id="dropdownDefaultButton4" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown4"
                                     class="text-white hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium  text-sm  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">QUAN HỆ CỔ ĐÔNG<svg class="w-2.5 h-2.5 ms-3" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -207,21 +196,18 @@
                                     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
                                         aria-labelledby="dropdownDefaultButton3">
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>quanhecodong/thongtintailieu"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông tin/Tài liệu cổ đông</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>quanhecodong/daihoi"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Đại hội cổ đông</a>
                                         </li>
                                         <li>
-                                            <a href="#"
+                                            <a href="<?php echo base_url() ?>quanhecodong/baocaotaichinh"
                                                 class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Báo cáo tài chinh</a>
                                         </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign                                               out</a>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                                 <a href="<?php echo base_url() ?>thuvien/thuvienanh" id="dropdownDefaultButton3" data-dropdown-trigger="hover" data-dropdown-toggle="dropdown3"

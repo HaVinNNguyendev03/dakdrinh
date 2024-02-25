@@ -118,7 +118,8 @@ $ngayHienTai = date("d-m-Y");
 </div>
 <div class="col-sm-10 d-sm-flex  p-sm-2 mx-auto my-2" style="min-height: 220px;">
     <div class=" col-sm-6">
-        <a href="#" class="block h-56 p-6 bg-white border-top border-r  border-gray-200   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <a href="#"
+            class="block h-56 p-6 bg-white border-top border-r  border-gray-200   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue-600 dark:text-white text-right">PV POWER DHC
             </h5>
             <p class="font-normal text-gray-700 dark:text-gray-400">PV POWER DHC dưới sự chỉ đạo điều
@@ -130,16 +131,17 @@ $ngayHienTai = date("d-m-Y");
     </div>
     <div class="col-sm-6">
         <div
-            class=" block h-56 m-2  bg-white border-top  border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-center text-sm font-bold tracking-tight text-blue-600 dark:text-white">
+            class=" block h-56  bg-white border-top  border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 id="nambieudo"
+                class="mb-2   text-center text-sm font-bold tracking-tight text-blue-600 dark:text-white">
                 TÌNH HÌNH SẢN
-                XUẤT NĂM2024</h5>
+                XUẤT NĂM 2023</h5>
             <div class="col-sm-12  p-sm-2 mx-auto my-2">
                 <div class="col-sm-12">
                     <div
                         class=" block h-56 m-2  bg-white border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                         <div style="width: 100%;">
-                            <canvas id="lineChart"></canvas>
+                            <canvas style=" height: 200px;" id="lineChart"></canvas>
                         </div>
                     </div>
                 </div>
@@ -746,8 +748,89 @@ $ngayHienTai = date("d-m-Y");
     </div>
 </section>
 <!-- thongtinduan -->
-<div class="">
-    
+<div class="thongtinduan bg-grey-1">
+    <div class="container ">
+        <div class="block">
+            <div class="section-heading">
+                <h2 class="heading"><span class="heading-icon-3 pt-4"><img
+                            src="<?php echo base_url(); ?>assets/img/icon-thongtinduan.jpg" class="img-fluid">Thông tin dự
+                        án</span></h2>
+            </div>
+            <div class="section-content-thongtinduan">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+
+                        <div class="project-item">
+                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
+                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
+                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
+                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
+                                        src="<?php echo base_url(); ?>assets/img/duandakrinh.jpg" style="">
+                                </a>
+                            </div>
+                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">THỦY ĐIỆN
+                                    DARDRINK</a></h3>
+                        </div>
+
+                    </div>
+                    <div class="item">
+
+                        <div class="project-item">
+                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
+                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
+                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
+                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
+                                        src="<?php echo base_url(); ?>assets/img/duan.jpg" style="">
+                                </a>
+                            </div>
+                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">NHIỆT ĐIỆN KHÍ NHƠN
+                                    TRẠCH 2</a></h3>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="project-item">
+                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
+                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
+                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
+                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
+                                        src="<?php echo base_url(); ?>assets/img/duan.jpg" style="">
+                                </a>
+                            </div>
+                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">NHIỆT ĐIỆN KHÍ CÀ
+                                    MAU</a></h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-item">
+                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
+                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
+                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
+                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
+                                        src="<?php echo base_url(); ?>assets/img/duanthanvungan.jpg" style="">
+                                </a>
+                            </div>
+                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">NHIỆT ĐIỆN KHÍ THAN VŨNG
+                                    ÁN 1 & 2</a></h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="project-item">
+                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
+                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
+                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
+                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
+                                        src="<?php echo base_url(); ?>assets/img/duannuha.jpg" style="">
+                                </a>
+                            </div>
+                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">THỦY ĐIỆN NỦA HA</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- thuvien -->
 <div class="">

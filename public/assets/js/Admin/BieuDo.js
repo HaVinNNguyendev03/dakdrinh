@@ -77,8 +77,8 @@ $(document).ready(function() {
                             beginAtZero: true
                         },
                         x: {
-                          Height : 300,
-                        } 
+                          Height : 200,
+                        }   
                     }
                 }
             });

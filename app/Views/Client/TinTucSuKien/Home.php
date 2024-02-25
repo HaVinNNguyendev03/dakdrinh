@@ -51,7 +51,7 @@
                 <?php if (!empty($baiviet)): ?>
                     <?php foreach ($baiviet as $bv): ?>
                         <a class="card col-6 px-2 my-2" href="<?= base_url('bai-viet/' . $bv['idbaiviet']) ?>">
-                            <img class="tintuc-imglon card-img" src="<?= $bv['anhrthumnail'] ?>" alt="Card image">
+                            <img style="height: 259px;" class="tintuc-imglon card-img" src="<?= $bv['anhrthumnail'] ?>" alt="Card image">
                             <div class="card-content">
                                 <h5 class="card-title title-baiviet">
                                     <?= $bv['tieudebaiviet'] ?>

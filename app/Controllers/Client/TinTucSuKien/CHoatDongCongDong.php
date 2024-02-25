@@ -10,7 +10,6 @@ class CHoatDongCongDong extends BaseController
         $pager =  \Config\Services::pager();
         $page = $this->request->getVar('page') ?? 1; // Lấy trang hiện tại từ query string, mặc định là 1
         $perPage = 4; // Số bài viết trên mỗi trang
-
         // Lấy dữ liệu bài viết phân trang
         $baiviets = $baivietModel->getBaivietByDanhMucPaginated(201, $page, $perPage);
         $total = $baivietModel->where('iddanhmuc', 201)->countAllResults();

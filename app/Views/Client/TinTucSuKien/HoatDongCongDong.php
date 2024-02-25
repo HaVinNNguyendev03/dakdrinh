@@ -1,5 +1,6 @@
 <?= $this->extend('Client/Layout/Base') ;?>
 <?= $this->section('DakDrinh') ;?>
+<?php var_dump($data) ?>
 <div class="col-12 wapper px-2 pt-5">
     <div class="wapper-content px-2 col-10 mx-auto">
         <div class="wapper-content-title">TIN TỨC – SỰ KIỆN</div>
@@ -40,7 +41,8 @@
                             <?= $baiviet[0]['tomtatbaiviet'] ?>
                         </p>
                         <p class="card-text date-baiviet">
-                        Ngày Đăng Bài:<?= $baiviet[0]['ngaydang'] ?>
+                            Ngày Đăng Bài:
+                            <?= $baiviet[0]['ngaydang'] ?>
                         </p>
                     </div>
                 </a>
@@ -48,8 +50,8 @@
             <div class="card-content col-12 my-4 d-flex flex-wrap">
                 <?php if (!empty($baiviet)): ?>
                     <?php foreach ($baiviet as $bv): ?>
-                        <div class="card col-6 px-2 my-2">
-                            <img class="tintuc-imglon card-img" src="<?= $bv['anhrthumnail'] ?>" alt="Card image">
+                        <a class="card col-6 px-2 my-2" href="<?= base_url('bai-viet/' . $bv['idbaiviet']) ?>">
+                            <img style="height: 259px;" class="tintuc-imglon card-img" src="<?= $bv['anhrthumnail'] ?>" alt="Card image">
                             <div class="card-content">
                                 <h5 class="card-title title-baiviet">
                                     <?= $bv['tieudebaiviet'] ?>
@@ -61,12 +63,10 @@
                                     <?= $bv['ngaydang'] ?>
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     <?php endforeach; ?>
                 <?php endif; ?>
-
                 <?= $pager->makeLinks($currentPage, $perPage, $total, 'pagination') ?>
-                <!-- </?php var_dump($pager) ?> -->
             </div>
         </div>
         <!-- 4 ảnh nhỏ và nội dung bên trái -->
@@ -120,7 +120,7 @@
                         <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy
                             bay</h5>
                         <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>

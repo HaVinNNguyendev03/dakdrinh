@@ -261,6 +261,60 @@
     justify-content: center;
     align-items: center;
 }
+
+.block{
+    position: relative;
+}
+.owl-carousel {
+    position: initial !important; 
+}
+.owl-nav {
+    position: absolute;
+    bottom: 10px; /* Điều chỉnh khoảng cách từ dưới lên */
+    top : 0;
+    left: 95%; /* Đặt ở giữa theo chiều ngang */
+    transform: translateX(-50%); /* Dịch chuyển vị trí sang trái 50% để căn giữa */
+    z-index: 1000; /* Đảm bảo owl-nav hiển thị trên các phần tử khác */
+}
+.project-item {
+    position: relative;
+}
+.project-item .title {
+    line-height: 1.5;
+    position: absolute;
+    top: 50%;
+    width: 207px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, .74);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: -23px;
+    background: rgba(0, 0, 0, .4);
+    padding: 13px 0;
+    font-size: 14px;
+}
+.title {
+    font-weight: 400;
+    letter-spacing: .75px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+.project-item .title a {
+    color: #fff;
+}
+.bg-grey-1{
+    background-color: #c4c7d0;
+}
+.heading-icon-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-content-thongtinduan{
+    padding: 0px 60px 60px;
+}
+/* baiviet */
 .title-baiviet{
     font-weight: 400;
     letter-spacing: .75px;
@@ -280,6 +334,7 @@
     color: #7F7F7F;
     font-size: 12px;
 }
+
 /* thuvienanh */
 .carousel-item>p>img{
     width: 100%!important;

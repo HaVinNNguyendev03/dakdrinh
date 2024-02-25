@@ -9,6 +9,7 @@ $routes->get('/pagedetail', 'Home::pagedetail');
 //trang chu
 $routes->get('/', 'Client\CHome::index');
 $routes->get('admin/bieudo/getData', 'Admin\CBieuDo::getdata');
+$routes->get('bieudo/getData', 'Admin\CBieuDo::getdata');
 // Tin tuc va su kien
 $routes->group('tintuc', function ($routes) {
     $routes->get('/', 'Client\TinTucSuKien\CHome::index');
@@ -16,6 +17,27 @@ $routes->group('tintuc', function ($routes) {
     $routes->get('hoatdongnganhdien', 'Client\TinTucSuKien\CHoatDongNganhDien::index');
     $routes->get('tintucpvpower', 'Client\TinTucSuKien\CTinTucPVPower::index');
     $routes->get('tintucpvpowerdhc', 'Client\TinTucSuKien\CTinTucPVPowerDHC::index');
+});
+// Hoat dong san xuat kinh doanhuang
+$routes->group('hdsx', function ($routes) {
+    $routes->get('/', 'Client\HoatDongSXKD\CHome::index');
+    $routes->get('chienluocmuctieu', 'Client\HoatDongSXKD\CChienLuocMucTieu::index');
+    $routes->get('tinhhinhsx', 'Client\HoatDongSXKD\CTinhHinhSX::index');
+    $routes->get('kehoachsx', 'Client\HoatDongSXKD\CKeHoachSX::index');
+});
+// thong bao
+$routes->group('thongbao', function ($routes) {
+    $routes->get('/', 'Client\ThongBao\CHome::index');
+    $routes->get('thongbaodauthau', 'Client\ThongBao\CThongBaoDauThau::index');
+    $routes->get('thongbaotuyendung', 'Client\ThongBao\CThongBaoTuyenDung::index');
+    $routes->get('thongbaobaochi', 'Client\ThongBao\CThongBaoBaoChi::index');
+});
+//at-sk-mt
+$routes->group('at-sk-mt', function ($routes) {
+    $routes->get('/', 'Client\ThongBao\CHome::index');
+    $routes->get('congdong', 'Client\ThongBao\CThongBaoDauThau::index');
+    $routes->get('nguoilaodong', 'Client\ThongBao\CThongBaoTuyenDung::index');
+    $routes->get('chinhsach', 'Client\ThongBao\CThongBaoBaoChi::index');
 });
 //Gioi Thieu
 $routes->group('gioithieu', function ($routes) {
