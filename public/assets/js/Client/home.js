@@ -78,14 +78,44 @@ $(document).ready(function() {
             0:{
                 items:1
             },
-            400:{
+            678:{
                 items:2
             },
-            800:{
+            768:{
+                items:3
+            },
+            1024:{
                 items:4
             }
         },
         navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
     })
    
+    
+    //responsive
+    // tin moi nhat
+    function hideElement(){
+        let screenWidth = window.innerWidth;
+        let cardtitle = document.querySelectorAll('.card-title');
+        let cardtime = document.querySelectorAll('.card-time');
+        if (screenWidth >= 375 && screenWidth <= 767) {
+           cardtitle.forEach(function(item){
+                item.style.display = 'none';
+           });
+           cardtime.forEach(function(item){
+            item.style.display = 'none';
+       })
+       } else {
+        cardtitle.forEach(function(item){
+            item.style.display = 'block';
+       });
+       cardtime.forEach(function(item){
+        item.style.display = 'block';
+        })
+        }
+    }
+    window.onload = hideElement;
+    window.onresize = hideElement;
 });
+
+
