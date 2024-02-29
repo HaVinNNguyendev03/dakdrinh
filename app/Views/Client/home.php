@@ -75,7 +75,7 @@ $ngayHienTai = date("d-m-Y");
     </button>
 </div>
 <!-- infomation -->
-<div class="col-10 col-sm-6 col-lg-3 mx-auto h-100 my-4">
+<div class="col-10 col-sm-6 col-lg-4 mx-auto h-100 my-4">
     <div class="row align-items-center h-100">
         <div class="container rounded">
             <div class="slider">
@@ -154,9 +154,9 @@ $ngayHienTai = date("d-m-Y");
     <span class="title">Tin Mới Nhất</span>
 </div>
 <div class="col-12 col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
-    <div class="row col-12 g-0">
+    <div class="row col-12 g-0 g-lg-3">
         <!-- Ảnh lớn bên trái -->
-        <div class="col-12 col-sm-6" style="height: 100%;">
+        <div class="col-12 col-lg-6 height-tmn_left">
             <div class="card bg-dark text-white" style="height: 100%;">
                 <img class="tintuc-imglon card-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg"
                     alt="Card image">
@@ -167,14 +167,13 @@ $ngayHienTai = date("d-m-Y");
                     <p class="card-time">Last updated 3 mins ago</p>
                 </div>
             </div>
-
             <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
         </div>
         <!-- 4 ảnh nhỏ và nội dung bên trái -->
-        <div class="col-12 col-md-6 mt-2 mt-sm-0">
+        <div class="col-12 col-lg-6 mt-2">
             <div class="row g-0">
                 <!-- item 1 -->
-                <div class="col-md-12 d-flex flex-row p-0" style="padding-top: 0px !important;">
+                <div class="col-md-12 d-flex flex-row p-0 height-tmn_left" style="padding-top: 0px !important;">
                     <div class="col-4 col-sm-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class=""
                             alt="Small Image 1"></div>
                     <div class="col-8 col-sm-6 ps-2">
@@ -184,7 +183,7 @@ $ngayHienTai = date("d-m-Y");
                         <p class="card-time">Last updated 3 mins ago</p>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex flex-row py-2">
+                <div class="col-md-12 d-flex flex-row py-2 height-tmn_left">
                     <div class="col-4 col-sm-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class=""
                             alt="Small Image 1"></div>
                     <div class="col-8 col-sm-6 ps-2">
@@ -194,7 +193,7 @@ $ngayHienTai = date("d-m-Y");
                         <p class="card-time">Last updated 3 mins ago</p>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex flex-row py-2" style="padding-bottom: 0px !important;">
+                <div class="col-md-12 d-flex flex-row py-2 height-tmn_left" style="padding-bottom: 0px !important;">
                     <div class="col-4 col-sm-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class=""
                             alt="Small Image 1"></div>
                     <div class="col-8 col-sm-6 ps-2">
@@ -216,7 +215,7 @@ $ngayHienTai = date("d-m-Y");
     <b></b>
 </div>
 <div class="col-sm-10 d-sm-flex flex-wrap  mx-auto my-2 pb-4">
-    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12" data-carousel="slide">
+    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
             <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
@@ -335,7 +334,7 @@ $ngayHienTai = date("d-m-Y");
             </span>
         </button>
     </div>
-    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12" data-carousel="slide">
+    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
             <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
@@ -454,7 +453,7 @@ $ngayHienTai = date("d-m-Y");
             </span>
         </button>
     </div>
-    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12" data-carousel="slide">
+    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
             <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
@@ -573,7 +572,7 @@ $ngayHienTai = date("d-m-Y");
             </span>
         </button>
     </div>
-    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12" data-carousel="slide">
+    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
             <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
@@ -692,7 +691,6 @@ $ngayHienTai = date("d-m-Y");
             </span>
         </button>
     </div>
-    
 </div>
 <!-- quanhecodong -->
 <section class="section mb-0 pb-0" style="background-color: #898fa3;">
@@ -761,7 +759,6 @@ $ngayHienTai = date("d-m-Y");
             <div class="section-content-thongtinduan">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-
                         <div class="project-item">
                             <div class="post-image" style="max-height: 200px; overflow: hidden;">
                                 <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
@@ -842,7 +839,7 @@ $ngayHienTai = date("d-m-Y");
         <b></b>
     </div>  
     <div class="thuvien-flex col-12 mx-auto">
-        <div class="thuvien-content-anh col-12">
+        <div class="thuvien-content-anh col-12 col-sm-5">
             <h1 class="col-8 text-center text-2xl mx-auto">TTHƯ VIỆN ẢNH</h1>
             <div id="default-carousel" class="relative w-full -z-10" data-carousel="slide">
                 <!-- Carousel wrapper -->
@@ -915,7 +912,7 @@ $ngayHienTai = date("d-m-Y");
                 </button>
             </div>
         </div>
-        <div class="thuvien-content col-12">
+        <div class="thuvien-content col-12 col-sm-5">
             <h1 class="text-center text-2xl mb-2 col-8 mx-auto">THƯ VIỆN VIDEO</h1>
             <div class="thuvienvideo">
                 <iframe width="560" height="300" src="https://www.youtube.com/embed/AoPiLg8DZ3A" frameborder="0"

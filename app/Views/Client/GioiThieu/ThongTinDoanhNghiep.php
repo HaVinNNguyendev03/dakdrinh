@@ -25,7 +25,7 @@
 </div>
 <!-- content -->
 <div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
-    <div class="row col-12 align-items-start">
+    <div class="row g-0 g-xl-3 col-12 align-items-start">
         <!-- Ảnh lớn bên trái -->
         <div class="col-md-8" style="height: 100%;">
             <?php if (!empty($baiviet)): ?>
@@ -73,7 +73,7 @@
             <div class="col-lg-12 col-md-10 new-header-tintucsukien">
                 <span class="title">Tin Mới Nhất</span>
             </div>
-            <div class="row align-items-start">
+            <div class="row align-items-start m-0">
 
                 <!-- item 1 -->
                 <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
