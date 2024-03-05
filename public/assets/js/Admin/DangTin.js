@@ -19,8 +19,8 @@ $(function () {
 
   function submitForm() {
     //  Lấy giá trị từ các trường input
-    var id = document.querySelector('h1[name="id"]').innerText;
-  var tentaikhoan = document.querySelector('h1[name="tentaikhoan"]').innerText;
+    var id = document.querySelector('h1[name="id"]').innerText.trim();
+  var tentaikhoan = document.querySelector('h1[name="tentaikhoan"]').innerText.trim();
     var tieudebaiviet = document.querySelector('input[name="tieudebaiviet"]').value;
     var iddanhmuc = document.querySelector('select[name="iddanhmuc"]').value;
     var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
@@ -37,7 +37,7 @@ $(function () {
     console.log("Ngày đăng: " + ngaydang);
     console.log("Nội dung bài viết: " + noidungbaiviet);
     console.log("Ảnh đại diện: " + anhrthumnailFile);
-
+    console.log("id: " + id);
           // thêm dữ liệu từ form
           let formData = new FormData();
           formData.append('iduser',id);

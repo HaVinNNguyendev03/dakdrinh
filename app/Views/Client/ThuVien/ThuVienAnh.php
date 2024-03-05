@@ -3,6 +3,14 @@
 
 <!-- Slider main container -->
 <!-- Swiper & Photoswipe-->
+    
+<style>
+    .gallery {
+  float: left;
+  padding: 12px;
+  cursor: pointer;
+}
+</style>
 <div class="col-12 wapper px-2 pt-2">
     <div class="wapper-content px-2 col-10 mx-auto">
         <div class="wapper-content-title">Thư Viện</div>
@@ -25,9 +33,10 @@
         </div>
     </div>
 </div>
-<div class="col-10 mx-auto my-4 d-flex flex-wrap">
+
+<div class="col-12 mx-auto my-4 d-flex flex-wrap">
     <?php foreach ($thuvienanh as $danhmucnamanh => $data): ?>
-        <div class="col-5 px-4 mx-auto container-block">
+        <div class="col-5 mx-auto container-block">
             <div class="container-top">
                 <h1>Danh Mục Ảnh Năm <?php echo $danhmucnamanh; ?></h1>
             </div>
@@ -54,11 +63,5 @@
         </div>
     <?php endforeach; ?>
 </div>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
-    integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <?= $this->endSection(); ?>

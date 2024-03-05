@@ -45,4 +45,14 @@ public function getBaivietByDanhMucPaginated($iddanhmuc, $page, $perPage)
                     ->orderBy('idbaiviet', 'DESC')
                     ->paginate($perPage, 'trangbaiviet', $page);
     }
+    public function getTinMoiNhat($sobaiviet){
+        return $this->query('SELECT * FROM tbbaiviet ORDER BY ngaytao DESC LIMIT ?',[$sobaiviet])->getResult();
+    }
+    public function getbaivietDanhMuc($iddanhmuc)
+    {
+        return $this->whereIn('iddanhmuc', $iddanhmuc)
+        ->orderBy('ngaytao', 'DESC')
+        ->limit(5)
+        ->find();
+    }
 }

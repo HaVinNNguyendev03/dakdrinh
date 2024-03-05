@@ -54,12 +54,12 @@
                                     lãnh đạo</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url() ?>tintuc/tintucpvpower"
+                                <a href="<?php echo base_url() ?>gioithieu/duan"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dự
                                     án</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url() ?>tintuc/tintucpvpowerdhc"
+                                <a href="<?php echo base_url() ?>gioithieu/thongtindoanhnghiep"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông
                                     tin doanh nghiệp</a>
                             </li>
@@ -75,7 +75,7 @@
                         class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="<?php echo base_url() ?>hdsx/chienluocmuctieu"
+                                <a href="<?php echo base_url() ?>tintuc/hoatdongcongdong"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Hoạt
                                     động cộng đồng</a>
                             </li>
@@ -239,7 +239,7 @@
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thu Vien Anh</a>
                             </li>
                             <li> 
-                                <a href="#"
+                                <a href="#"  
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thu Vien Video</a>
                             </li>
                             <li>

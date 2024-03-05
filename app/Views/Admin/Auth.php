@@ -10,11 +10,8 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-
         <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/auth.css">
     </head>
-
     <body>
         <section class="ftco-section">
             <div class="container">
@@ -55,7 +52,6 @@
                 </div>
             </div>
         </section>
-
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>

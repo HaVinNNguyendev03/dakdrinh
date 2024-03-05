@@ -67,6 +67,7 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('dangtin', 'Admin\CDangTin::index');
     $routes->get('thuvienanh', 'Admin\CThuVienAnh::index'); 
     $routes->get('danghinhanh', 'Admin\CThuVienAnh::ViewAddHinhAnh');
+    $routes->get('sliderhome', 'Admin\CSliderhome::ViewAddHinhAnh');
     $routes->post('import/import', 'Admin\CBieuDo::import', ['as' => 'import']);
 });
 //api
@@ -87,3 +88,5 @@ $routes->get('thuvienanh/gethinhanh/(:num)', 'Admin\CThuVienAnh::EditHinhAnh/$1'
 $routes->get('thuvienanh/gethinhanh/api/gethinhanh/(:num)', 'Admin\CSuaHinhAnh::gethinhanh/$1');
 $routes->post('thuvienanh/gethinhanh/api/edithinhanh/(:num)', 'Admin\CSuaHinhAnh::edithinhanh/$1');
 $routes->delete('api/deletedhinhanh/(:num)', 'Admin\CThuVienAnh::Deletehinhanh/$1');
+//tinmoinhat
+$routes->get('api/baivietmoinhat', 'Client\CHome::tinmoinhat');

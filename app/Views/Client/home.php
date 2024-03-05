@@ -155,56 +155,63 @@ $ngayHienTai = date("d-m-Y");
 </div>
 <div class="col-12 col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
     <div class="row col-12 g-0 g-lg-3">
+        <?php $firstBv = reset($baivietmoinhat); ?>
         <!-- Ảnh lớn bên trái -->
+
         <div class="col-12 col-lg-6 height-tmn_left">
-            <div class="card bg-dark text-white" style="height: 100%;">
-                <img class="tintuc-imglon card-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg"
-                    alt="Card image">
-                <div class="card-img-overlayfix">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-time">Last updated 3 mins ago</p>
+            <a href="<?= base_url('bai-viet/' . $firstBv->idbaiviet) ?>">
+                <div class="card bg-dark text-white" style="height: 100%;">
+                    <img class="tintuc-imglon card-img" src="<?= $firstBv->anhrthumnail; ?>" alt="Card image"
+                        style="height: 100%;">
+                    <div class="card-img-overlayfix">
+                        <h5 class="card-title">
+                            <?= $firstBv->tieudebaiviet; ?>
+                        </h5>
+                        <p class="card-text">
+                            <?= $firstBv->tomtatbaiviet; ?>
+                        </p>
+                        <p class="card-time">Ngày Tạo
+                            <?= $firstBv->ngaytao; ?>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
             <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
         </div>
+
         <!-- 4 ảnh nhỏ và nội dung bên trái -->
         <div class="col-12 col-lg-6 mt-2">
-            <div class="row g-0">
+            <div class="row g-xl-2">
                 <!-- item 1 -->
-                <div class="col-md-12 d-flex flex-row p-0 height-tmn_left" style="padding-top: 0px !important;">
-                    <div class="col-4 col-sm-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class=""
-                            alt="Small Image 1"></div>
-                    <div class="col-8 col-sm-6 ps-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-time">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row py-2 height-tmn_left">
-                    <div class="col-4 col-sm-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class=""
-                            alt="Small Image 1"></div>
-                    <div class="col-8 col-sm-6 ps-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-time">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row py-2 height-tmn_left" style="padding-bottom: 0px !important;">
-                    <div class="col-4 col-sm-6 tintuc-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg" class=""
-                            alt="Small Image 1"></div>
-                    <div class="col-8 col-sm-6 ps-2">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-time">Last updated 3 mins ago</p>
-                    </div>
-                </div>
+                <?php
+                $isFirst = true;
+                foreach ($baivietmoinhat as $bv):
+                    if ($isFirst) {
+                        $isFirst = false;
+                        continue; // Bỏ qua phần tử đầu tiên
+                    }
+                    ?>
+                    <a href="<?= base_url('bai-viet/' . $bv->idbaiviet) ?>">
+                        <div class="col-md-12 d-flex flex-row p-0 height-tmn_left">
+                            <div class="col-4 col-sm-6 tintuc-img"><img src="<?= $bv->anhrthumnail; ?>" class=""
+                                    alt="Small Image 1"></div>
+                            <div class="col-8 col-sm-6 ps-2">
+                                <h5 class="card-title card-title-home">
+                                    <?= $bv->tieudebaiviet; ?>
+                                </h5>
+                                <p class="card-text text ">
+                                    <?= $bv->tomtatbaiviet; ?>
+                                </p>
+                                <p class="card-time">Ngày Đăng
+                                    <?= $bv->ngaytao; ?>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
+
     </div>
 </div>
 <!-- end-->
@@ -222,86 +229,101 @@ $ngayHienTai = date("d-m-Y");
         </div>
         <!-- Carousel wrapper -->
         <div class="relative height-carousel_ttsk overflow-hidden col-12">
-            <!-- Item 1 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a class="col-12 static" href="#">
-                        <img class="col-12 height-carousel_ttsk-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5 class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
+            <?php foreach ($tintucsukien as $tt): ?>
+                <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
+                    <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tt['idbaiviet']) ?>">
+                            <img class="col-12 height-carousel_ttsk-img" src="<?= $tt['anhrthumnail'] ?>" alt="" />
+                            <div class="absolute left-0 top-0 box-day ">
+                                <?= $tt['ngaydang'] ?>
+                            </div>
+                        </a>
+                        <div class="my-8 mx-4  text-center   ">
+                            <div class="my-8">
+                                <a class="" href="<?= base_url('bai-viet/' . $tt['idbaiviet']) ?>">
+                                    <h5
+                                        class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                        <p class="text">
+                                            <?= $tt['tieudebaiviet'] ?>
+                                        </p>
+                                    </h5>
+                                </a>
+                            </div>
+                            <a href="<?= base_url('bai-viet/' . $tt['idbaiviet']) ?>"
+                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                XEM THÊM
                             </a>
                         </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
                     </div>
                 </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg min-height" src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
-                            alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                    </p>
-                                </h5>
+            <?php endforeach ?>
+        </div>
+        <!-- Slider indicators -->
+
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
+        <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
+        <div class="col-12 bg-blue-700 qhcd-top">
+            <P class="qhcd-text">HOẠT ĐỘNG SX-KD</P>
+        </div>
+        <!-- Carousel wrapper -->
+        <div class="relative height-carousel_ttsk overflow-hidden col-12">
+            <div class="relative height-carousel_ttsk overflow-hidden col-12">
+                <?php foreach ($hoatdong as $hd): ?>
+                    <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
+                        <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+                            <a class="col-12 static" href="<?= base_url('bai-viet/' . $hd['idbaiviet']) ?>">
+                                <img class="col-12 height-carousel_ttsk-img" src="<?= $hd['anhrthumnail'] ?>" alt="" />
+                                <div class="absolute left-0 top-0 box-day ">
+                                    <?= $hd['ngaydang'] ?>
+                                </div>
                             </a>
+                            <div class="my-8 mx-4  text-center   ">
+                                <div class="my-8">
+                                    <a class="" href="<?= base_url('bai-viet/' . $hd['idbaiviet']) ?>">
+                                        <h5
+                                            class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <p class="text">
+                                                <?= $hd['tieudebaiviet'] ?>
+                                            </p>
+                                        </h5>
+                                    </a>
+                                </div>
+                                <a href="<?= base_url('bai-viet/' . $hd['idbaiviet']) ?>"
+                                    class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    XEM THÊM
+                                </a>
+                            </div>
                         </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
                     </div>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
         <!-- Slider indicators -->
@@ -337,91 +359,38 @@ $ngayHienTai = date("d-m-Y");
     <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
-            <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
+            <P class="qhcd-text">THÔNG BÁO</P>
         </div>
         <!-- Carousel wrapper -->
         <div class="relative height-carousel_ttsk overflow-hidden col-12">
-            <!-- Item 1 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a class="col-12 static" href="#">
-                        <img class="col-12 height-carousel_ttsk-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5 class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
+            <?php foreach ($thongbao as $tb): ?>
+                <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
+                    <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
+                            <img class="col-12 height-carousel_ttsk-img" src="<?= $tb['anhrthumnail'] ?>" alt="" />
+                            <div class="absolute left-0 top-0 box-day ">
+                                <?= $tb['ngaydang'] ?>
+                            </div>
+                        </a>
+                        <div class="my-8 mx-4  text-center   ">
+                            <div class="my-8">
+                                <a class="" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
+                                    <h5
+                                        class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                        <p class="text">
+                                            <?= $tb['tieudebaiviet'] ?>
+                                        </p>
+                                    </h5>
+                                </a>
+                            </div>
+                            <a href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>"
+                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                XEM THÊM
                             </a>
                         </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
                     </div>
                 </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg min-height" src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
-                            alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                    </p>
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach ?>
         </div>
         <!-- Slider indicators -->
 
@@ -456,210 +425,40 @@ $ngayHienTai = date("d-m-Y");
     <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
-            <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
+            <P class="qhcd-text">AT-SK-SM</P>
         </div>
         <!-- Carousel wrapper -->
         <div class="relative height-carousel_ttsk overflow-hidden col-12">
-            <!-- Item 1 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a class="col-12 static" href="#">
-                        <img class="col-12 height-carousel_ttsk-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5 class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg min-height" src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
-                            alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                    </p>
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Slider indicators -->
 
-        <!-- Slider controls -->
-        <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 1 1 5l4 4" />
-                </svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 9 4-4-4-4" />
-                </svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
-    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
-        <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
-        <div class="col-12 bg-blue-700 qhcd-top">
-            <P class="qhcd-text">TIN TỨC SỰ KIỆN</P>
-        </div>
-        <!-- Carousel wrapper -->
-        <div class="relative height-carousel_ttsk overflow-hidden col-12">
-            <!-- Item 1 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a class="col-12 static" href="#">
-                        <img class="col-12 height-carousel_ttsk-img" src="<?php echo base_url(); ?>assets/img/thuvien2.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5 class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
+            <?php foreach ($atsk as $at): ?>
+                <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
+                    <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $at['idbaiviet']) ?>">
+                            <img class="col-12 height-carousel_ttsk-img" src="<?= $at['anhrthumnail'] ?>" alt="" />
+                            <div class="absolute left-0 top-0 box-day ">
+                                <?= $at['ngaydang'] ?>
+                            </div>
+                        </a>
+                        <div class="my-8 mx-4  text-center   ">
+                            <div class="my-8">
+                                <a class="" href="<?= base_url('bai-viet/' . $at['idbaiviet']) ?>">
+                                    <h5
+                                        class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                        <p class="text">
+                                            <?= $at['tieudebaiviet'] ?>
+                                        </p>
+                                    </h5>
+                                </a>
+                            </div>
+                            <a href="<?= base_url('bai-viet/' . $at['idbaiviet']) ?>"
+                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                XEM THÊM
                             </a>
                         </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
                     </div>
                 </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg min-height" src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
-                            alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                    </p>
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                <div
-                    class="col-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="col-12 height-carousel_ttsk-img rounded-t-lg" src="<?php echo base_url(); ?>assets/img/slide3.jpg" alt="" />
-                        <div class="absolute left-0 top-0 box-day ">
-                            <h1 class="font-bold">23</h1>
-                            <p class="font-bold">Th11</p>
-                        </div>
-                    </a>
-                    <div class="my-8 mx-4  text-center   ">
-                        <div class="my-8">
-                            <a class="" href="#">
-                                <h5
-                                    class=" border-b-2 border-b-2 border-gray-200 text mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                    <p  class="text">Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023 Diễn tập ứng cứu tình huống khẩn cấp & đảm bảo an toàn đập, hồ chứa đập thủy điện Đakđrinh năm 2023
-                                </h5>
-                            </a>
-                        </div>
-                        <a href="#"
-                            class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            XEM THÊM
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach ?>
+
         </div>
         <!-- Slider indicators -->
 
@@ -753,7 +552,8 @@ $ngayHienTai = date("d-m-Y");
         <div class="block">
             <div class="section-heading">
                 <h2 class="heading"><span class="heading-icon-3 pt-4"><img
-                            src="<?php echo base_url(); ?>assets/img/icon-thongtinduan.jpg" class="img-fluid">Thông tin dự
+                            src="<?php echo base_url(); ?>assets/img/icon-thongtinduan.jpg" class="img-fluid">Thông tin
+                        dự
                         án</span></h2>
             </div>
             <div class="section-content-thongtinduan">
@@ -837,7 +637,7 @@ $ngayHienTai = date("d-m-Y");
         <b></b>
         <span style="color:rgb(0, 137, 225);" class="text-center text-2xl font-bold mx-2 mx-auto">Thư Viện</span>
         <b></b>
-    </div>  
+    </div>
     <div class="thuvien-flex col-12 mx-auto">
         <div class="thuvien-content-anh col-12 col-sm-5">
             <h1 class="col-8 text-center text-2xl mx-auto">TTHƯ VIỆN ẢNH</h1>

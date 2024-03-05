@@ -27,8 +27,6 @@ $(document).ready(function () {
             $('input[name="tomtatbaiviet"]').val(response.tomtatbaiviet);
             $('input[name="ngaydang"]').val(response.ngaydang);
             CKEDITOR.instances['content'].setData(response.noidungbaiviet); // Đặt nội dung cho CKEditor
-            // In ra để kiểm tra
-            console.log("Dữ liệu bài viết: ", response);
         },
         error: function (error) {
             console.log('Lỗi Ajax khi lấy dữ liệu bài viết: ', error);
@@ -40,14 +38,14 @@ $('#dangbai').click(function() {
 });
     function submitFormUpdate() {
         var idbaiviet = document.getElementById('idurl').innerText; // Lấy ID bài viết từ thẻ có id là 'idurl'
-
         // Lấy giá trị từ các trường input
         var tieudebaiviet = document.querySelector('input[name="tieudebaiviet"]').value;
         var iddanhmuc = document.querySelector('select[name="iddanhmuc"]').value;
         var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
         var ngaydang = document.querySelector('input[name="ngaydang"]').value;
         var noidungbaiviet = CKEDITOR.instances['content'].getData(); // Lấy nội dung từ CKEditor
-
+        var anhrthumnailInput = document.querySelector('input[name="anhrthumnail"]');
+        var anhrthumnailFile = anhrthumnailInput.files[0]; 
         // Tạo đối tượng FormData và thêm dữ liệu vào đó
         var formData = new FormData();
         formData.append('tieudebaiviet', tieudebaiviet);
@@ -55,7 +53,7 @@ $('#dangbai').click(function() {
         formData.append('tomtatbaiviet', tomtatbaiviet);
         formData.append('ngaydang', ngaydang);
         formData.append('noidungbaiviet', noidungbaiviet);
-
+        formData.append('anhrthumnail', anhrthumnailFile);
         // Gửi Ajax request
         $.ajax({
             type: 'POST',
@@ -64,9 +62,10 @@ $('#dangbai').click(function() {
             contentType: false,
             processData: false,
             success: function (response) {
-                if (response.success) {
+                response = JSON.parse(response);
+                if (response.status === 'success') {
                     alert('Cập nhật thành công!');
-                    // Redirect hoặc làm gì đó khi cập nhật thành công
+                    
                 } else {
                     alert('Cập nhật thất bại!');
                     // Xử lý khi cập nhật không thành công

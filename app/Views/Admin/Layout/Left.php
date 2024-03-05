@@ -73,7 +73,7 @@
                   </li>
                 </ul>
               </li>
-              
+             
               <!-- <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -83,29 +83,41 @@
                   ><span class="hide-menu">Full Width</span></a
                 >
               </li> -->
-              <!-- <li class="sidebar-item">
+              <li class="sidebar-item">
                 <a
                   class="sidebar-link has-arrow waves-effect waves-dark"
                   href="javascript:void(0)"
                   aria-expanded="false"
                   ><i class="mdi mdi-receipt"></i
-                  ><span class="hide-menu">Forms </span></a
+                  ><span class="hide-menu">Cấu Hình Web </span></a
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
                     <a href="form-basic.html" class="sidebar-link"
                       ><i class="mdi mdi-note-outline"></i
-                      ><span class="hide-menu"> Form Basic </span></a
+                      ><span class="hide-menu">Slider Home</span></a
                     >
                   </li>
                   <li class="sidebar-item">
                     <a href="form-wizard.html" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
-                      ><span class="hide-menu"> Form Wizard </span></a
+                      ><span class="hide-menu">Thông Tin Dự Án</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu">Slogain Home</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu">Logo & tên Web</span></a
                     >
                   </li>
                 </ul>
-              </li> -->
+              </li>
               <!--
               <li class="sidebar-item">
                 <a

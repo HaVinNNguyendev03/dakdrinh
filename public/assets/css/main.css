@@ -1,4 +1,7 @@
     /* config bosstrap */
+    .carousel-item .lg-item > img {
+        height: 600px;
+    }
     .card-img-overlayfix {
         position: absolute !important;
         right: 0 !important;
@@ -10,7 +13,17 @@
         background-color: #3f3f3f;
         opacity: .9;
     }
-
+    .card-title-home{
+        font-size: 20px;
+        font-weight: 700;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1; /* Số dòng hiển thị */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .card-time{
+        font-size: 12px;
+    }
     /* config bosstrap */
     .h-30rem {
         height: 40rem !important;
@@ -62,10 +75,9 @@
 
     .text {
         display: -webkit-box;
-        -webkit-line-clamp: 3; /* Số dòng bạn muốn hiển thị */
+        -webkit-line-clamp: 3; /* Số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
-        /* Thay thế giới hạn chiều rộng bằng giá trị mong muốn */
     }
 
     .min-height2 {
@@ -379,14 +391,23 @@
         color: #7F7F7F;
         font-size: 12px;
     }
-
+   
     /* thuvienanh */
     .carousel-item>p>img {
         width: 100% !important;
         display: block !important;
         height: 500px !important;
+        object-fit: cover;
     }
-
+    .container-top{
+        margin: 10px 0px;
+        font-size: 20px;
+        font-weight: 700;
+        font-style: normal;
+        color: #0056a8;
+        border-bottom: 3px #0056a8 solid;
+        width: 50%;
+    }
     .carousel {
         height: 500px !important;
     }
