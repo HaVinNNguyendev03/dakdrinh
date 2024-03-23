@@ -32,3 +32,7 @@ th{
   background-color: blue !important;
   color: aliceblue !important;
 }
+.anhsliderhomecss{
+  width: 200px !important;
+  margin: auto;
+}

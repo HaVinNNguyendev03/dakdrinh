@@ -14,14 +14,28 @@ class CThuVienAnh extends BaseController
     {
         return view('Admin/DangHinhAnh');
     }
+    // public function AddHinhAnh(){
+    //     $thuvienanhmodel = new Mthuvienanh();
+    //     $datahinhanh = $this->request->getPost();
+    //     $result = $thuvienanhmodel->addHinhAnh($datahinhanh);
+    //     if ($result) {
+    //         return json_encode(['status' => 'success','message' => 'thêm bài viết thành công']);
+    //     } else {
+    //         return json_encode(['status' => 'error','message' => 'thêm bài viết thất bại']);
+    //     }
+    // }
     public function AddHinhAnh(){
         $thuvienanhmodel = new Mthuvienanh();
         $datahinhanh = $this->request->getPost();
+        $anhPath = $this->uploadImage('hinhanh');
+        if($anhPath){
+            $datahinhanh['hinhanh'] = $anhPath;
+        }
         $result = $thuvienanhmodel->addHinhAnh($datahinhanh);
         if ($result) {
-            return json_encode(['status' => 'success','message' => 'thêm bài viết thành công']);
+            return json_encode(['status' => 'success','message' => 'thêm thành công', 'data' => $datahinhanh['hinhanh']]);
         } else {
-            return json_encode(['status' => 'error','message' => 'thêm bài viết thất bại']);
+            return json_encode(['status' => 'error','message' => 'thêm thất bại', 'data' => $datahinhanh]);
         }
     }
     public function EditHinhAnh($idhinhanh)
@@ -47,5 +61,16 @@ class CThuVienAnh extends BaseController
             // Nếu xóa thất bại, trả về thông báo lỗi   
             return $this->response->setStatusCode(500)->setBody('Xóa Anh thất bại');
         }
+    }
+    private function uploadImage($fieldName)
+    {
+        $file = $this->request->getFile($fieldName);
+
+        if ($file->isValid() && !$file->hasMoved()) {
+            $newName = $file->getRandomName();
+            $file->move(FCPATH  . 'uploads', $newName); // Thư mục để lưu trữ ảnh
+            return base_url('uploads/' . $newName); // Đường dẫn đến ảnh
+        }
+        return null; // Trả về null nếu có lỗi
     }
 }

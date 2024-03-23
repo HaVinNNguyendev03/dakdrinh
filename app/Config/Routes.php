@@ -8,6 +8,7 @@ use App\Controllers\Admin;
 $routes->get('/pagedetail', 'Home::pagedetail');
 //trang chu
 $routes->get('/', 'Client\CHome::index');
+$routes->get('lienhe', 'Client\LienHe\CLienHe::index');
 $routes->get('admin/bieudo/getData', 'Admin\CBieuDo::getdata');
 $routes->get('bieudo/getData', 'Admin\CBieuDo::getdata');
 // Tin tuc va su kien
@@ -35,9 +36,16 @@ $routes->group('thongbao', function ($routes) {
 //at-sk-mt
 $routes->group('at-sk-mt', function ($routes) {
     $routes->get('/', 'Client\ThongBao\CHome::index');
-    $routes->get('congdong', 'Client\ThongBao\CThongBaoDauThau::index');
-    $routes->get('nguoilaodong', 'Client\ThongBao\CThongBaoTuyenDung::index');
-    $routes->get('chinhsach', 'Client\ThongBao\CThongBaoBaoChi::index');
+    $routes->get('congdong', 'Client\at_sk_mt\CCongDong::index');
+    $routes->get('nguoilaodong', 'Client\at_sk_mt\CNguoiLaoDong::index');
+    $routes->get('chinhsach', 'Client\at_sk_mt\CCacChinhSachMoiTruong::index');
+});
+//quan he co dong
+$routes->group('quanhecodong', function ($routes) {
+    $routes->get('/', 'Client\ThongBao\CHome::index');
+    $routes->get('thongtintailieu', 'Client\QuanHeCoDong\CThongTinTaiLieu::index');
+    $routes->get('daihoicodong', 'Client\QuanHeCoDong\CDaiHoiCoDong::index');
+    $routes->get('baocaotaichinh', 'Client\QuanHeCoDong\CBaoCaoTaiChinh::index');
 });
 //Gioi Thieu
 $routes->group('gioithieu', function ($routes) {
@@ -46,14 +54,14 @@ $routes->group('gioithieu', function ($routes) {
     $routes->get('banlanhdao', 'Client\GioiThieu\CBanLanhDao::index');
     $routes->get('duan', 'Client\GioiThieu\CDuAn::index');
     $routes->get('thongtindoanhnghiep', 'Client\GioiThieu\CThongTinDoanhNghiep::index');
+    $routes->get('nganhnghekinhdoanh', 'Client\GioiThieu\CNganhNgheKinhDoanh::index');
+    $routes->get('lichsu', 'Client\GioiThieu\CLichSu::index');
 });
 //Thu Vien
 $routes->group('thuvien', function ($routes) {
     $routes->get('/', 'Client\ThuVien\CThuVienAnh::index');
     $routes->get('thuvienanh', 'Client\ThuVien\CThuVienAnh::index');
-    $routes->get('banlanhdao', 'Client\GioiThieu\CBanLanhDao::index');
-    $routes->get('duan', 'Client\GioiThieu\CDuAn::index');
-    $routes->get('thongtindoanhnghiep', 'Client\GioiThieu\CThongTinDoanhNghiep::index');
+    $routes->get('thuvienvideo', 'Client\ThuVien\CThuVienVideo::index');
 });
 //admin menu
 $routes->get('/dangnhap', 'Admin\CAuth::index');
@@ -67,26 +75,61 @@ $routes->group('admin', ['filter' => 'auth'], function ($routes) {
     $routes->get('dangtin', 'Admin\CDangTin::index');
     $routes->get('thuvienanh', 'Admin\CThuVienAnh::index'); 
     $routes->get('danghinhanh', 'Admin\CThuVienAnh::ViewAddHinhAnh');
-    $routes->get('sliderhome', 'Admin\CSliderhome::ViewAddHinhAnh');
+    $routes->get('thuvienvideo', 'Admin\CThuVienVideo::index'); 
+    $routes->get('dangvideo', 'Admin\CThuVienVideo::ViewAddVideo');
+    $routes->get('sliderhome', 'Admin\CSliderHome::index');
+    $routes->get('dangsliderhome', 'Admin\CSliderHome::ViewAddSliderHome');
+    $routes->get('sloganhome', 'Admin\CSlogan::index');
+    $routes->get('dangsloganhome', 'Admin\CSlogan::ViewAddSlogan');
+    $routes->get('thongtinduan', 'Admin\CThongTinDuAn::index');
+    $routes->get('dangthongtinduan', 'Admin\CThongTinDuAn::ViewAddDuAn');
+    $routes->get('logoweb', 'Admin\CLogo_Nameweb::index');
     $routes->post('import/import', 'Admin\CBieuDo::import', ['as' => 'import']);
-});
-//api
+}); 
+//api   
 $routes->post('admin/api/addbaiviet', 'Admin\CDangTin::addbaiviet');
 $routes->get('admin/api/getSessionInfo', 'Admin\CAuth::getSessionInfo');
+$routes->match(['get', 'post'], 'api/lienhe', 'Client\LienHe\CLienHe::sendMail');
 /**crud baiviet */
 //baivietchitiet,xembaiviet
 $routes->get('bai-viet/(:num)', 'Client\CBaivietchitiet::index/$1', ['as' => 'bai-viet.chi-tiet']);
+$routes->get('du-an/(:num)', 'Client\CBaivietchitiet::thongtinduan/$1', ['as' => 'du-an.chi-tiet']);
 //suabaiviet baiviet/updateBaiviet/
 $routes->get('sua-bai-viet/api/getbaiviet/(:num)', 'Admin\CSuaTin::getbaiviet/$1');
 $routes->post('sua-bai-viet/api/updateBaiviet/(:num)', 'Admin\CSuaTin::updateBaiviet/$1');
 $routes->get('sua-bai-viet/(:num)', 'Admin\CSuaTin::index/$1', ['as' => 'sua-bai-viet']);
 //xoabaiviet
 $routes->delete('api/xoabaiviet/(:num)', 'Admin\CXoaTin::xoabaiviet/$1');
-/**crud anh,video */
+/**crud anh */
 $routes->post('admin/api/danghinhanh', 'Admin\CThuVienAnh::AddHinhAnh');        
 $routes->get('thuvienanh/gethinhanh/(:num)', 'Admin\CThuVienAnh::EditHinhAnh/$1');
+$routes->get('thuvienanh/gethinhanh/api/gethinhanh/(:num)', 'Admin\CSuaHinhAnh::gethinhanh/$1');
+$routes->post('thuvienanh/gethinhanh/api/edithinhanh/(:num)', 'Admin\CSuaHinhAnh::updatehinhanh/$1');
+$routes->delete('api/deletedhinhanh/(:num)', 'Admin\CThuVienAnh::Deletehinhanh/$1');
+/**crud video */
+$routes->post('admin/api/dangvideo', 'Admin\CThuVienVideo::AddVideo');        
+$routes->get('thuvienvideo/getvideo/(:num)', 'Admin\CThuVienVideo::EditVideo/$1'); //view
+$routes->get('thuvienvideo/getvideo/api/getvideo/(:num)', 'Admin\CSuaVideo::getvideo/$1'); //api
+$routes->post('thuvienvideo/getvideo/api/editvideo/(:num)', 'Admin\CSuaVideo::editvideo/$1');
+$routes->delete('api/xoavideo/(:num)', 'Admin\CSuaVideo::xoavideo/$1');
+/**crud sliderhome*/
+$routes->post('admin/api/dangsliderhome', 'Admin\CSliderHome::AddSliderHome');        
+$routes->get('sliderhome/getsliderhome/(:num)', 'Admin\CSliderHome::ViewEditSliderHome/$1');
+$routes->get('sliderhome/getsliderhome/api/getsliderhome/(:num)', 'Admin\CSuaSliderHome::getsliderhome/$1');
+$routes->post('sliderhome/getsliderhome/api/editsliderhome/(:num)', 'Admin\CSuaSliderHome::updatesliderhome/$1');
+$routes->delete('api/deletedhinhanh/(:num)', 'Admin\CThuVienAnh::Deletehinhanh/$1');
+/**crud thongtinduan */
+$routes->post('admin/api/dangthongtinduan', 'Admin\CThongTinDuAn::AddDuAn');        
+$routes->get('thongtinduan/dangthongtinduan/(:num)', 'Admin\CThuVienAnh::EditHinhAnh/$1');
+$routes->get('thuvienanh/gethinhanh/api/gethinhanh/(:num)', 'Admin\CSuaHinhAnh::gethinhanh/$1');
+$routes->post('thuvienanh/gethinhanh/api/edithinhanh/(:num)', 'Admin\CSuaHinhAnh::edithinhanh/$1');
+$routes->delete('api/deletedhinhanh/(:num)', 'Admin\CThuVienAnh::Deletehinhanh/$1');
+/**crud slogan */
+$routes->post('admin/api/dangslogan', 'Admin\CSlogan::AddSlogan');        
+$routes->get('sloganhome/dangsloganhome/(:num)', 'Admin\CThuVienAnh::EditHinhAnh/$1');
 $routes->get('thuvienanh/gethinhanh/api/gethinhanh/(:num)', 'Admin\CSuaHinhAnh::gethinhanh/$1');
 $routes->post('thuvienanh/gethinhanh/api/edithinhanh/(:num)', 'Admin\CSuaHinhAnh::edithinhanh/$1');
 $routes->delete('api/deletedhinhanh/(:num)', 'Admin\CThuVienAnh::Deletehinhanh/$1');
 //tinmoinhat
-$routes->get('api/baivietmoinhat', 'Client\CHome::tinmoinhat');
+$routes->get('api/baivietmoinhat', 'Client\CHome::tinmoinhat'); 
+$routes->get('thuvien/api/getthuvienanh', 'Client\ThuVien\CThuVienAnh::apigetthuvienanh'); 

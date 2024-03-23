@@ -2,6 +2,8 @@
 namespace App\Controllers\Client;
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
+use App\Models\MSliderhome;
+use App\Models\Mthongtinduan;
 class CHome extends BaseController
 {
     public function index(): string
@@ -20,6 +22,12 @@ class CHome extends BaseController
         $iddanhmucatsk = ['501','502','503'];
         $atsk = $baivietmodels->getbaivietDanhMuc($iddanhmucatsk);
         $data['atsk'] = $atsk;
+        //carousel
+        $sliderhome = new MSliderhome;
+        $data['sliderhome'] = $sliderhome->getAllSlider();
+        //thongtinduan
+        $thongtinduan = new Mthongtinduan(); 
+        $data['thongtinduan'] = $thongtinduan->getAllthongtinduan();
         return view('Client/home',$data);
     }
     public function tinmoinhat()

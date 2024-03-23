@@ -7,31 +7,13 @@ $ngayHienTai = date("d-m-Y");
 <div id="default-carousel" class="relative w-full -z-10" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative overflow-hidden rounded-lg height-carousel_home">
-        <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="<?php echo base_url(); ?>assets/img/slide1.jpg"
+        <?php foreach ($sliderhome as $item) : ?>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="<?= $item['anhsliderhome'] ?>"
                 class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="<?php echo base_url(); ?>assets/img/slider10.jpg"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="<?php echo base_url(); ?>assets/img/sxkd.jpg"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="<?php echo base_url(); ?>assets/img/nganhdien.jpg"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="<?php echo base_url(); ?>assets/img/slide3.jpg"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
+        <?php endforeach ?>
+        
     </div>
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -359,72 +341,6 @@ $ngayHienTai = date("d-m-Y");
     <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
         <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
         <div class="col-12 bg-blue-700 qhcd-top">
-            <P class="qhcd-text">THÔNG BÁO</P>
-        </div>
-        <!-- Carousel wrapper -->
-        <div class="relative height-carousel_ttsk overflow-hidden col-12">
-            <?php foreach ($thongbao as $tb): ?>
-                <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
-                    <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
-                            <img class="col-12 height-carousel_ttsk-img" src="<?= $tb['anhrthumnail'] ?>" alt="" />
-                            <div class="absolute left-0 top-0 box-day ">
-                                <?= $tb['ngaydang'] ?>
-                            </div>
-                        </a>
-                        <div class="my-8 mx-4  text-center   ">
-                            <div class="my-8">
-                                <a class="" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
-                                    <h5
-                                        class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
-                                        <p class="text">
-                                            <?= $tb['tieudebaiviet'] ?>
-                                        </p>
-                                    </h5>
-                                </a>
-                            </div>
-                            <a href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>"
-                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                XEM THÊM
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
-        </div>
-        <!-- Slider indicators -->
-
-        <!-- Slider controls -->
-        <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-prev>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 1 1 5l4 4" />
-                </svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
-            <span
-                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="m1 9 4-4-4-4" />
-                </svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
-    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
-        <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
-        <div class="col-12 bg-blue-700 qhcd-top">
             <P class="qhcd-text">AT-SK-SM</P>
         </div>
         <!-- Carousel wrapper -->
@@ -490,6 +406,73 @@ $ngayHienTai = date("d-m-Y");
             </span>
         </button>
     </div>
+    <div id="default-carousel" class="relative px-sm-2 mb-sm-8 col-12 col-sm-6 col-xl-3" data-carousel="slide">
+        <!-- <h1 class="text-center py-3 text-blue-500 bg-gray-500/50 font-bold text-2xl">Sản Xuất Kinh Doanh</h1> -->
+        <div class="col-12 bg-blue-700 qhcd-top">
+            <P class="qhcd-text">THÔNG BÁO</P>
+        </div>
+        <!-- Carousel wrapper -->
+        <div class="relative height-carousel_ttsk overflow-hidden col-12">
+            <?php foreach ($thongbao as $tb): ?>
+                <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
+                    <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
+                            <img class="col-12 height-carousel_ttsk-img" src="<?= $tb['anhrthumnail'] ?>" alt="" />
+                            <div class="absolute left-0 top-0 box-day ">
+                                <?= $tb['ngaydang'] ?>
+                            </div>
+                        </a>
+                        <div class="my-8 mx-4  text-center   ">
+                            <div class="my-8">
+                                <a class="" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
+                                    <h5
+                                        class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                        <p class="text">
+                                            <?= $tb['tieudebaiviet'] ?>
+                                        </p>
+                                    </h5>
+                                </a>
+                            </div>
+                            <a href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>"
+                                class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                XEM THÊM
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+        </div>
+        <!-- Slider indicators -->
+
+        <!-- Slider controls -->
+        <button type="button"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button"
+            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next>
+            <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    
 </div>
 <!-- quanhecodong -->
 <section class="section mb-0 pb-0" style="background-color: #898fa3;">
@@ -501,7 +484,7 @@ $ngayHienTai = date("d-m-Y");
             <div class="section-content row m-0">
 
                 <div class="col-md-4 p-0">
-                    <a href="/vi/tag/thong-tin-tai-lieu-co-dong-20.htm">
+                    <a href="<?php echo base_url() ?>quanhecodong/thongtintailieu">
                         <div class="cate-item" style="background-color: #069dd8">
                             <div class="text-center">
                                 <div class="image">
@@ -514,7 +497,7 @@ $ngayHienTai = date("d-m-Y");
                 </div>
 
                 <div class="col-md-4 p-0">
-                    <a href="/vi/tag/dai-hoi-co-dong-23.htm">
+                    <a href="<?php echo base_url() ?>quanhecodong/daihoicodong">
                         <div class="cate-item" style="background-color: #0063af">
                             <div class="text-center">
                                 <div class="image">
@@ -527,7 +510,7 @@ $ngayHienTai = date("d-m-Y");
                 </div>
 
                 <div class="col-md-4 p-0">
-                    <a href="/vi/tag/bao-cao-tai-chinh-10.htm">
+                    <a href="<?php echo base_url() ?>quanhecodong/baocaotaichinh">
                         <div class="cate-item" style="background-color: #151f41">
                             <div class="text-center">
                                 <div class="image">
@@ -555,77 +538,24 @@ $ngayHienTai = date("d-m-Y");
                             src="<?php echo base_url(); ?>assets/img/icon-thongtinduan.jpg" class="img-fluid">Thông tin
                         dự
                         án</span></h2>
-            </div>
+            </div>  
             <div class="section-content-thongtinduan">
                 <div class="owl-carousel owl-theme">
-                    <div class="item">
+                    <?php foreach ($thongtinduan as $da) : ?>
+                        <div class="item">
                         <div class="project-item">
                             <div class="post-image" style="max-height: 200px; overflow: hidden;">
-                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
+                                <a href="<?= base_url('du-an/' . $da['idthongtinduan']) ?>"
                                     title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
                                     <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
-                                        src="<?php echo base_url(); ?>assets/img/duandakrinh.jpg" style="">
+                                        src="<?= $da['anhrthumnail'] ?>" style=""> 
                                 </a>
                             </div>
-                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">THỦY ĐIỆN
-                                    DARDRINK</a></h3>
+                            <h3 class="title"><a href="<?= base_url('du-an/' . $da['idthongtinduan']) ?>"><?= $da['tieudethongtinduan'] ?></a></h3>
                         </div>
 
                     </div>
-                    <div class="item">
-
-                        <div class="project-item">
-                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
-                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
-                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
-                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
-                                        src="<?php echo base_url(); ?>assets/img/duan.jpg" style="">
-                                </a>
-                            </div>
-                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">NHIỆT ĐIỆN KHÍ NHƠN
-                                    TRẠCH 2</a></h3>
-                        </div>
-
-                    </div>
-                    <div class="item">
-                        <div class="project-item">
-                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
-                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
-                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
-                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
-                                        src="<?php echo base_url(); ?>assets/img/duan.jpg" style="">
-                                </a>
-                            </div>
-                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">NHIỆT ĐIỆN KHÍ CÀ
-                                    MAU</a></h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-item">
-                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
-                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
-                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
-                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
-                                        src="<?php echo base_url(); ?>assets/img/duanthanvungan.jpg" style="">
-                                </a>
-                            </div>
-                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">NHIỆT ĐIỆN KHÍ THAN VŨNG
-                                    ÁN 1 & 2</a></h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-item">
-                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
-                                <a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1"
-                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
-                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
-                                        src="<?php echo base_url(); ?>assets/img/duannuha.jpg" style="">
-                                </a>
-                            </div>
-                            <h3 class="title"><a href="/vi/project/nhiet-dien-khi-ca-mau-1-2-1">THỦY ĐIỆN NỦA HA</a>
-                            </h3>
-                        </div>
-                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>
@@ -715,7 +645,7 @@ $ngayHienTai = date("d-m-Y");
         <div class="thuvien-content col-12 col-sm-5">
             <h1 class="text-center text-2xl mb-2 col-8 mx-auto">THƯ VIỆN VIDEO</h1>
             <div class="thuvienvideo">
-                <iframe width="560" height="300" src="https://www.youtube.com/embed/AoPiLg8DZ3A" frameborder="0"
+                <iframe width="560" height="300" src="https://www.youtube.com/embed/Hkd-YBoEsKQ?si=6dC_XqWMamTf2vTS" frameborder="0"
                     allowfullscreen title="YouTube Video"></iframe>
             </div>
         </div>

@@ -36,12 +36,10 @@
        
         <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-        
          <!-- Custom CSS -->
     <link href="<?php echo base_url()?>Admin/assets/libs/flot/css/float-chart.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="<?php echo base_url()?>Admin/dist/css/style.min.css" rel="stylesheet" />
-    
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/Admin.css">
     <link rel="stylesheet"type="text/css"href="<?php echo base_url()?>Admin/assets/libs/quill/dist/quill.snow.css"/>
     <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" />
@@ -132,9 +130,19 @@
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaTin.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/ThuVienAnh.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangHinhAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangVideo.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaHinhAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaVideo.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaHinhAnh.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoaVideo.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/BieuDo.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SliderHome.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangSliderHome.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaSliderHome.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangThongTinDuAn.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/ThongTinDuAn.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Slogan.js"></script> 
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangSlogan.js"></script>
 <script src="<?php echo base_url()?>ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
     <script src="<?php echo base_url()?>ckfinder/ckfinder.js"></script>

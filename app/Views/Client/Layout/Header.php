@@ -1,7 +1,7 @@
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <a href="<?php echo base_url(); ?>" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="<?php echo base_url(); ?>assets/img/Logo.png" class="h-16" alt="Flowbite Logo" />
+            <img src="<?php echo base_url(); ?>assets/img/Logo_DHC.png" class="h-16" alt="Flowbite Logo" />
             <!-- <span  
                             class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
         </a>
@@ -37,7 +37,7 @@
                 class="menu-bg flex flex-col font-medium p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 ">
                 <li>    
                     <button id="dropdownNavbarLink6" data-dropdown-toggle="dropdownNavbar6"
-                        class="flex items-center justify-between w-full text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">GIỚI THIỆU
+                        class="flex items-center boxshadow justify-between w-full text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">GIỚI THIỆU<i class="fa-solid fa-angle-down"></i>
                       </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar6"
@@ -63,12 +63,20 @@
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông
                                     tin doanh nghiệp</a>
                             </li>
+                            <li>
+                                <a href="<?php echo base_url() ?>gioithieu/nganhnghekinhdoanh"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ngành Nghề Kinh Doanh</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url() ?>gioithieu/lichsu"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Lịch Sử Hình Thành Và Phát Triển</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <button id="dropdownNavbarLink5" data-dropdown-toggle="dropdownNavbar5"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">TIN TỨC & SỰ KIỆN
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">TIN TỨC & SỰ KIỆN<i class="fa-solid fa-angle-down"></i>
                         </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar5"
@@ -99,7 +107,7 @@
                 </li>
                 <li>
                     <button id="dropdownNavbarLink4" data-dropdown-toggle="dropdownNavbar4"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">HOẠT ĐỘNG SX-KD
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">HOẠT ĐỘNG SX-KD<i class="fa-solid fa-angle-down"></i>
                         </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar4"
@@ -125,7 +133,7 @@
                 </li>
                 <li>
                     <button id="dropdownNavbarLink3" data-dropdown-toggle="dropdownNavbar3"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">THÔNG BÁO
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">THÔNG BÁO<i class="fa-solid fa-angle-down"></i>
                        </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar3"
@@ -151,7 +159,7 @@
                 </li>
                 <li>
                     <button id="dropdownNavbarLink2" data-dropdown-toggle="dropdownNavbar2"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">AT-SK-MT
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">AT-SK-MT<i class="fa-solid fa-angle-down"></i>
                        </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar2"
@@ -177,35 +185,31 @@
                 </li>
                 <li>
                     <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">QUAN HỆ CỔ ĐÔNG
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">QUAN HỆ CỔ ĐÔNG<i class="fa-solid fa-angle-down"></i>
                         </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar"
                         class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                <a href="<?php echo base_url() ?>quanhecodong/thongtintailieu"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thông Tin Tài Liệu Cổ Đông</a>
                             </li>
                             <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                <a href="<?php echo base_url() ?>quanhecodong/daihoicodong"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Đại Hội Cổ Đông</a>
                             </li>
                             <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                <a href="<?php echo base_url() ?>quanhecodong/baocaotaichinh"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Báo Cáo Tài Chính Thường Niên</a>
                             </li>
                         </ul>
-                        <div class="py-1">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
-                                out</a>
-                        </div>
+                       
                     </div>
                 </li>
                 <li>
                     <button id="dropdownNavbarLink1" data-dropdown-toggle="dropdownNavbar1"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">THU VIEN
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">THƯ VIỆN<i class="fa-solid fa-angle-down"></i>
                         </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar1"
@@ -213,38 +217,26 @@
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             <li>
                                 <a href="<?php echo base_url() ?>thuvien/thuvienanh"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thu Vien Anh</a>
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thư Viện Ảnh</a>
                             </li>
                             <li> 
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thu Vien Video</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">So Tay Van Hoa</a>
+                                <a href="<?php echo base_url() ?>thuvien/thuvienvideo"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thư Viện Video</a>
                             </li>
                         </ul>
                     </div>
                 </li>
                 <li>
                     <button id="dropdownNavbarLink8" data-dropdown-toggle="dropdownNavbar8"
-                        class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">LIEN HE
+                        class="flex items-center boxshadow justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">LIÊN HỆ<i class="fa-solid fa-angle-down"></i>
                         </button>
                     <!-- Dropdown menu -->
                     <div id="dropdownNavbar8"
                         class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="<?php echo base_url() ?>thuvien/thuvienanh"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thu Vien Anh</a>
-                            </li>
-                            <li> 
-                                <a href="#"  
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Thu Vien Video</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">So Tay Van Hoa</a>
+                                <a href="<?php echo base_url() ?>lienhe"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Liên Hệ</a>
                             </li>
                         </ul>
                     </div>

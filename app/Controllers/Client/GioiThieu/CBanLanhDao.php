@@ -5,6 +5,7 @@ class CBanLanhDao extends BaseController
 {
     public function index(): string
     {
+        
         return view('Client/GioiThieu/BanLanhDao');
     }
 }

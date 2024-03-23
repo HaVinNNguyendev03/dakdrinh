@@ -59,6 +59,9 @@
                                         <option>Chọn Danh Mục</option>
                                         <optgroup label="Giới Thiệu">
                                             <option value="101">Thông Tin Doanh Nghiệp</option>
+                                            <option value="102">Ngành Nghề Kinh Doanh</option>
+                                            <option value="103">Lịch sử hình thành & phát triển</option>
+                                            <option value="104">Dự Án</option>
                                         </optgroup>
                                         <optgroup label="Tin Tức Sự Kiện">
                                             <option value="201">Hoạt Động Cộng Đồng</option>

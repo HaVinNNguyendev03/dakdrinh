@@ -66,7 +66,7 @@
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="form-wizard.html" class="sidebar-link"
+                    <a href="<?php echo base_url() ?>admin/thuvienvideo" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu">Thư Viện Video</span></a
                     >
@@ -93,25 +93,25 @@
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="form-basic.html" class="sidebar-link"
+                    <a href="<?php echo base_url() ?>admin/sliderhome" class="sidebar-link"
                       ><i class="mdi mdi-note-outline"></i
                       ><span class="hide-menu">Slider Home</span></a
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="form-wizard.html" class="sidebar-link"
+                    <a href="<?php echo base_url() ?>admin/thongtinduan" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu">Thông Tin Dự Án</span></a
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="form-wizard.html" class="sidebar-link"
+                    <a href="<?php echo base_url() ?>admin/sloganhome" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu">Slogain Home</span></a
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="form-wizard.html" class="sidebar-link"
+                    <a href="<?php echo base_url() ?>admin/logoweb" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu">Logo & tên Web</span></a
                     >

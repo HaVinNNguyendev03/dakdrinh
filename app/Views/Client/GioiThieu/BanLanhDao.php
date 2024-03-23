@@ -1,21 +1,28 @@
 <?= $this->extend('Client/Layout/Base') ;?>
 <?= $this->section('DakDrinh') ;?>
 <div class="col-12 wapper px-2 pt-2">
-    <div class="wapper-content px-2 col-10 mx-auto">
+    <div class="wapper-content px-2 col-12 col-md-10 mx-auto">
         <div class="wapper-content-title">Giới Thiệu</div>
         <div class="wapper-content-tab">
-            <ul class="tab-ul d-flex">
+            <ul class="tab-ul d-md-flex">
                 <li class="my-4">
                     <a href="<?php echo base_url() ?>gioithieu/gioithieuchung" data-toggle="tab">Giới Thiệu Chung</a>
                 </li>
-                <li class="mx-4 my-4">
+                <li class="mx-md-4 my-4">
                     <a href="<?php echo base_url() ?>gioithieu/banlanhdao" data-toggle="tab">Ban Lãnh Đạo</a>
                 </li>
-                <li class="mx-4 my-4">
+                <li class="mx-md-4 my-4">
                     <a href="<?php echo base_url() ?>gioithieu/duan" data-toggle="tab">Dự Án</a>
                 </li>
+                <li class="mx-md-4 my-4">
+                    <a href="<?php echo base_url() ?>gioithieu/thongtindoanhnghiep" data-toggle="tab">Thông Tin Doanh
+                        Nghiệp</a>
+                </li>
+                <li class="mx-md-4 my-4">
+                    <a href="<?php echo base_url() ?>gioithieu/nganhnghekinhdoanh" data-toggle="tab">Ngành Nghề Kinh Doanh</a>
+                </li>
                 <li class="my-4">
-                    <a href="<?php echo base_url() ?>gioithieu/thongtindoanhnghiep" data-toggle="tab">Thông Tin Doanh Nghiệp</a>
+                    <a href="<?php echo base_url() ?>gioithieu/lichsu" data-toggle="tab">Lịch Sử Hình Thành Và Phát Triển</a>
                 </li>
             </ul>
         </div>

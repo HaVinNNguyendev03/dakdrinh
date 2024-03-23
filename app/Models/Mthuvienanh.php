@@ -59,6 +59,19 @@ class Mthuvienanh extends Model
     {
         return $this->delete($id);
     }
+        public function apigetthuvienanh(){
+            $query = $this->db->query("
+            SELECT *
+            FROM tbthuvienanh
+            WHERE danhmucnamanh IN (
+                SELECT danhmucnamanh    
+                FROM tbthuvienanh
+                GROUP BY danhmucnamanh
+            )
+            ORDER BY danhmucnamanh ASC
+        ");
+        return $query->getResultArray();
+        }
     public function groupByDanhMucNam()
     {
         $query = $this->db->query("

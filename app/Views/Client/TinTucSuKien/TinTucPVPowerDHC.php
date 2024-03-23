@@ -1,33 +1,33 @@
 <?= $this->extend('Client/Layout/Base') ;?>
 <?= $this->section('DakDrinh') ;?>
-<div class="col-12 wapper px-2 pt-5">
-    <div class="wapper-content px-2 col-10 mx-auto">
+<div class="col-12 wapper px-2 pt-2">
+    <div class="wapper-content px-2 col-12 col-md-10 mx-auto">
         <div class="wapper-content-title">TIN TỨC – SỰ KIỆN</div>
         <div class="wapper-content-tab">
-            <ul class="tab-ul d-flex">
+            <ul class="tab-ul d-md-flex">
                 <li class="my-4">
-                    <a href="<?php echo base_url() ?>tintuc/hoatdongcongdong" data-toggle="tab">Hoat Dong Cong Dong</a>
+                    <a href="<?php echo base_url() ?>tintuc/hoatdongcongdong" data-toggle="tab">Hoạt Động Cộng Đồng</a>
                 </li>
-                <li class="mx-4 my-4">
-                    <a href="<?php echo base_url() ?>tintuc/hoatdongnganhdien" data-toggle="tab">Hoat Dong Nganh
-                        Dien</a>
+                <li class="mx-md-4 my-4">
+                    <a href="<?php echo base_url() ?>tintuc/hoatdongnganhdien" data-toggle="tab">Hoạt Động Ngành Điện</a>
                 </li>
-                <li class="mx-4 my-4">
-                    <a href="<?php echo base_url() ?>tintuc/tintucpvpower" data-toggle="tab">Tin Tuc PVPower</a>
+                <li class="mx-md-4 my-4">
+                    <a href="<?php echo base_url() ?>tintuc/tintucpvpower" data-toggle="tab">Tin Tức PVPower</a>
                 </li>
                 <li class="my-4">
-                    <a href="<?php echo base_url() ?>tintuc/tintucpvpowerdhc" data-toggle="tab">Tin Tuc PVPowerDHC</a>
+                    <a href="<?php echo base_url() ?>tintuc/tintucpvpowerdhc" data-toggle="tab">Tin Tức PVPowerDHC</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+
 <!-- end tab -->
 <!-- content -->
-<div class="col-sm-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
-    <div class="row col-12 align-items-start">
+<div class="col-12 col-xl-10 d-sm-flex flex-wrap p-sm-2 mx-auto my-2">
+    <div class="row g-0 g-xl-3 col-12 align-items-start">
         <!-- Ảnh lớn bên trái -->
-        <div class="col-md-8" style="height: 100%;">
+        <div class="col-12 col-lg-8">
             <?php if (!empty($baiviet)): ?>
                 <a class="card px-2 " href="<?= base_url('bai-viet/' . $baiviet[0]['idbaiviet']) ?>">
                     <img style="max-height: 500px;" class="tintuc-imglon card-img" src="<?= $baiviet[0]['anhrthumnail'] ?>"
@@ -50,7 +50,7 @@
                 <?php if (!empty($baiviet)): ?>
                     <?php foreach ($baiviet as $bv): ?>
                         <a class="card col-6 px-2 my-2" href="<?= base_url('bai-viet/' . $bv['idbaiviet']) ?>">
-                            <img style="height: 259px;" class="tintuc-imglon card-img" src="<?= $bv['anhrthumnail'] ?>" alt="Card image">
+                            <img class="tintuc-imglon card-img" src="<?= $bv['anhrthumnail'] ?>" alt="Card image">
                             <div class="card-content">
                                 <h5 class="card-title title-baiviet">
                                     <?= $bv['tieudebaiviet'] ?>
@@ -69,60 +69,31 @@
             </div>
         </div>
         <!-- 4 ảnh nhỏ và nội dung bên trái -->
-        <div class="col-md-4 wapper-newtintucsukien py-4">
+        <div class="col-12 col-lg-4 wapper-newtintucsukien py-4">
             <div class="col-lg-12 col-md-10 new-header-tintucsukien">
                 <span class="title">Tin Mới Nhất</span>
             </div>
-            <div class="row align-items-start">
+            <div class="row align-items-start m-0">
+                <?php foreach ($baivietmoinhat as $bv): ?>
+                    <a href="<?= base_url('bai-viet/' . $bv->idbaiviet) ?>">
+                        <div class="col-md-12 d-flex flex-row align-items-center py-2" style="padding-top: 0px !important;">
+                            <div class="col-4 pagedetail-componet-img"><img src="<?= $bv->anhrthumnail; ?>" class=""
+                                    alt="Thumbnail"></div>
+                            <div class="col-8 m-2">
+                                <h5 class="card-title-pagedetail text">
+                                    <?= $bv->tieudebaiviet; ?>
+                                </h5>
+                                <p class="card-text">Ngày Tạo
+                                    <?= $bv->ngaytao; ?>
+                                </p>
+                            </div>
 
-                <!-- item 1 -->
-                <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
-                    <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
-                            class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy
-                            bay</h5>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
-                    <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
-                            class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy
-                            bay</h5>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
-                    <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
-                            class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy
-                            bay</h5>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
-                    <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
-                            class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy
-                            bay</h5>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-                <div class="col-md-12 d-flex flex-row align-items-center py-2 " style="padding-top: 0px !important;">
-                    <div class="col-4 pagedetail-componet-img"><img src="<?php echo base_url(); ?>assets/img/anhnho.jpg"
-                            class="" alt="Small Image 1"></div>
-                    <div class="col-8 m-2">
-                        <h5 class="card-title-pagedetail">BSR tối ưu công suất phân xưởng, đẩy mạnh sản xuất xăng máy
-                            bay</h5>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>  
-                </div>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
 </div>
-<!-- pagination --><?= $this->endSection() ;?>
+<!-- pagination -->
+<?= $this->endSection() ;?>

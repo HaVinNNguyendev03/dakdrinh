@@ -10,10 +10,11 @@ class CHome extends BaseController
         $pager =  \Config\Services::pager();
         $page = $this->request->getVar('page') ?? 1; // Lấy trang hiện tại từ query string, mặc định là 1
         $perPage = 4; // Số bài viết trên mỗi trang
-
+        $sobaiviet = 5;
         // Lấy dữ liệu bài viết phân trang
         $iddanhmuc = [201,202,203,204];
         $baiviets = $baivietModel->getBaivietByDanhMucsPagianted($iddanhmuc, $page, $perPage);
+        $result =  $baivietModel->getTinMoiNhat($sobaiviet);
         $total = $baivietModel->whereIn('iddanhmuc', $iddanhmuc)->countAllResults();
         $data = [
             'baiviet' => $baiviets,
