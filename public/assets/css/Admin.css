@@ -36,3 +36,13 @@ th{
   width: 200px !important;
   margin: auto;
 }
+#SuaSlogan > a{
+  color: #fff !important;
+}
+.boxwarning{
+  background-color: yellow;
+  color: red;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}

@@ -1,0 +1,190 @@
+ERROR - 2024-02-29 00:22:36 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Admin\CBieuDo.php(57): CodeIgniter\BaseModel->first()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Admin\CBieuDo->getdata()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CBieuDo))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Admin\CBieuDo.php(57): CodeIgniter\BaseModel->first()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Admin\CBieuDo->getdata()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CBieuDo))
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#11 {main}
+CRITICAL - 2024-02-29 00:22:36 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbbieudothuydien`
+ORDER BY `idbieudothuydien` DESC
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Admin\CBieuDo.php(57): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\CBieuDo->getdata()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CBieuDo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-02-29 13:52:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+CRITICAL - 2024-02-29 13:52:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:', [...], false)
+ 3 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+ 6 APPPATH\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-02-29 13:53:14 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+CRITICAL - 2024-02-29 13:53:14 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:', [...], false)
+ 3 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+ 6 APPPATH\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-02-29 13:53:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+CRITICAL - 2024-02-29 13:53:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:', [...], false)
+ 3 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+ 6 APPPATH\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(15): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')

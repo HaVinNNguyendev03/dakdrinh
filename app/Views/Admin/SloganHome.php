@@ -36,16 +36,7 @@
         <!-- ============================================================== -->
         <!-- Start Page Content -->
         <!-- ============================================================== -->
-        <div class="row">
-            <div class="col-md-12">
-            </div>
-            <div class="card-button text-right">
-                <a class="btn text-white" data-mdb-ripple-init="" style="background-color: #55acee;"
-                    href="<?php echo base_url() ?>admin/dangsloganhome" role="button">
-                    Thêm Slogan
-                </a>
-            </div>
-        </div>
+       
         <table id="exampleslogan" class="display" style="width:100%">
             <thead>
                 <tr>
@@ -53,11 +44,10 @@
                     <th>Nội Dung Slogan</th>
                     <th>Xem</th>
                     <th>Sửa</th>
-                    <th>Xóa</th>
                 </tr>
             </thead>
             <tbody>
-            <?php foreach ($slogan as $sg): ?>
+                <?php foreach ($slogan as $sg): ?>
                     <tr>
                         <td>
                             <?= $sg['idslogan'] ?>
@@ -65,27 +55,26 @@
                         <td>
                             <?= $sg['noidungslogan'] ?>
                         </td>
-                        <td><a class="btn text-white" data-mdb-ripple-init style="background-color: #55acee;" role="button">
+                        <td>
+                            <a class="btn text-white" data-mdb-ripple-init style="background-color: #55acee;" role="button">
                                 Xem
-                            </a></td>
-                        <td><a class="btn text-white" href="<?= base_url('sliderhome/getsliderhome/' . $sg['idslogan']) ?>"
+                            </a>
+                        </td>
+                        <td>
+                            <a class="btn text-white" href="<?= base_url('sloganhome/getsloganhome/' . $sg['idslogan']) ?>"
                                 data-mdb-ripple-init style="background-color: #ffac44;" role role="button">
                                 Sửa
-                            </a></td>
-                        <td><a class="btn Hinhanh-xoa text-white" data-idthuvienanh= "<?= $sg['idslogan'] ?>" style="background-color: #dd4b39;"
-                                role="button">
-                                Xóa
-                            </a></td>
+                            </a>
+                        </td>
                     </tr>
                 <?php endforeach ?>
             </tbody>
             <tfoot>
                 <tr>
-                <th>id</th>
+                    <th>id</th>
                     <th>Nội Dung Slogan</th>
                     <th>Xem</th>
                     <th>Sửa</th>
-                    <th>Xóa</th>
                 </tr>
             </tfoot>
         </table>

@@ -1,3 +1,39 @@
+
+/* menu */
+#dropdownNavbar {
+    display: none;
+    position: absolute !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    transform: translate3d(-30px, 30px, 50px) !important;
+}
+#dropdownNavbarLink:hover + #dropdownNavbar,
+#dropdownNavbar:hover {
+    display: block;
+}
+/* #dropdownNavbar5 {
+    display: none;
+    position: absolute !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    transform: translate3d(-30px, 30px, 50px) !important;
+}
+#dropdownNavbarLink5:hover + #dropdownNavbar5,
+#dropdownNavbar5:hover {
+    display: block;
+}
+#dropdownNavbar4 {
+    display: none;
+    position: absolute !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    transform: translate3d(-30px, 30px, 50px) !important;
+}
+
+#dropdownNavbarLink4:hover + #dropdownNavbar4,
+#dropdownNavbar4:hover {
+    display: block;
+} */
 .inline-gallery-container {
   
     height: 500px;
@@ -66,7 +102,7 @@
         font-size: 20px;
         font-weight: 700;
         display: -webkit-box !important;
-        -webkit-line-clamp: 1; /* Số dòng hiển thị */
+        -webkit-line-clamp: 3; /* Số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -84,17 +120,17 @@
 
     .qhcd-text {
         text-align: center;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 600;
         color: aliceblue;
-    }
+    }   
 
     .qhcd-top {
-        min-height: 54px;
+        min-height: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
-
+        background-color: #151f41 !important;
     }
 
     b {
@@ -124,7 +160,7 @@
 
     .text {
         display: -webkit-box;
-        -webkit-line-clamp: 3; /* Số dòng hiển thị */
+        -webkit-line-clamp: 1; /* Số dòng hiển thị */
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -475,10 +511,11 @@
     }
     .height-carousel_ttsk-img{
         max-height: 200px  !important;
+        height: 200px !important;
     }
     .boxshadow{
         box-shadow: none !important;
-    }
+    }   
     /* lienhe */
     .c_input{
         border: none !important;

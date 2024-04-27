@@ -6,7 +6,6 @@ $(document).ready(function() {
         success: function(response) {
             var labels = [];
             var data = [];
-    
             if (response) {
                 // Thêm dữ liệu vào mảng labels
                 var label = "Sản Lượng ngày " + response.ngaynhaplieu;
@@ -41,12 +40,12 @@ $(document).ready(function() {
             nambieudo.textContent = nambieudo.textContent.replace('2023',namnhaplieuValue);
             // Khởi tạo biểu đồ
             var lineChart = new Chart(document.getElementById('lineChart').getContext('2d'), {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: labels,
                     datasets: [{
                         label: 'Dữ liệu',
-                        data: data,
+                        data: data, 
                         borderColor: 'rgba(75, 192, 192, 1)',
                         borderWidth: 2,
                         fill: false
@@ -117,5 +116,41 @@ $(document).ready(function() {
     window.onload = hideElement;
     window.onresize = hideElement;
 });
+// // Xử lý sự kiện hover
+// // Xử lý sự kiện hover
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Lấy tất cả các button dropdown
+//     var dropdowns = document.querySelectorAll('.dropdown-trigger');
+
+//     // Duyệt qua từng button dropdown
+//     dropdowns.forEach(function (dropdown) {
+//         // Thêm sự kiện hover vào mỗi button dropdown
+//         dropdown.addEventListener('mouseover', function () {
+//             // Lấy id của dropdown content tương ứng
+//             var dropdownContentId = this.getAttribute('id').replace('dropdownNavbarLink', 'dropdownNavbar');
+
+//             // Lấy dropdown content tương ứng
+//             var dropdownContent = document.getElementById(dropdownContentId);
+
+//             // Hiển thị dropdown content và áp dụng CSS
+//             dropdownContent.style.display = 'block';
+//             dropdownContent.style.position = 'absolute';
+//             dropdownContent.style.top = 'auto';
+//             dropdownContent.style.right = 'auto';
+//             dropdownContent.style.bottom = 'auto';
+//             dropdownContent.style.left = 'auto';
+//             dropdownContent.style.transform = 'translate3d(-30px, 30px, 50px)';
+//         });
+
+//         // Thêm sự kiện mouseout để ẩn dropdown content khi rời khỏi button
+//         dropdown.addEventListener('mouseout', function () {
+//             // Lấy id của dropdown content tương ứng
+//             var dropdownContentId = this.getAttribute('id').replace('dropdownNavbarLink', 'dropdownNavbar');
+
+//             // Ẩn dropdown content
+//             document.getElementById(dropdownContentId).style.display = 'none';
+//         });
+//     });
+// });
 
 

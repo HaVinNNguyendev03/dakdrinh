@@ -3,9 +3,10 @@ import lightGallery from "https://cdn.skypack.dev/lightgallery@2.4.0";
 
 import lgZoom from "https://cdn.skypack.dev/lightgallery@2.4.0/plugins/zoom";
 import lgThumbnail from "https://cdn.skypack.dev/lightgallery@2.4.0/plugins/thumbnail";
+$(document.querySelector("#thuvienanhslider")).ready(function() {
 $.ajax({
     type: 'GET',
-    url: 'api/getthuvienanh',
+    url: '/api/getthuvienanh',
     dataType: 'json',
     contentType: false,
     processData: false,
@@ -13,6 +14,7 @@ $.ajax({
         console.log('Dữ liệu:', response.data);
         var keys = Object.keys(response.data);
         let numberOfArrays = keys.length;
+         // Tạo thẻ div
         for (var i = 1; i <= numberOfArrays; i++) {
             let box = document.createElement("div");
             box.className = "col-5 mx-auto container-block";
@@ -23,10 +25,8 @@ $.ajax({
             div.className = "inline-gallery-container";
             document.getElementById("thuvienanhbox" + i).appendChild(div);
             var currentArrayData = response.data[keys[i - 1]];
-            // Tạo thẻ div cho mỗi hình ảnh trong mảng con
             for (var j = 0; j < 1; j++) {
                 var currentItemData = currentArrayData[j];
-                // Tạo thẻ div cho phần tựa đề   
                 var titleDiv = document.createElement("div");
                 titleDiv.className = "container-top";
                 titleDiv.innerHTML = `<h1>Danh Mục Ảnh Năm ${currentArrayData[0].danhmucnamanh}</h1>`;
@@ -83,7 +83,8 @@ $.ajax({
         }
 
     },
-    error: function (error) {
-        console.log('Lỗi Ajax: ', error);
+    error: function (xhr, status, error) {
+        console.log('Lỗi Ajax: ', xhr.responseText);
     }
+});
 });

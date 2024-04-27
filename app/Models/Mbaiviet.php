@@ -9,12 +9,16 @@ class Mbaiviet extends Model{
     
     protected $useAutoIncrement = true;
     
-    protected $allowedFields = ['iddanhmuc', 'iduser', 'tomtatbaiviet', 'anhrthumnail','tieudebaiviet','noidungbaiviet','ngaytao','ngaydang','tennguoidung'];
+    protected $allowedFields = ['iddanhmuc', 'iduser', 'tomtatbaiviet', 'anhrthumnail','tieudebaiviet','noidungbaiviet','ngaytao','ngaydang','tennguoidung','tinnoibat','idmenu','tieudeurl'];
     
     public function getbaiviet($id)
     {
         return $this->find($id);
     }
+    public function findIdDanhMuc($idDanhMuc)
+{
+    return $this->where('iddanhmuc', $idDanhMuc)->first();
+}
     public function addbaiviet($data)
     {
         return $this->insert($data);
@@ -29,14 +33,14 @@ class Mbaiviet extends Model{
     {
         return $this->delete($id);
     }
-    public function getbaivietByDanhMuc($iddanhmuc)
+    public function getbaivietByMenu($idmenu)
 {
-    return $this->where('iddanhmuc', $iddanhmuc)->orderBy('idbaiviet', 'DESC')->findAll();
+    return $this->where('idmenu', $idmenu)->orderBy('idbaiviet', 'DESC')->findAll();
 }
 public function getBaivietByDanhMucPaginated($iddanhmuc, $page, $perPage)
     {
         return $this->where('iddanhmuc', $iddanhmuc)
-                    ->orderBy('idbaiviet', 'DESC')
+                    ->orderBy('ngaytao', 'DESC')
                     ->paginate($perPage, 'trangbaiviet', $page);
     }
     public function getBaivietByDanhMucsPagianted($iddanhmuc, $page, $perPage)
@@ -46,7 +50,7 @@ public function getBaivietByDanhMucPaginated($iddanhmuc, $page, $perPage)
                     ->paginate($perPage, 'trangbaiviet', $page);
     }
     public function getTinMoiNhat($sobaiviet){
-        return $this->query('SELECT * FROM tbbaiviet ORDER BY ngaytao DESC LIMIT ?',[$sobaiviet])->getResult();
+        return $this->query('SELECT * FROM tbbaiviet WHERE tinnoibat = ? ORDER BY ngaytao DESC LIMIT ?', [1, $sobaiviet])->getResult();
     }
     public function getbaivietDanhMuc($iddanhmuc)
     {
@@ -54,5 +58,26 @@ public function getBaivietByDanhMucPaginated($iddanhmuc, $page, $perPage)
         ->orderBy('ngaytao', 'DESC')
         ->limit(5)
         ->find();
+    }
+    public function getbaivietOneDanhMuc($iddanhmuc)
+    {
+        return $this->where('iddanhmuc', $iddanhmuc)
+        ->orderBy('ngaytao', 'DESC')
+        ->limit(5)
+        ->find();
+    }
+    public function getbaivietMenu($idmenu)
+    {
+        return $this->where('idmenu', $idmenu)
+        ->orderBy('ngaytao', 'DESC')
+        ->limit(5)
+        ->find();
+    }
+        public function getIdmenuByIddanhmuc($iddanhmuc)
+        {
+            return $this->select('idmenu')
+                        ->where('iddanhmuc', $iddanhmuc)
+                        ->orderBy('idmenu', 'DESC')
+                        ->first();
     }
 }

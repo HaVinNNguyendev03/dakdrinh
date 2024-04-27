@@ -8,7 +8,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <?php foreach ($cauhinhweb as $item) : ?>
+        <title><?= $item['tenweb'] ?></title>
+    <link rel="icon" href="<?= $item['anhicon'] ?>" />
+    <?php endforeach ?>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -79,7 +82,6 @@
         <?= $this->include('Admin/Layout/Footer') ;?>
      </footer>
     </div>
-     
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -138,11 +140,33 @@
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/BieuDo.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/SliderHome.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangSliderHome.js"></script>
-    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaSliderHome.js"></script>
-    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangThongTinDuAn.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaSliderHome.js"></script> 
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Xoasliderhome.js"></script>   
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SliderLogo.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangSliderLogo.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaSliderLogo.js"></script> 
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/XoasliderLogo.js"></script>  
+    <!-- menu -->
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Menu.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Themmenu.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Suamenu.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Xoamenu.js"></script>
+    <!-- danh muc -->
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Submenu.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Sualogonameweb.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Themsubmenu.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Xoadanhmuc.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Suadanhmuc.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/ThongTinDuAn.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangThongTinDuAn.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaThongTinDuAn.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Xoathongtinduan.js"></script>
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/Slogan.js"></script> 
     <script type="module" src="<?php echo base_url();?>assets/js/Admin/DangSlogan.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/SuaSlogan.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/slidertexthome.js"></script> 
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Dangslidertexthome.js"></script>
+    <script type="module" src="<?php echo base_url();?>assets/js/Admin/Suaslidertexthome.js"></script>
 <script src="<?php echo base_url()?>ckeditor/ckeditor.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>assets/js/Admin/DangTin.js"></script>
     <script src="<?php echo base_url()?>ckfinder/ckfinder.js"></script>

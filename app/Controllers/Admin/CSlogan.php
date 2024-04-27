@@ -2,17 +2,22 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\MSlogan;
+use App\Services\CauhinhwebService;
 class CSlogan extends BaseController
 {
     public function index(): string
     {
         $slogan = new MSlogan();
         $data['slogan'] = $slogan->getAllslogan();
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/SloganHome',$data);
     }
     public function ViewAddSlogan(): string
     {
-        return view('Admin/ThemSlogan');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/ThemSlogan',$data);
     }
     public function AddSlogan(){
         $slogan = new MSlogan();
@@ -27,8 +32,10 @@ class CSlogan extends BaseController
     public function ViewEditSlogan($id)
     {
         $slogan = new MSlogan();
-        $data[''] =  $slogan->find($id);
-        return view('Admin/SuaSliderHome',$data);
+        $data['slogan'] =  $slogan->find($id);
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/Suasloganhome',$data);
     }
     public function DeleteSlogan($id)
     {

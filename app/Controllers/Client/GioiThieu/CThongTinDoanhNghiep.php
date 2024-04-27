@@ -3,6 +3,8 @@ namespace App\Controllers\Client\GioiThieu;
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
 use CodeIgniter\Database\SQLite3\Result;
+use App\Services\CauhinhwebService;
+
 class CThongTinDoanhNghiep extends BaseController
 {
     public function index(): string
@@ -24,6 +26,8 @@ class CThongTinDoanhNghiep extends BaseController
             'perPage' => $perPage, // Truyền số bài viết trên mỗi trang
             'total' => $total, // Truyền tổng số bài viết
         ];
+        $cauhinhwebService = service('cauhinhwebService');
+$data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Client/GioiThieu/ThongTinDoanhNghiep', $data);
     }
 }

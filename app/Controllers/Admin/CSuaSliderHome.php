@@ -4,11 +4,14 @@
 
 use App\Controllers\BaseController;
 use App\Models\MSliderhome;
+use App\Services\CauhinhwebService;
 class CSuaSliderHome extends BaseController
 {
     public function index(): string
     {
-        return view('Admin/Home');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/Home',$data);
     }
     public function getsliderhome($idsliderhome)
     {
@@ -60,5 +63,14 @@ class CSuaSliderHome extends BaseController
             return base_url('uploads/' . $newName); // Đường dẫn đến ảnh
         }
         return null; // Trả về null nếu có lỗi
+    }
+    public function xoasliderhome($idsliderhome)
+    {
+        $sliderhomeModel = new MSliderhome();
+        if ($sliderhomeModel->deleteslider($idsliderhome)) {
+            return $this->response->setJSON(['success' => true]);
+        } else {
+            return $this->response->setStatusCode(500)->setBody('Xóa thất bại');
+        }
     }
 }

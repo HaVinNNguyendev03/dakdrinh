@@ -12,16 +12,17 @@
 }
 </style>
 <div class="col-12 wapper px-2 pt-2">
-    <div class="wapper-content px-2 col-10 mx-auto">
-        <div class="wapper-content-title">Thư Viện</div>
+    <div class="wapper-content px-2 col-12 col-md-10 mx-auto">
+        <?php foreach ($menu as $mn) : ?>
+            <div class="wapper-content-title"><?= $mn['tenmenu'] ?></div> 
+        <?php endforeach ?>
         <div class="wapper-content-tab">
-            <ul class="tab-ul d-flex">
+            <ul class="tab-ul d-md-flex">
+                <?php foreach ($danhmuc as $item) : ?>
                 <li class="my-4">
-                    <a href="<?php echo base_url() ?>thuvien/thuvienanh" data-toggle="tab">Thư Viện Ảnh</a>
+                    <a href="<?= base_url() . 'menu/' . $item['urldanhmuc'] . '/' . $item['iddanhmuc']; ?>" data-toggle="tab"><?= $item['tendanhmuc'] ?></a>
                 </li>
-                <li class="mx-4 my-4">
-                    <a href="<?php echo base_url() ?>gioithieu/banlanhdao" data-toggle="tab">Thư Viện Video</a>
-                </li>
+                <?php endforeach ?>
             </ul>
         </div>
     </div>

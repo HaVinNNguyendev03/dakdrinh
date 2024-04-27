@@ -7,13 +7,12 @@ $ngayHienTai = date("d-m-Y");
 <div id="default-carousel" class="relative w-full -z-10" data-carousel="slide">
     <!-- Carousel wrapper -->
     <div class="relative overflow-hidden rounded-lg height-carousel_home">
-        <?php foreach ($sliderhome as $item) : ?>
+        <?php foreach ($sliderhome as $item): ?>
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="<?= $item['anhsliderhome'] ?>"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-        </div>
+                <img src="<?= $item['anhsliderhome'] ?>"
+                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
         <?php endforeach ?>
-        
     </div>
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
@@ -30,7 +29,7 @@ $ngayHienTai = date("d-m-Y");
     </div>
     <!-- Slider controls -->
     <button type="button"
-        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow"
         data-carousel-prev>
         <span
             class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -42,9 +41,8 @@ $ngayHienTai = date("d-m-Y");
             <span class="sr-only">Previous</span>
         </span>
     </button>
-    <button type="button"
-        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow
+        " data-carousel-next>
         <span
             class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
@@ -61,54 +59,37 @@ $ngayHienTai = date("d-m-Y");
     <div class="row align-items-center h-100">
         <div class="container rounded">
             <div class="slider">
-                <div class="logos">
+                <?php foreach ($slidertexthome as $slth) : ?>
+                    <div class="logos">
                     <div class="logo-nhan">
                         <div class="logo-text">
-                            <p>Chào Mừng Năm Mới Giáp Thìn 2024</p>
+                        <?= $slth['textsliderhome'] ?>
                         </div>
-                        <!-- <div class="logo-text">
-                            <p>Kỷ Niệm Ngày Thủy Điện Dakdrinh Thành Lập</p>
-                        </div>
-                        <div class="logo-text">
-                            <p>Mực Nước Ngày <?php echo $ngayHienTai; ?> là 200 </p>
-                        </div>
-                        <div class="logo-text">
-                            <p>Chất Lượng-An Toàn-Hiệu Quả-Phát Triển</p>
-                        </div> -->
                     </div>
                 </div>
-                <div class="logos">
+                <?php endforeach ?>
+                <?php foreach ($slidertexthome as $slth) : ?>
+                    <div class="logos">
                     <div class="logo-nhan">
                         <div class="logo-text">
-                            <p>Chào Mừng Năm Mới Giáp Thìn 2024</p>
+                        <?= $slth['textsliderhome'] ?>
                         </div>
-                        <!-- <div class="logo-text">
-                            <p>Kỷ Niệm Ngày Thủy Điện Dakdrinh Thành Lập</p>
-                        </div>
-                        <div class="logo-text">
-                            <p>Mực Nước Ngày <?php echo $ngayHienTai; ?> là 200 </p>
-                        </div>
-                        <div class="logo-text">
-                            <p>Chất Lượng-An Toàn-Hiệu Quả-Phát Triển</p>
-                        </div> -->
                     </div>
                 </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>
 </div>
 <div class="col-12 col-sm-10 d-sm-flex  p-sm-2 mx-auto my-2" style="min-height: 220px;">
     <div class="my-2 col-sm-6">
-        <a href="#"
-            class="block h-56 p-6 bg-white border-top border-r  border-gray-200   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue-600 dark:text-white text-right">PV POWER DHC
+        <?php foreach ($slogan as $sl) : ?>
+            <div class="block h-56 p-6 bg-white border-top border-r  border-gray-200   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-blue-600 dark:text-white text-right">PV POWER <span style="color: red;">DHC</span>
             </h5>
-            <p class="font-normal text-gray-700 dark:text-gray-400">PV POWER DHC dưới sự chỉ đạo điều
-                hành quyết liệt của Ban lãnh đạo, đồng bộ các khâu từ quản lý sản xuất, kỹ thuật đến nắm bắt
-                thị trường chào giá cạnh tranh, xây dựng hệ thống quản lý công ty theo tiêu chuẩn ISO
-                9001-2008 nên hiệu quả sản xuất kinh doanh lũy kế lợi nhuận các năm 2014, 2015, 2016,
-                2017, 2018, 2019, 2020, 2021 và 2022 đạt 863 tỷ đồng..</p>
-        </a>
+            <p class="font-normal text-gray-700 dark:text-gray-400"><?= $sl['noidungslogan'] ?></p>
+        </div>
+        <?php endforeach ?>
     </div>
     <div class="my-2 col-sm-6">
         <div
@@ -139,9 +120,8 @@ $ngayHienTai = date("d-m-Y");
     <div class="row col-12 g-0 g-lg-3">
         <?php $firstBv = reset($baivietmoinhat); ?>
         <!-- Ảnh lớn bên trái -->
-
         <div class="col-12 col-lg-6 height-tmn_left">
-            <a href="<?= base_url('bai-viet/' . $firstBv->idbaiviet) ?>">
+            <a href="<?= base_url('bai-viet/'.$firstBv->tieudeurl .'/'. $firstBv->idbaiviet) ?>">
                 <div class="card bg-dark text-white" style="height: 100%;">
                     <img class="tintuc-imglon card-img" src="<?= $firstBv->anhrthumnail; ?>" alt="Card image"
                         style="height: 100%;">
@@ -149,18 +129,11 @@ $ngayHienTai = date("d-m-Y");
                         <h5 class="card-title">
                             <?= $firstBv->tieudebaiviet; ?>
                         </h5>
-                        <p class="card-text">
-                            <?= $firstBv->tomtatbaiviet; ?>
-                        </p>
-                        <p class="card-time">Ngày Tạo
-                            <?= $firstBv->ngaytao; ?>
-                        </p>
                     </div>
                 </div>
             </a>
             <!-- Tiêu đề chuyên mục và nội dung mô tả ngắn -->
         </div>
-
         <!-- 4 ảnh nhỏ và nội dung bên trái -->
         <div class="col-12 col-lg-6 mt-2">
             <div class="row g-xl-2">
@@ -173,7 +146,7 @@ $ngayHienTai = date("d-m-Y");
                         continue; // Bỏ qua phần tử đầu tiên
                     }
                     ?>
-                    <a href="<?= base_url('bai-viet/' . $bv->idbaiviet) ?>">
+                    <a href="<?= base_url('bai-viet/' . $bv->tieudeurl . '/' . $bv->idbaiviet) ?>">
                         <div class="col-md-12 d-flex flex-row p-0 height-tmn_left">
                             <div class="col-4 col-sm-6 tintuc-img"><img src="<?= $bv->anhrthumnail; ?>" class=""
                                     alt="Small Image 1"></div>
@@ -181,9 +154,6 @@ $ngayHienTai = date("d-m-Y");
                                 <h5 class="card-title card-title-home">
                                     <?= $bv->tieudebaiviet; ?>
                                 </h5>
-                                <p class="card-text text ">
-                                    <?= $bv->tomtatbaiviet; ?>
-                                </p>
                                 <p class="card-time">Ngày Đăng
                                     <?= $bv->ngaytao; ?>
                                 </p>
@@ -214,7 +184,7 @@ $ngayHienTai = date("d-m-Y");
             <?php foreach ($tintucsukien as $tt): ?>
                 <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
                     <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tt['idbaiviet']) ?>">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tt['tieudeurl'] . '/' . $tt['idbaiviet']) ?>">
                             <img class="col-12 height-carousel_ttsk-img" src="<?= $tt['anhrthumnail'] ?>" alt="" />
                             <div class="absolute left-0 top-0 box-day ">
                                 <?= $tt['ngaydang'] ?>
@@ -222,7 +192,7 @@ $ngayHienTai = date("d-m-Y");
                         </a>
                         <div class="my-8 mx-4  text-center   ">
                             <div class="my-8">
-                                <a class="" href="<?= base_url('bai-viet/' . $tt['idbaiviet']) ?>">
+                                <a class="" href="<?= base_url('bai-viet/' . $tt['tieudeurl'] . '/' . $tt['idbaiviet']) ?>">
                                     <h5
                                         class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
                                         <p class="text">
@@ -231,7 +201,7 @@ $ngayHienTai = date("d-m-Y");
                                     </h5>
                                 </a>
                             </div>
-                            <a href="<?= base_url('bai-viet/' . $tt['idbaiviet']) ?>"
+                            <a href="<?= base_url('bbai-viet/' . $tt['tieudeurl'] . '/' . $tt['idbaiviet']) ?>"
                                 class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 XEM THÊM
                             </a>
@@ -241,10 +211,9 @@ $ngayHienTai = date("d-m-Y");
             <?php endforeach ?>
         </div>
         <!-- Slider indicators -->
-
         <!-- Slider controls -->
         <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow"
             data-carousel-prev>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -256,9 +225,8 @@ $ngayHienTai = date("d-m-Y");
                 <span class="sr-only">Previous</span>
             </span>
         </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow
+            " data-carousel-next>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
@@ -278,41 +246,71 @@ $ngayHienTai = date("d-m-Y");
         <!-- Carousel wrapper -->
         <div class="relative height-carousel_ttsk overflow-hidden col-12">
             <div class="relative height-carousel_ttsk overflow-hidden col-12">
-                <?php foreach ($hoatdong as $hd): ?>
+                <?php if (count($hoatdong) == 1): ?>
                     <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
                         <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                            <a class="col-12 static" href="<?= base_url('bai-viet/' . $hd['idbaiviet']) ?>">
-                                <img class="col-12 height-carousel_ttsk-img" src="<?= $hd['anhrthumnail'] ?>" alt="" />
+                            <a class="col-12 static" href="<?= base_url('bai-viet/' . $hoatdong[0]['tieudeurl'] . '/' . $hoatdong[0]['idbaiviet']) ?>">
+                                <img class="col-12 height-carousel_ttsk-img" src="<?= $hoatdong[0]['anhrthumnail'] ?>"
+                                    alt="" />
                                 <div class="absolute left-0 top-0 box-day ">
-                                    <?= $hd['ngaydang'] ?>
+                                    <?= $hoatdong[0]['ngaydang'] ?>
                                 </div>
                             </a>
                             <div class="my-8 mx-4  text-center   ">
                                 <div class="my-8">
-                                    <a class="" href="<?= base_url('bai-viet/' . $hd['idbaiviet']) ?>">
+                                    <a class="" href="<?= base_url('bai-viet/' . $hoatdong[0]['tieudeurl'] . '/' . $hoatdong[0]['idbaiviet']) ?>">
                                         <h5
                                             class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
                                             <p class="text">
-                                                <?= $hd['tieudebaiviet'] ?>
+                                                <?= $hoatdong[0]['tieudebaiviet'] ?>
                                             </p>
                                         </h5>
                                     </a>
                                 </div>
-                                <a href="<?= base_url('bai-viet/' . $hd['idbaiviet']) ?>"
+                                <a href="<?= base_url('bai-viet/' . $hoatdong[0]['tieudeurl'] . '/' . $hoatdong[0]['idbaiviet']) ?>"
                                     class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     XEM THÊM
                                 </a>
                             </div>
                         </div>
                     </div>
-                <?php endforeach ?>
+                <?php else: ?>
+                    <?php foreach ($hoatdong as $hd): ?>
+                        <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
+                            <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
+                                <a class="col-12 static" href="<?= base_url('bai-viet/' .  $hd['tieudeurl']  . '/' . $hd['idbaiviet']) ?>">
+                                    <img class="col-12 height-carousel_ttsk-img" src="<?= $hd['anhrthumnail'] ?>" alt="" />
+                                    <div class="absolute left-0 top-0 box-day ">
+                                        <?= $hd['ngaydang'] ?>
+                                    </div>
+                                </a>
+                                <div class="my-8 mx-4  text-center   ">
+                                    <div class="my-8">
+                                        <a class="" href="<?= base_url('bai-viet/' . $hd['tieudeurl']  . '/' . $hd['idbaiviet']) ?>">
+                                            <h5
+                                                class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
+                                                <p class="text">
+                                                    <?= $hd['tieudebaiviet'] ?>
+                                                </p>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <a href="<?= base_url('bai-viet/' .  $hd['tieudeurl']  . '/' . $hd['idbaiviet']) ?>"
+                                        class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        XEM THÊM
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
+                <?php endif; ?>
             </div>
         </div>
         <!-- Slider indicators -->
 
         <!-- Slider controls -->
         <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow"
             data-carousel-prev>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -324,9 +322,8 @@ $ngayHienTai = date("d-m-Y");
                 <span class="sr-only">Previous</span>
             </span>
         </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow
+            " data-carousel-next>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
@@ -349,7 +346,7 @@ $ngayHienTai = date("d-m-Y");
             <?php foreach ($atsk as $at): ?>
                 <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
                     <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $at['idbaiviet']) ?>">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $at['tieudeurl'] . '/' . $at['idbaiviet']) ?>">
                             <img class="col-12 height-carousel_ttsk-img" src="<?= $at['anhrthumnail'] ?>" alt="" />
                             <div class="absolute left-0 top-0 box-day ">
                                 <?= $at['ngaydang'] ?>
@@ -357,7 +354,7 @@ $ngayHienTai = date("d-m-Y");
                         </a>
                         <div class="my-8 mx-4  text-center   ">
                             <div class="my-8">
-                                <a class="" href="<?= base_url('bai-viet/' . $at['idbaiviet']) ?>">
+                                <a class="" href="<?= base_url('bai-viet/' . $at['tieudeurl'] . '/' . $at['idbaiviet']) ?>">
                                     <h5
                                         class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
                                         <p class="text">
@@ -366,7 +363,7 @@ $ngayHienTai = date("d-m-Y");
                                     </h5>
                                 </a>
                             </div>
-                            <a href="<?= base_url('bai-viet/' . $at['idbaiviet']) ?>"
+                            <a href="<?= base_url('bai-viet/' . $at['tieudeurl'] . '/' . $at['idbaiviet']) ?>"
                                 class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 XEM THÊM
                             </a>
@@ -380,7 +377,7 @@ $ngayHienTai = date("d-m-Y");
 
         <!-- Slider controls -->
         <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow"
             data-carousel-prev>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -392,9 +389,8 @@ $ngayHienTai = date("d-m-Y");
                 <span class="sr-only">Previous</span>
             </span>
         </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow
+            " data-carousel-next>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
@@ -416,7 +412,7 @@ $ngayHienTai = date("d-m-Y");
             <?php foreach ($thongbao as $tb): ?>
                 <div class="hidden col-12  duration-700 ease-in-out" data-carousel-item>
                     <div class="col-12 bg-white border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
-                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
+                        <a class="col-12 static" href="<?= base_url('bai-viet/' . $tb['tieudeurl'] . '/' . $tb['idbaiviet']) ?>">
                             <img class="col-12 height-carousel_ttsk-img" src="<?= $tb['anhrthumnail'] ?>" alt="" />
                             <div class="absolute left-0 top-0 box-day ">
                                 <?= $tb['ngaydang'] ?>
@@ -424,7 +420,7 @@ $ngayHienTai = date("d-m-Y");
                         </a>
                         <div class="my-8 mx-4  text-center   ">
                             <div class="my-8">
-                                <a class="" href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>">
+                                <a class="" href="<?= base_url('bai-viet/' . $tb['tieudeurl'] . '/' . $tb['idbaiviet']) ?>">
                                     <h5
                                         class="text-carousel_ttsk border-b-2 border-b-2 border-gray-200 mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white">
                                         <p class="text">
@@ -433,7 +429,7 @@ $ngayHienTai = date("d-m-Y");
                                     </h5>
                                 </a>
                             </div>
-                            <a href="<?= base_url('bai-viet/' . $tb['idbaiviet']) ?>"
+                            <a href="<?= base_url('bai-viet/' . $tb['tieudeurl'] . '/' . $tb['idbaiviet']) ?>"
                                 class="inline-flex items-center text-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 XEM THÊM
                             </a>
@@ -446,7 +442,7 @@ $ngayHienTai = date("d-m-Y");
 
         <!-- Slider controls -->
         <button type="button"
-            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow"
             data-carousel-prev>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -458,9 +454,8 @@ $ngayHienTai = date("d-m-Y");
                 <span class="sr-only">Previous</span>
             </span>
         </button>
-        <button type="button"
-            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-            data-carousel-next>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow
+            " data-carousel-next>
             <span
                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-slate-400 dark:bg-gray-800/30  group-focus:ring-4 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
@@ -472,7 +467,7 @@ $ngayHienTai = date("d-m-Y");
             </span>
         </button>
     </div>
-    
+
 </div>
 <!-- quanhecodong -->
 <section class="section mb-0 pb-0" style="background-color: #898fa3;">
@@ -484,7 +479,7 @@ $ngayHienTai = date("d-m-Y");
             <div class="section-content row m-0">
 
                 <div class="col-md-4 p-0">
-                    <a href="<?php echo base_url() ?>quanhecodong/thongtintailieu">
+                    <a href="<?php echo base_url() ?>menu/thongtintailieu/601">
                         <div class="cate-item" style="background-color: #069dd8">
                             <div class="text-center">
                                 <div class="image">
@@ -495,9 +490,8 @@ $ngayHienTai = date("d-m-Y");
                         </div>
                     </a>
                 </div>
-
                 <div class="col-md-4 p-0">
-                    <a href="<?php echo base_url() ?>quanhecodong/daihoicodong">
+                    <a href="<?php echo base_url() ?>menu/daihoicodong/602">
                         <div class="cate-item" style="background-color: #0063af">
                             <div class="text-center">
                                 <div class="image">
@@ -510,7 +504,7 @@ $ngayHienTai = date("d-m-Y");
                 </div>
 
                 <div class="col-md-4 p-0">
-                    <a href="<?php echo base_url() ?>quanhecodong/baocaotaichinh">
+                    <a href="<?php echo base_url() ?>menu/baocaotaichinh/603">
                         <div class="cate-item" style="background-color: #151f41">
                             <div class="text-center">
                                 <div class="image">
@@ -522,9 +516,6 @@ $ngayHienTai = date("d-m-Y");
                         </div>
                     </a>
                 </div>
-
-
-
             </div>
         </div>
     </div>
@@ -538,23 +529,25 @@ $ngayHienTai = date("d-m-Y");
                             src="<?php echo base_url(); ?>assets/img/icon-thongtinduan.jpg" class="img-fluid">Thông tin
                         dự
                         án</span></h2>
-            </div>  
+            </div>
             <div class="section-content-thongtinduan">
                 <div class="owl-carousel owl-theme">
-                    <?php foreach ($thongtinduan as $da) : ?>
+                    <?php foreach ($thongtinduan as $da): ?>
                         <div class="item">
-                        <div class="project-item">
-                            <div class="post-image" style="max-height: 200px; overflow: hidden;">
-                                <a href="<?= base_url('du-an/' . $da['idthongtinduan']) ?>"
-                                    title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
-                                    <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
-                                        src="<?= $da['anhrthumnail'] ?>" style=""> 
-                                </a>
+                            <div class="project-item">
+                                <div class="post-image" style="max-height: 200px; overflow: hidden;">
+                                    <a href="<?= base_url('du-an/' . $da['idthongtinduan']) ?>"
+                                        title="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img post-avatar avatar-xs">
+                                        <img alt="NHIỆT ĐIỆN KHÍ CÀ MAU 1 &amp; 2" class="img-fluid"
+                                            src="<?= $da['anhrthumnail'] ?>" style="">
+                                    </a>
+                                </div>
+                                <h3 class="title"><a href="<?= base_url('du-an/' . $da['idthongtinduan']) ?>">
+                                        <?= $da['tieudethongtinduan'] ?>
+                                    </a></h3>
                             </div>
-                            <h3 class="title"><a href="<?= base_url('du-an/' . $da['idthongtinduan']) ?>"><?= $da['tieudethongtinduan'] ?></a></h3>
-                        </div>
 
-                    </div>
+                        </div>
                     <?php endforeach ?>
                 </div>
             </div>
@@ -575,47 +568,23 @@ $ngayHienTai = date("d-m-Y");
                 <!-- Carousel wrapper -->
                 <div class="relative height-thuvienanh overflow-hidden rounded-lg h-80">
                     <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide1.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    <?php foreach ($thuvienanh as $tva) : ?>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="<?= $tva['hinhanh'] ?>"
+                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="<?= $tva['hinhanh'] ?>">
                     </div>
-                    <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide3.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide1.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide3.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 5 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="<?php echo base_url(); ?>assets/img/slide3.jpg"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
+                    <?php endforeach ?>
                 </div>
                 <!-- Slider indicators -->
                 <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
-                        data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-                        data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                        data-carousel-slide-to="2"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
-                        data-carousel-slide-to="3"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
-                        data-carousel-slide-to="4"></button>
+                <?php foreach ($thuvienanh as $index => $tva) : ?>
+        <button type="button" class="w-3 h-3 rounded-full <?= $index === 0 ? 'bg-black' : 'bg-gray-300' ?>" aria-current="<?= $index === 0 ? 'true' : 'false' ?>" aria-label="Slide <?= $index + 1 ?>" data-carousel-slide-to="<?= $index ?>"></button>
+    <?php endforeach ?>
+                    
                 </div>
                 <!-- Slider controls -->
                 <button type="button"
-                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow"
                     data-carousel-prev>
                     <span
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -627,9 +596,8 @@ $ngayHienTai = date("d-m-Y");
                         <span class="sr-only">Previous</span>
                     </span>
                 </button>
-                <button type="button"
-                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-next>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none boxshadow
+                    " data-carousel-next>
                     <span
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                         <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
@@ -645,8 +613,8 @@ $ngayHienTai = date("d-m-Y");
         <div class="thuvien-content col-12 col-sm-5">
             <h1 class="text-center text-2xl mb-2 col-8 mx-auto">THƯ VIỆN VIDEO</h1>
             <div class="thuvienvideo">
-                <iframe width="560" height="300" src="https://www.youtube.com/embed/Hkd-YBoEsKQ?si=6dC_XqWMamTf2vTS" frameborder="0"
-                    allowfullscreen title="YouTube Video"></iframe>
+                    <iframe width="560" height="300" src="<?= $thuvienvideo['linkvideo'] ?>"
+                    frameborder="0" allowfullscreen title="YouTube Video"></iframe>
             </div>
         </div>
     </div>
@@ -658,39 +626,24 @@ $ngayHienTai = date("d-m-Y");
             <div class="slider">
                 <div class="logos">
                     <div class="logo-nhan">
+                    <?php foreach ($sliderlogo as $sllg) : ?>
                         <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                            <img src="<?= $sllg['anhlogo'] ?>" alt="">
                         </div>
-                        <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
-                        </div>
-                        <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
-                        </div>
-                        <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
-                        </div>
+                        <?php endforeach ?> 
                     </div>
                 </div>
                 <div class="logos">
                     <div class="logo-nhan">
+                    <?php foreach ($sliderlogo as $sllg) : ?>
                         <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
+                            <img src="<?= $sllg['anhlogo'] ?>" alt="">
                         </div>
-                        <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/bidv.jpg" alt="">
-                        </div>
-                        <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/sd.png" alt="">
-                        </div>
-                        <div class="logo-nhan-img">
-                            <img src="<?php echo base_url(); ?>assets/img/ligogi-2.jpg" alt="">
-                        </div>
+                        <?php endforeach ?> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 <?= $this->endSection(); ?>

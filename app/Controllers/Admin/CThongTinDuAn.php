@@ -2,17 +2,22 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Mthongtinduan;
+use App\Services\CauhinhwebService;
 class CThongTinDuAn extends BaseController
 {
     public function index(): string
     {
         $duan = new Mthongtinduan();
         $data['duan'] = $duan->getAllthongtinduan();
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/ThongTinDuAn',$data);
     }
     public function ViewAddDuAn(): string
     {
-        return view('Admin/ThemThongTinDuAn');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/ThemThongTinDuAn',$data);
     }
     public function AddDuAn(){
         $duan = new Mthongtinduan();
@@ -32,7 +37,9 @@ class CThongTinDuAn extends BaseController
     {
         $duan = new Mthongtinduan();
         $data['duan'] =  $duan->find($id);
-        return view('Admin/SuaSliderHome',$data);
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/SuaThongTinDuAn',$data);
     }
     public function DeleteDuAn($id)
     {

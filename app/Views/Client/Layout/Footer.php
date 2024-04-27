@@ -15,34 +15,36 @@
 ">CÔNG TY CỔ PHẦN THỦY ĐIỆN ĐAKDRINH</span>
                          <br>
                          <span style="
-                         color: #ffffff;
-    font-size: 12px;
-">Thôn Ra Nhua, xã Sơn Tân, huyện Sơn Tây, tỉnh Quảng Ngãi (0255) 629 3777</span>
+                         color: #ffffff;font-size: 12px;">Thôn Ra Nhua, xã Sơn Tân, huyện Sơn Tây, tỉnh Quảng Ngãi (0255) 629 3777</span>
                     </div>
                     <!--Grid column-->
-                    <div class=" mb-4 col-12 mb-md-0 p-2 mx-auto">
-                        <ul class="list-unstyled mb-0 col-12" style="
-    display: flex;
-    justify-content: space-evenly;
-">
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base trang font-medium"><i class="fa-solid fa-user"></i>
-                                    Đang online: 1</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base trang font-medium"><i class="fa-solid fa-user"></i>
-                                    Hôm Nay: 20</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base trang font-medium"><i class="fa-solid fa-user"></i>
-                                    Tuần Này: 300</a>
-                            </li>
-                            <li class="h-8">
-                                <a href="#!" class="text-body text-base trang font-medium"><i class="fa-regular fa-user"></i>
-                                    Tổng Lượt Truy Cập: 1000</a>
-                            </li>
-                        </ul>
-                    </div>
+                        <div class=" mb-4 col-12 mb-md-0 p-2 mx-auto">
+                            <ul class="list-unstyled mb-0 col-12" style="display: flex;justify-content: space-evenly;">
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base trang font-medium"><i class="fa-solid fa-user"></i>
+                                        Đang online: 
+                                     <?php if ($online) : ?>
+                                       1
+                                     <?php else : ?>    
+                                       0
+                                     <?php endif ?>
+                                    </a>  
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base trang font-medium"><i class="fa-solid fa-user"></i>
+                                        Truy Cập Ngày <?= $currentDay ?> : <?= $currentAccess ?>
+                                    </a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base trang font-medium"><i class="fa-solid fa-user"></i>
+                                        Tuần Này: <?= $currentWeek ?></a>
+                                </li>
+                                <li class="h-8">
+                                    <a href="#!" class="text-body text-base trang font-medium"><i class="fa-regular fa-user"></i>
+                                        Tổng Lượt Truy Cập: <?= $totalAccess ?></a>
+                                </li>
+                            </ul>
+                        </div>
                     <div class="mx-auto">
                         <img src="<?php echo base_url() ?>assets/img/line-bottom-footer.jpg" alt="">
                     </div>

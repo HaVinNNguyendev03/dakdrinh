@@ -2,17 +2,22 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Mthuvienanh;
+use App\Services\CauhinhwebService;
 class CThuVienAnh extends BaseController
 {
     public function index(): string
     {
         $thuvienanhmodel = new Mthuvienanh();
         $data['thuvienanh'] = $thuvienanhmodel->getAllHinhAnh();
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/ThuVienAnh',$data);
     }
     public function ViewAddHinhAnh(): string
     {
-        return view('Admin/DangHinhAnh');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/DangHinhAnh',$data);
     }
     // public function AddHinhAnh(){
     //     $thuvienanhmodel = new Mthuvienanh();
@@ -42,6 +47,8 @@ class CThuVienAnh extends BaseController
     {
         $thuvienanhmodel = new Mthuvienanh();
         $data['hinhanh'] =  $thuvienanhmodel->find($idhinhanh);
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/SuaHinhAnh',$data);
     }
     public function Deletehinhanh($idhinhanh)

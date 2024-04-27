@@ -1,8 +1,4 @@
-<?php
-/**
- * @var CodeIgniter\View\View $this
- */
-?>
+
 <?= $this->extend('Admin/Layout/base'); ?>
 <?= $this->section('Admin'); ?>
 <div class="page-wrapper">

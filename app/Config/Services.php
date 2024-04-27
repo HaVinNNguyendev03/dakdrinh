@@ -3,7 +3,7 @@
 namespace Config;
 
 use CodeIgniter\Config\BaseService;
-
+use App\Services\CauhinhwebService;
 /**
  * Services Configuration file.
  *
@@ -29,5 +29,11 @@ class Services extends BaseService
      *     return new \CodeIgniter\Example();
      * }
      */
-    
+    public static function cauhinhwebService($getShared = true)
+    {
+        if ($getShared) {
+            return static::getSharedInstance('cauhinhwebService');
+        }
+        return new CauhinhwebService();
+    }
 }

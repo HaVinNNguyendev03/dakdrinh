@@ -2,6 +2,7 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
+use App\Services\CauhinhwebService;
 class CDanhSachDangTin extends BaseController
 {
     public function index(): string
@@ -21,6 +22,8 @@ class CDanhSachDangTin extends BaseController
             'perPage' => $perPage, // Truyền số bài viết trên    mỗi trang
             'total' => $total, // Truyền tổng số bài viết
         ];
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/DanhSachDangTin',$data);
     }
 }

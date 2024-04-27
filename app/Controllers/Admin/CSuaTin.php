@@ -4,6 +4,8 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
+use App\Models\Mmenu;
+use App\Services\CauhinhwebService;
 
 class CSuaTin extends BaseController
 {
@@ -17,6 +19,10 @@ class CSuaTin extends BaseController
             // return view('errors/html/error_404');
         }
         $data['baiviet'] = $baiviet;
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        $menu  = new Mmenu();
+        $data['menus'] = $menu->getAllMenu();
         return view('Admin/SuaTin', $data);
     }
     public function getbaiviet($idbaiviet)
@@ -44,6 +50,8 @@ class CSuaTin extends BaseController
             'ngaydang' => $this->request->getPost('ngaydang'),
             'noidungbaiviet' => $this->request->getPost('noidungbaiviet'),
             'anhrthumnail' => $this->request->getPost('anhrthumnail'),
+            'tinnoibat' => $this->request->getPost('tinnoibat'),
+            'idmenu' => $this->request->getPost('idmenu'),
         ];
         // Kiểm tra nếu có dữ liệu trong trường file input
         $anhrthumnail = $this->request->getFile('anhrthumnail');

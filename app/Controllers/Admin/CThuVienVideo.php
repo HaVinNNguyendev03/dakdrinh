@@ -2,6 +2,7 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Mthuvienvideo;
+use App\Services\CauhinhwebService;
 class CThuVienVideo extends BaseController
 {
     public function index(): string
@@ -9,11 +10,15 @@ class CThuVienVideo extends BaseController
         $thuvienvideo = new Mthuvienvideo();
         $result = $thuvienvideo->getAllVideo();
         $data['video'] = $result;
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/ThuVienVideo',$data);
     }
     public function ViewAddVideo(): string
     {
-        return view('Admin/DangVideo');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/DangVideo',$data);
     }
     public function AddVideo(){
         $thuvienvideo = new Mthuvienvideo();
@@ -30,6 +35,8 @@ class CThuVienVideo extends BaseController
     {
         $thuvienvideo = new Mthuvienvideo();
         $data['video'] =  $thuvienvideo->find($idvideo);
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/SuaVideo',$data);
     }
 }

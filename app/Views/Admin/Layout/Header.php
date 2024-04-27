@@ -82,6 +82,9 @@
                   <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
                 </form>
               </li>
+              <li class="nav-item">
+                <a href="<?php echo base_url() ?>"  class="nav-link waves-effect waves-dark"><i class="fa-solid fa-eye"></i>Xem Website</a>
+              </li>
             </ul>
             <!-- ============================================================== -->
             <!-- Right side toggle and nav items -->

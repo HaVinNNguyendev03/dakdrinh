@@ -1,44 +1,53 @@
 <?php
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
-
+use App\Models\Mcauhinhweb;
+use App\Services\CauhinhwebService;
 class CLogo_Nameweb extends BaseController
 {
     public function index(): string
     {
-        return view('Admin/Logo_Nameweb');
+        $Logowebmodel = new Mcauhinhweb();
+        $data['logoweb'] =  $Logowebmodel->getAllcauhinhweb();
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/Logonameweb',$data);
     }
-    public function ViewAddSliderHome(): string
+    public function ViewAddLogoweb(): string
     {
-        return view('Admin/ThemSliderHome');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/ThemLogonameweb',$data);
     }
-    public function AddSliderHome(){
-        $sliderhomemodel = new MSliderhome();
-        $datasliderhome = $this->request->getPost();
-        $result = $sliderhomemodel->addslider($datasliderhome);
+    public function AddLogoweb(){
+        $Logowebmodel = new Mcauhinhweb();
+        $dataLogoweb = $this->request->getPost();
+        $result = $Logowebmodel->addslider($dataLogoweb);
         if ($result) {
             return json_encode(['status' => 'success','message' => 'thêm thành công']);
         } else {
             return json_encode(['status' => 'error','message' => 'thêm thất bại']);
         }
     }
-    public function ViewEditSliderHome($id)
+    public function ViewEditLogoweb($id)
     {
-        $sliderhomemodel = new MSliderhome();
-        $data[''] =  $sliderhomemodel->find($id);
-        return view('Admin/SuaSliderHome',$data);
+        $Logowebmodel = new Mcauhinhweb();
+        $data['logoweb'] =  $Logowebmodel->find($id);
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/SuaLogoweb',$data);
     }
-    public function DeleteSliderHome($id)
+    public function DeleteLogoweb($id)
     {
-        $sliderhomemodel = new MSliderhome();
+        $Logowebmodel = new Mcauhinhweb();
         // Kiểm tra xem có tồn tại không
-        $sliderhome = $sliderhomemodel->find($id);
-        if (!$sliderhome) {
+        $Logoweb = $Logowebmodel->find($id);
+        if (!$Logoweb) {
             // Trả về thông báo lỗi nếu không tìm thấy
             return $this->response->setStatusCode(404)->setBody('slider không tồn tại');
         }
         // Tiến hành xóa
-        if ($sliderhomemodel->delete($id)) {
+        if ($Logowebmodel->delete($id)) {
             // Nếu xóa thành công, trả về thông báo thành công
             return $this->response->setJSON(['success' => true]);
         } else {

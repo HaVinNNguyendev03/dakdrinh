@@ -1,0 +1,927 @@
+ERROR - 2024-04-22 01:02:15 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(18): App\Models\Mbaiviet->getTinMoiNhat(4)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(18): App\Models\Mbaiviet->getTinMoiNhat(4)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#10 {main}
+CRITICAL - 2024-04-22 01:02:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbbaiviet WHERE tinnoibat = ? ORDER BY ngaytao DESC LIMIT ?', [...])
+ 3 APPPATH\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Client\CHome.php(18): App\Models\Mbaiviet->getTinMoiNhat(4)
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 01:49:36 --> Undefined variable $cauhinhweb
+in APPPATH\Views\Client\Layout\Base.php on line 6.
+ 1 APPPATH\Views\Client\Layout\Base.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cauhinhweb', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/LienHe/LienHe', [], true)
+ 6 APPPATH\Controllers\Client\LienHe\CLienHe.php(11): view('Client/LienHe/LienHe')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\LienHe\CLienHe->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\LienHe\CLienHe))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:02:33 --> Undefined array key "idmenu"
+in APPPATH\Views\Client\DanhMuc.php on line 5.
+ 1 APPPATH\Views\Client\DanhMuc.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idmenu"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 5)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(36): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:03:17 --> Undefined variable $data
+in APPPATH\Views\Client\DanhMuc.php on line 3.
+ 1 APPPATH\Views\Client\DanhMuc.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(36): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:05:15 --> Undefined variable $data
+in APPPATH\Views\Client\DanhMuc.php on line 3.
+ 1 APPPATH\Views\Client\DanhMuc.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(36): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:05:44 --> Undefined array key "idmenu"
+in APPPATH\Views\Client\DanhMuc.php on line 6.
+ 1 APPPATH\Views\Client\DanhMuc.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idmenu"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(36): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:18:30 --> Undefined array key "idmenu"
+in APPPATH\Views\Client\DanhMuc.php on line 6.
+ 1 APPPATH\Views\Client\DanhMuc.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idmenu"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(36): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:19:13 --> Undefined variable $data
+in APPPATH\Views\Client\DanhMuc.php on line 3.
+ 1 APPPATH\Views\Client\DanhMuc.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(36): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:19:46 --> Undefined variable $data
+in APPPATH\Views\Client\DanhMuc.php on line 3.
+ 1 APPPATH\Views\Client\DanhMuc.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(38): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:20:11 --> Undefined variable $data
+in APPPATH\Views\Client\DanhMuc.php on line 3.
+ 1 APPPATH\Views\Client\DanhMuc.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(38): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:25:59 --> Undefined variable $data
+in APPPATH\Views\Client\DanhMuc.php on line 3.
+ 1 APPPATH\Views\Client\DanhMuc.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(40): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 02:26:34 --> Undefined array key "idmenu"
+in APPPATH\Views\Client\DanhMuc.php on line 6.
+ 1 APPPATH\Views\Client\DanhMuc.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idmenu"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\DanhMuc.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+ 5 APPPATH\Controllers\Client\CDanhMuc.php(40): view('Client/DanhMuc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-04-22 07:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:10:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:22:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:23:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:23:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:26:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:27:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:28:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 07:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-22 07:43:53 --> reset(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Views\Client\home.php on line 121.
+ 1 APPPATH\Views\Client\home.php(121): reset(null)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+ 5 APPPATH\Controllers\Client\CHome.php(55): view('Client/home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 07:56:43 --> Undefined array key "tenmenu"
+in APPPATH\Views\Client\Layout\Header.php on line 44.
+ 1 APPPATH\Views\Client\Layout\Header.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tenmenu"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+10 APPPATH\Controllers\Client\CHome.php(58): view('Client/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:00:57 --> Undefined variable $submenu
+in APPPATH\Views\Client\Layout\Header.php on line 259.
+ 1 APPPATH\Views\Client\Layout\Header.php(259): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $submenu', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 259)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+10 APPPATH\Controllers\Client\CHome.php(58): view('Client/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:03:02 --> Undefined array key "danhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 257.
+ 1 APPPATH\Views\Client\Layout\Header.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "danhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 257)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+10 APPPATH\Controllers\Client\CHome.php(58): view('Client/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:03:14 --> Undefined array key "tendanhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 257.
+ 1 APPPATH\Views\Client\Layout\Header.php(257): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tendanhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 257)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+10 APPPATH\Controllers\Client\CHome.php(58): view('Client/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:04:01 --> Undefined array key "tenmenu"
+in APPPATH\Views\Client\Layout\Header.php on line 44.
+ 1 APPPATH\Views\Client\Layout\Header.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tenmenu"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 44)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+10 APPPATH\Controllers\Client\CHome.php(58): view('Client/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:27:06 --> Undefined array key "urldanhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 65.
+ 1 APPPATH\Views\Client\Layout\Header.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "urldanhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+10 APPPATH\Controllers\Client\CDanhMuc.php(37): view('Client/DanhMuc', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:27:39 --> Undefined array key "urldanhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 65.
+ 1 APPPATH\Views\Client\Layout\Header.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "urldanhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+10 APPPATH\Controllers\Client\CDanhMuc.php(37): view('Client/DanhMuc', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('403')
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:28:13 --> Undefined array key "urldanhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 65.
+ 1 APPPATH\Views\Client\Layout\Header.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "urldanhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+10 APPPATH\Controllers\Client\CDanhMuc.php(37): view('Client/DanhMuc', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('403')
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:28:16 --> Undefined array key "urldanhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 65.
+ 1 APPPATH\Views\Client\Layout\Header.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "urldanhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+10 APPPATH\Controllers\Client\CDanhMuc.php(37): view('Client/DanhMuc', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('403')
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:37:20 --> Undefined array key "urldanhmuc"
+in APPPATH\Views\Client\Layout\Header.php on line 61.
+ 1 APPPATH\Views\Client\Layout\Header.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "urldanhmuc"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 61)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/DanhMuc', [], true)
+10 APPPATH\Controllers\Client\CDanhMuc.php(39): view('Client/DanhMuc', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CDanhMuc->index('401')
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CDanhMuc))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 08:37:28 --> Undefined variable $menu
+in APPPATH\Views\Client\Layout\Header.php on line 43.
+ 1 APPPATH\Views\Client\Layout\Header.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+10 APPPATH\Controllers\Client\CHome.php(58): view('Client/home', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 09:05:35 --> Undefined variable $menuhome
+in APPPATH\Views\Client\Layout\Header.php on line 43.
+ 1 APPPATH\Views\Client\Layout\Header.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuhome', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/ThuVien/ThuVienAnh', [], true)
+10 APPPATH\Controllers\Client\ThuVien\CThuVienAnh.php(14): view('Client/ThuVien/ThuVienAnh', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\ThuVien\CThuVienAnh->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ThuVien\CThuVienAnh))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 09:09:52 --> Undefined variable $cauhinhweb
+in APPPATH\Views\Client\Layout\Base.php on line 6.
+ 1 APPPATH\Views\Client\Layout\Base.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cauhinhweb', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/LienHe/LienHe', [], true)
+ 6 APPPATH\Controllers\Client\LienHe\CLienHe.php(11): view('Client/LienHe/LienHe')
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\LienHe\CLienHe->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\LienHe\CLienHe))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 09:12:01 --> Undefined variable $menuhome
+in APPPATH\Views\Client\Layout\Header.php on line 43.
+ 1 APPPATH\Views\Client\Layout\Header.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuhome', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/ThuVien/ThuVienVideo', [], true)
+10 APPPATH\Controllers\Client\ThuVien\CThuVienVideo.php(14): view('Client/ThuVien/ThuVienVideo', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\ThuVien\CThuVienVideo->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ThuVien\CThuVienVideo))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 12:32:42 --> Undefined variable $menuhome
+in APPPATH\Views\Client\Layout\Header.php on line 43.
+ 1 APPPATH\Views\Client\Layout\Header.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuhome', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/ThuVien/ThuVienVideo', [], true)
+10 APPPATH\Controllers\Client\ThuVien\CThuVienVideo.php(14): view('Client/ThuVien/ThuVienVideo', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\ThuVien\CThuVienVideo->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ThuVien\CThuVienVideo))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 12:56:53 --> Undefined variable $menuhome
+in APPPATH\Views\Client\Layout\Header.php on line 43.
+ 1 APPPATH\Views\Client\Layout\Header.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuhome', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/GioiThieuChung', [], true)
+10 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(11): view('Client/GioiThieu/GioiThieuChung', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index()
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-04-22 13:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-22 13:21:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-22 13:32:30 --> Undefined variable $baiviet
+in APPPATH\Views\Client\baivietchitiet.php on line 6.
+ 1 APPPATH\Views\Client\baivietchitiet.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baiviet', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(21): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:35:19 --> whereIn() expects $values to be of type array or closure
+in SYSTEMPATH\Database\BaseBuilder.php on line 939.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(826): CodeIgniter\Database\BaseBuilder->_whereIn('iddanhmuc', '105', false, 'AND ', null)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->whereIn('iddanhmuc', '105')
+ 3 APPPATH\Models\Mbaiviet.php(53): CodeIgniter\Model->__call('whereIn', [...])
+ 4 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(23): App\Models\Mbaiviet->getbaivietDanhMuc('105')
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:36:33 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\baivietchitiet.php on line 6.
+ 1 APPPATH\Views\Client\baivietchitiet.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:37:48 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\baivietchitiet.php on line 6.
+ 1 APPPATH\Views\Client\baivietchitiet.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(35): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:38:07 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\baivietchitiet.php on line 6.
+ 1 APPPATH\Views\Client\baivietchitiet.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(35): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:38:14 --> Undefined variable $cauhinhweb
+in APPPATH\Views\Client\Layout\Base.php on line 6.
+ 1 APPPATH\Views\Client\Layout\Base.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cauhinhweb', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 6 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(35): view('Client/baivietchitiet', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:39:19 --> Undefined variable $cauhinhweb
+in APPPATH\Views\Client\Layout\Base.php on line 6.
+ 1 APPPATH\Views\Client\Layout\Base.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cauhinhweb', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php', 6)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 5 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 6 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(35): view('Client/baivietchitiet', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:40:09 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\baivietchitiet.php on line 7.
+ 1 APPPATH\Views\Client\baivietchitiet.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(36): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:46:21 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 7.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(27): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:49:24 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 8.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(27): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:50:06 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 8.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(27): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:51:14 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 24.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(27): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:52:36 --> Uninitialized string offset 6
+in APPPATH\Views\Client\baivietchitiet.php on line 24.
+ 1 APPPATH\Views\Client\baivietchitiet.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 6', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\CBaivietchitiet.php(27): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:53:57 --> Undefined variable $menuhome
+in APPPATH\Views\Client\Layout\Header.php on line 43.
+ 1 APPPATH\Views\Client\Layout\Header.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menuhome', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php', 43)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('Client/Layout/Header', null, true)
+ 5 APPPATH\Views\Client\Layout\Base.php(61): CodeIgniter\View\View->include('Client/Layout/Header')
+ 6 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\Layout\\Base.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('Client/Layout/Base', [], true)
+ 9 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+10 APPPATH\Controllers\Client\CBaivietchitiet.php(27): view('Client/baivietchitiet', [...])
+11 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+12 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+13 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:56:02 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 24.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:57:57 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\baivietchitiet.php on line 8.
+ 1 APPPATH\Views\Client\baivietchitiet.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 8)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:58:23 --> Undefined array key 1
+in APPPATH\Views\Client\baivietchitiet.php on line 8.
+ 1 APPPATH\Views\Client\baivietchitiet.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 8)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 13:58:40 --> Undefined array key 3
+in APPPATH\Views\Client\baivietchitiet.php on line 8.
+ 1 APPPATH\Views\Client\baivietchitiet.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 3', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 8)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:03:04 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 8.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:03:57 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 9.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:04:21 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 13.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:05:41 --> Undefined array key 7
+in APPPATH\Views\Client\baivietchitiet.php on line 9.
+ 1 APPPATH\Views\Client\baivietchitiet.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 7', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:05:57 --> Uninitialized string offset 7
+in APPPATH\Views\Client\baivietchitiet.php on line 9.
+ 1 APPPATH\Views\Client\baivietchitiet.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 7', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:06:08 --> Uninitialized string offset 10
+in APPPATH\Views\Client\baivietchitiet.php on line 13.
+ 1 APPPATH\Views\Client\baivietchitiet.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 10', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:06:15 --> Uninitialized string offset 2
+in APPPATH\Views\Client\baivietchitiet.php on line 13.
+ 1 APPPATH\Views\Client\baivietchitiet.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized string offset 2', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 13)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:06:46 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 9.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:08:58 --> syntax error, unexpected token "<"
+in APPPATH\Views\Client\baivietchitiet.php on line 28.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 3 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:09:18 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 12.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:13:59 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\baivietchitiet.php on line 7.
+ 1 APPPATH\Views\Client\baivietchitiet.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:16:22 --> Trying to access array offset on value of type null
+in APPPATH\Views\Client\baivietchitiet.php on line 7.
+ 1 APPPATH\Views\Client\baivietchitiet.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 7)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:18:39 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\Client\baivietchitiet.php on line 35.
+ 1 APPPATH\Views\Client\baivietchitiet.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:19:03 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 13.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:21:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\Client\baivietchitiet.php on line 30.
+ 1 APPPATH\Views\Client\baivietchitiet.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 30)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:21:08 --> Cannot access offset of type string on string
+in APPPATH\Views\Client\baivietchitiet.php on line 12.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 4 APPPATH\Controllers\Client\CBaivietchitiet.php(29): view('Client/baivietchitiet', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('54')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-04-22 14:21:33 --> Undefined variable $bv1
+in APPPATH\Views\Client\baivietchitiet.php on line 31.
+ 1 APPPATH\Views\Client\baivietchitiet.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bv1', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 31)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CGioiThieuChung.php(34): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CGioiThieuChung->index('105')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CGioiThieuChung))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')

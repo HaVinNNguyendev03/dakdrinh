@@ -2,17 +2,22 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\MSliderhome;
+use App\Services\CauhinhwebService;
 class CSliderHome extends BaseController
 {
     public function index(): string
     {
         $sliderhome = new MSliderHome();
         $data['sliderhome'] = $sliderhome->getAllSlider();
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/SliderHome',$data);
     }
     public function ViewAddSliderHome(): string
     {
-        return view('Admin/ThemSliderHome');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/ThemSliderHome',$data);
     }
     public function AddSliderHome(){
         $sliderhomemodel = new MSliderhome();
@@ -32,6 +37,8 @@ class CSliderHome extends BaseController
     {
         $sliderhomemodel = new MSliderhome();
         $data['sliderhome'] =  $sliderhomemodel->find($id);
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/SuaSliderHome',$data);
     }
     public function DeleteSliderHome($id)

@@ -1,0 +1,288 @@
+ERROR - 2024-03-04 00:17:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(10): App\Models\Mbaiviet->getTinMoiNhat(4)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(10): App\Models\Mbaiviet->getTinMoiNhat(4)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#10 {main}
+CRITICAL - 2024-03-04 00:17:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbbaiviet ORDER BY ngaytao DESC LIMIT ?', [...])
+ 3 APPPATH\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Client\CHome.php(10): App\Models\Mbaiviet->getTinMoiNhat(4)
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-04 00:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 00:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-03-04 01:13:53 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(34): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietByDanhMuc(Array)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+CRITICAL - 2024-03-04 01:13:53 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:
+ORDER BY `idbaiviet` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mbaiviet.php(34): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietByDanhMuc([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-04 01:27:55 --> Call to undefined method App\Models\Mbaiviet::order_by
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Models\Mbaiviet.php(56): CodeIgniter\Model->__call('order_by', [...])
+ 2 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc([...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-04 01:29:43 --> mysqli_sql_exception: Not unique table/alias: 'tbbaiviet' in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(57): CodeIgniter\Model->__call('get', Array)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc(Array)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+CRITICAL - 2024-03-04 01:29:43 --> Not unique table/alias: 'tbbaiviet'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbbaiviet`, `tbbaiviet`
+WHERE `idanhmuc` = :idanhmuc:
+ORDER BY `ngaytao` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(871): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\Mbaiviet.php(57): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc([...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-04 01:30:46 --> mysqli_sql_exception: Unknown column 'bv.idanhmuc' in 'where clause' in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM t...', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM t...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM t...')
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(54): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc(Array)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#11 {main}
+CRITICAL - 2024-03-04 01:30:46 --> Unknown column 'bv.idanhmuc' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbbaiviet AS bv WHERE bv.idanhmuc = ? ORDER BY bv.ngaytao DESC', [...])
+ 2 APPPATH\Models\Mbaiviet.php(54): CodeIgniter\Model->__call('query', [...])
+ 3 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc([...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-04 01:32:02 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(55): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc(Array)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+CRITICAL - 2024-03-04 01:32:02 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:
+ORDER BY `ngaytao` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mbaiviet.php(55): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-04 01:32:34 --> mysqli_sql_exception: Illegal parameter data types int and row for operation '=' in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(55): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc(Array)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+CRITICAL - 2024-03-04 01:32:34 --> Illegal parameter data types int and row for operation '='
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:
+ORDER BY `ngaytao` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\Mbaiviet.php(55): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getbaivietDanhMuc([...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-04 01:39:46 --> Attempt to read property "idbaiviet" on array
+in APPPATH\Views\Client\home.php on line 234.
+ 1 APPPATH\Views\Client\home.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idbaiviet" on array', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php', 234)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+ 5 APPPATH\Controllers\Client\CHome.php(14): view('Client/home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-04 01:40:16 --> Attempt to read property "idbaiviet" on array
+in APPPATH\Views\Client\home.php on line 243.
+ 1 APPPATH\Views\Client\home.php(243): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "idbaiviet" on array', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php', 243)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+ 5 APPPATH\Controllers\Client\CHome.php(14): view('Client/home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-04 01:41:05 --> Attempt to read property "anhrthumnail" on array
+in APPPATH\Views\Client\home.php on line 236.
+ 1 APPPATH\Views\Client\home.php(236): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "anhrthumnail" on array', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php', 236)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\home.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/home', [], true)
+ 5 APPPATH\Controllers\Client\CHome.php(14): view('Client/home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-04 02:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 02:06:47 --> Undefined variable $data
+in APPPATH\Views\Admin\DangTin.php on line 4.
+ 1 APPPATH\Views\Admin\DangTin.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Admin\\DangTin.php', 4)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Admin\\DangTin.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Admin/DangTin', [], true)
+ 5 APPPATH\Controllers\Admin\CDangTin.php(13): view('Admin/DangTin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\CDangTin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CDangTin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-04 02:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:57:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 02:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:03:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:14:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 03:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

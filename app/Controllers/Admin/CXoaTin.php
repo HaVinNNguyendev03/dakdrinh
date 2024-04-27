@@ -4,11 +4,14 @@
 
 use App\Controllers\BaseController;
 use App\Models\Mbaiviet;
+use App\Services\CauhinhwebService;
 class CXoaTin extends BaseController
 {
     public function index(): string
     {
-        return view('Admin/SuaTin');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/SuaTin',$data);
     }
     public function xoabaiviet($idbaiviet)
     {

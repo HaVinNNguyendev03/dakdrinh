@@ -52,52 +52,37 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-3 text-end control-label col-form-label">Danh Mục Bài Viết</label>
+                                <label class="col-sm-3 text-end control-label col-form-label">Menu Bài Viết</label>
                                 <div class="col-md-9">
-                                    <select name="iddanhmuc" class="select2 form-select shadow-none"
+                                    <select name="idmenu" class=" form-select shadow-none"
                                         style="width: 100%; height: 36px">
-                                        <option>Chọn Danh Mục</option>
-                                        <optgroup label="Giới Thiệu">
-                                            <option value="101">Thông Tin Doanh Nghiệp</option>
-                                        </optgroup>
-                                        <optgroup label="Tin Tức Sự Kiện">
-                                            <option value="201">Hoạt Động Cộng Đồng</option>
-                                            <option value="202">Hoạt Động Ngành Điện</option>
-                                            <option value="203">Tin Tức PVPower</option>
-                                            <option value="204">Tin Tức PVPowerDHC</option>
-                                        </optgroup>
-                                        <optgroup label="Hoạt Động SX-KD">
-                                            <option value="301">Chiến Lược Mục Tiêu</option>
-                                            <option value="302">Tình HÌnh Sản Xuất Kinh Doanh</option>
-                                            <option value="303">Kế Hoạch Sản Xuất Kinh Doanh</option>
-                                        </optgroup>
-                                        <optgroup label="Thông Báo">
-                                            <option value="401">Thông Báo Đấu Thầu</option>
-                                            <option value="402">Thông Báo Tuyển Dụng</option>
-                                            <option value="403">Thông Báo Báo Chí</option>
-                                        </optgroup>
-                                        <optgroup label="AT-SK-MT">
-                                            <option value="501">Cộng Đồng</option>
-                                            <option value="502">Người Lao Động</option>
-                                            <option value="503">Các Chính Sách Môi Trường</option>
-                                        </optgroup>
-                                        <optgroup label="QUAN HỆ CỔ ĐÔNG">
-                                            <option value="501">Thông Tin/Tài Liệu Cổ Đông</option>
-                                            <option value="502">Đại Hội Cổ Đông</option>
-                                            <option value="503">Báo Cáo Tài Chính</option>
+                                        <option>Chọn Menu</option>
+                                        <optgroup label="Menu"> 
+                                            <?php foreach ($menus as $menu): ?>
+                                                   <option value="<?= $menu['idmenu'] ?>"><?= $menu['tenmenu'] ?></option>
+                                            <?php endforeach; ?>
                                         </optgroup>
                                     </select>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 text-end control-label col-form-label">Danh Mục Bài Viết</label>
+                                <div class="col-md-9">
+                                    <select name="iddanhmuc" class="select2 form-select shadow-none"
+                                        style="width: 100%; height: 36px">
+                                        <option class ="h4">Chọn Danh Mục</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group row">
+                        <!-- <div class="form-group row">
                             <label for="lname" class="col-sm-3 text-end control-label col-form-label">Tóm Tắt Bài
                                 Viết</label>
                             <div class="col-sm-9">
                                 <input name="tomtatbaiviet" type="text" class="form-control" id="lname"
                                     placeholder="Last Name Here" />
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group row">
                             <label class="col-sm-3 text-end control-label col-form-label">Ảnh Đại Diện</label>
                             <div class="col-md-9">
@@ -115,7 +100,17 @@
                                     placeholder="Company Name Here" />
                             </div>
                         </div>
-
+                        <div class="form-group row">
+    <label class="col-sm-3 text-end control-label col-form-label">Tin nổi bật</label>
+    <div class="col-md-9">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="tinnoibat" name="tinnoibat">
+            <label class="form-check-label" for="tinnoibat">
+                Đánh dấu nếu tin này là tin nổi bật
+            </label>
+        </div>
+    </div>
+</div>
                         <div class="form-group row align-items-start">
                             <label for="email1" class="col-sm-3 text-end control-label col-form-label">Nội Dung Bài
                                 Viết</label>

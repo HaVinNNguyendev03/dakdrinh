@@ -41,6 +41,11 @@ class Mthuvienvideo extends Model
     {
         return $this->findAll();
     }
+    public function getFirstVideo()
+    {
+        return $this->orderBy('idvideo', 'DESC')
+        ->first();
+    }
     public function getVideo($id)
     {
         return $this->find($id);

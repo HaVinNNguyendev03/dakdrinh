@@ -1,0 +1,540 @@
+CRITICAL - 2024-03-23 09:03:46 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 194.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-03-23 09:04:59 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getTinMoiNhat(4)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getTinMoiNhat(4)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#10 {main}
+CRITICAL - 2024-03-23 09:04:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbbaiviet ORDER BY ngaytao DESC LIMIT ?', [...])
+ 3 APPPATH\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Client\CHome.php(12): App\Models\Mbaiviet->getTinMoiNhat(4)
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-23 09:07:37 --> mysqli_sql_exception: MySQL server has gone away in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Admin\CBieuDo.php(57): CodeIgniter\BaseModel->first()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Admin\CBieuDo->getdata()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CBieuDo))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+CRITICAL - 2024-03-23 09:07:37 --> MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbbieudothuydien`
+ORDER BY `idbieudothuydien` DESC
+ LIMIT 1', [], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Admin\CBieuDo.php(57): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\CBieuDo->getdata()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CBieuDo))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-23 09:07:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(36): App\Models\Mbaiviet->getTinMoiNhat(4)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->tinmoinhat()
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM t...', Array)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', Array)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CHome.php(36): App\Models\Mbaiviet->getTinMoiNhat(4)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CHome->tinmoinhat()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#10 {main}
+CRITICAL - 2024-03-23 09:07:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('SELECT * FROM tbbaiviet ORDER BY ngaytao DESC LIMIT ?', [...])
+ 3 APPPATH\Models\Mbaiviet.php(49): CodeIgniter\Model->__call('query', [...])
+ 4 APPPATH\Controllers\Client\CHome.php(36): App\Models\Mbaiviet->getTinMoiNhat(4)
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CHome->tinmoinhat()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CHome))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-23 09:08:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'dakdrinh', 3306, '', 0)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(16): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#10 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ADMIN\Desktop\dakdrinh\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\Users\ADMIN\Desktop\dakdrinh\system\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+#5 C:\Users\ADMIN\Desktop\dakdrinh\app\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+#6 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(16): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+#8 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#12 {main}
+CRITICAL - 2024-03-23 09:08:12 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1699): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tbbaiviet`
+WHERE `iddanhmuc` = :iddanhmuc:', [...], false)
+ 3 SYSTEMPATH\Model.php(599): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1203): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Models\Mbaiviet.php(40): CodeIgniter\BaseModel->paginate(4, 'trangbaiviet', 1)
+ 6 APPPATH\Controllers\Client\GioiThieu\CThongTinDoanhNghiep.php(16): App\Models\Mbaiviet->getBaivietByDanhMucPaginated(101, 1, 4)
+ 7 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CThongTinDoanhNghiep))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 09:10:30 --> Undefined variable $baivietmoinhat
+in APPPATH\Views\Client\TinTucSuKien\TinTucPVPower.php on line 76.
+ 1 APPPATH\Views\Client\TinTucSuKien\TinTucPVPower.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baivietmoinhat', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\TinTucSuKien\\TinTucPVPower.php', 76)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\TinTucSuKien\\TinTucPVPower.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/TinTucSuKien/TinTucPVPower', [], true)
+ 5 APPPATH\Controllers\Client\TinTucSuKien\CTinTucPVPower.php(24): view('Client/TinTucSuKien/TinTucPVPower', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\TinTucSuKien\CTinTucPVPower->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\TinTucSuKien\CTinTucPVPower))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 09:11:29 --> Undefined variable $baivietmoinhat
+in APPPATH\Views\Client\HoatDongSKKD\chienluocmuctieu.php on line 74.
+ 1 APPPATH\Views\Client\HoatDongSKKD\chienluocmuctieu.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baivietmoinhat', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\HoatDongSKKD\\chienluocmuctieu.php', 74)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\HoatDongSKKD\\chienluocmuctieu.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/HoatDongSKKD/chienluocmuctieu', [], true)
+ 5 APPPATH\Controllers\Client\HoatDongSXKD\CChienLuocMucTieu.php(25): view('Client/HoatDongSKKD/chienluocmuctieu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\HoatDongSXKD\CChienLuocMucTieu->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\HoatDongSXKD\CChienLuocMucTieu))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 09:30:17 --> Undefined variable $baivietmoinhat
+in APPPATH\Views\Client\ThongBao\thongbaodauthau.php on line 74.
+ 1 APPPATH\Views\Client\ThongBao\thongbaodauthau.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baivietmoinhat', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\ThongBao\\thongbaodauthau.php', 74)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\ThongBao\\thongbaodauthau.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/ThongBao/thongbaodauthau', [], true)
+ 5 APPPATH\Controllers\Client\ThongBao\CThongBaoDauThau.php(25): view('Client/ThongBao/thongbaodauthau', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\ThongBao\CThongBaoDauThau->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\ThongBao\CThongBaoDauThau))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-23 09:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 09:38:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-23 12:46:12 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Client\CLienHe.php on line 13.
+ 1 APPPATH\Controllers\Client\CLienHe.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Controllers\\Client\\CLienHe.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CLienHe->sendMail()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CLienHe))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 12:47:40 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Client\CLienHe.php on line 13.
+ 1 APPPATH\Controllers\Client\CLienHe.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Controllers\\Client\\CLienHe.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CLienHe->sendMail()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CLienHe))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 12:47:49 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Client\CLienHe.php on line 13.
+ 1 APPPATH\Controllers\Client\CLienHe.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Controllers\\Client\\CLienHe.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CLienHe->sendMail()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CLienHe))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+ERROR - 2024-03-23 12:50:07 --> Email: sendWithMail throwed ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\Users\ADMIN\Desktop\dakdrinh\system\Email\Email.php:1752
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed ...', 'C:\\Users\\ADMIN\\...', 1752)
+#1 C:\Users\ADMIN\Desktop\dakdrinh\system\Email\Email.php(1752): mail('nguyenvanphucde...', '=?UTF-8?Q?Li=C3...', 'H\xE1\xBB\x8D V\xC3\xA0 T\xC3\xAAn :...', 'Date: Sat, 23 M...', '-f phucviptvg20...')
+#2 C:\Users\ADMIN\Desktop\dakdrinh\system\Email\Email.php(1684): CodeIgniter\Email\Email->sendWithMail()
+#3 C:\Users\ADMIN\Desktop\dakdrinh\system\Email\Email.php(1578): CodeIgniter\Email\Email->spoolEmail()
+#4 C:\Users\ADMIN\Desktop\dakdrinh\app\Controllers\Client\CLienHe.php(31): CodeIgniter\Email\Email->send()
+#5 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(942): App\Controllers\Client\CLienHe->sendMail()
+#6 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CLienHe))
+#7 C:\Users\ADMIN\Desktop\dakdrinh\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\ADMIN\Desktop\dakdrinh\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\ADMIN\Desktop\dakdrinh\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\...')
+#10 {main}
+ERROR - 2024-03-23 12:50:07 --> Email: Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.
+ERROR - 2024-03-23 12:50:07 --> 
+ERROR - 2024-03-23 12:50:54 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-03-23 12:50:54 --> 220 smtp.gmail.com ESMTP 2-20020a17090a0cc200b0029c77d82bcfsm7775939pjt.49 - gsmtp
+
+hello: 250-smtp.gmail.com at your service, [2402:800:620f:b70:6c5a:9628:bbca:2caa]
+250-SIZE 35882577
+250-8BITMIME
+250-STARTTLS
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+starttls: 220 2.0.0 Ready to start TLS
+
+hello: 250-smtp.gmail.com at your service, [2402:800:620f:b70:6c5a:9628:bbca:2caa]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+Failed to authenticate password. Error: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 2-20020a17090a0cc200b0029c77d82bcfsm7775939pjt.49 - gsmtp
+
+CRITICAL - 2024-03-23 14:40:28 --> Class "App\Controllers\Client\GioiThieu\Mbaiviet" not found
+in APPPATH\Controllers\Client\GioiThieu\CDuAn.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 14:47:18 --> Undefined array key "idbaiviet"
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 36.
+ 1 APPPATH\Views\Client\GioiThieu\DuAn.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idbaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(28): view('Client/GioiThieu/DuAn', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 14:52:59 --> Undefined variable $baivietmoinhat
+in APPPATH\Views\Client\baivietchitiet.php on line 21.
+ 1 APPPATH\Views\Client\baivietchitiet.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $baivietmoinhat', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php', 21)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\baivietchitiet.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/baivietchitiet', [], true)
+ 5 APPPATH\Controllers\Client\CBaivietchitiet.php(19): view('Client/baivietchitiet', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\CBaivietchitiet->index('39')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\CBaivietchitiet))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-23 14:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-23 14:59:26 --> Undefined array key "tieudebaiviet"
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 41.
+ 1 APPPATH\Views\Client\GioiThieu\DuAn.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tieudebaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(28): view('Client/GioiThieu/DuAn', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 14:59:55 --> Undefined array key "idbaiviet"
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 49.
+ 1 APPPATH\Views\Client\GioiThieu\DuAn.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idbaiviet"', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php', 49)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(28): view('Client/GioiThieu/DuAn', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 15:00:49 --> Call to a member function makeLinks() on null
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 59.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 4 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(28): view('Client/GioiThieu/DuAn', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 15:02:41 --> Call to a member function makeLinks() on null
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 60.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 4 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(28): view('Client/GioiThieu/DuAn', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 15:08:56 --> Undefined variable $bv
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 41.
+ 1 APPPATH\Views\Client\GioiThieu\DuAn.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bv', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(19): view('Client/GioiThieu/DuAn', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+CRITICAL - 2024-03-23 15:09:15 --> Attempt to read property "anhrthumnail" on array
+in APPPATH\Views\Client\GioiThieu\DuAn.php on line 41.
+ 1 APPPATH\Views\Client\GioiThieu\DuAn.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "anhrthumnail" on array', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Client\\GioiThieu\\DuAn.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Client/GioiThieu/DuAn', [], true)
+ 5 APPPATH\Controllers\Client\GioiThieu\CDuAn.php(19): view('Client/GioiThieu/DuAn', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Client\GioiThieu\CDuAn->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Client\GioiThieu\CDuAn))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-23 15:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:16:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:27:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:31:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:32:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:57:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 15:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:00:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:24:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:26:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-23 16:26:52 --> Undefined variable $hinhanh
+in APPPATH\Views\Admin\SuaHinhAnh.php on line 3.
+ 1 APPPATH\Views\Admin\SuaHinhAnh.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hinhanh', 'C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Admin\\SuaHinhAnh.php', 3)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\app\\Views\\Admin\\SuaHinhAnh.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Admin/SuaHinhAnh', [], true)
+ 5 APPPATH\Controllers\Admin\CThuVienVideo.php(33): view('Admin/SuaHinhAnh', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Admin\CThuVienVideo->EditVideo('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\CThuVienVideo))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ADMIN\\Desktop\\dakdrinh\\public\\index.php')
+INFO - 2024-03-23 16:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:32:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:38:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:41:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:47:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:47:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:53:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 16:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-23 17:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

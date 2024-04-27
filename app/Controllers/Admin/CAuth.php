@@ -4,13 +4,15 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\Muser;
 use CodeIgniter\Log\Logger;
-
+use App\Services\CauhinhwebService;
 class CAuth extends BaseController
 {
     public function index()
     {
         $data = [];
         $data['session'] = session();
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
         return view('Admin/Auth', $data);
     }
     public function loginAuth()
@@ -32,6 +34,7 @@ class CAuth extends BaseController
                         'tentaikhoan' => $userData['tentaikhoan'],
                         // Add other user data as needed
                         'isLoggedIn' => true,
+                        'online' => true
                     ];
                     $session->set($sessionData);
                 // Redirect to home page
@@ -52,6 +55,7 @@ class CAuth extends BaseController
         $session = session();
         $sessionData = [
             'isLoggedIn' => false,
+            'online' => false
         ];
         $session->set($sessionData);
         $session->destroy(); //logout session
@@ -67,6 +71,7 @@ class CAuth extends BaseController
             'tentaikhoan' => session('tentaikhoan'),
             // Thêm dữ liệu người dùng khác nếu cần
             'isLoggedIn' => true,
+            'online' => true
         ];
 
         // Trả về dữ liệu session dưới dạng JSON

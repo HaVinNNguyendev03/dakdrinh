@@ -116,18 +116,31 @@
                       ><span class="hide-menu">Logo & tên Web</span></a
                     >
                   </li>
+                  <li class="sidebar-item">
+                    <a href="<?php echo base_url() ?>admin/sliderlogo" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu">SliderLogo</span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="<?php echo base_url() ?>admin/slidertext" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu">SliderText</span></a
+                    >
+                  </li>
                 </ul>
               </li>
-              <!--
+              
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="pages-buttons.html"
+                  href="<?php echo base_url() ?>admin/menu"
                   aria-expanded="false"
                   ><i class="mdi mdi-relative-scale"></i
-                  ><span class="hide-menu">Buttons</span></a
+                  ><span class="hide-menu">Quản Lý Menu</span></a
                 >
               </li>
+              <!--
               <li class="sidebar-item">
                 <a
                   class="sidebar-link has-arrow waves-effect waves-dark"

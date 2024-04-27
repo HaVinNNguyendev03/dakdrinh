@@ -16,7 +16,7 @@
         </div>
         <div class="row align-items-start m-0">
             <?php foreach ($baivietmoinhat as $bv): ?>
-                <a href="<?= base_url('bai-viet/' . $bv->idbaiviet) ?>">
+                <a href="<?= base_url('bai-viet/' . $bv->tieudeurl . '/' . $bv->idbaiviet) ?>">
                     <div class="col-md-12 d-flex flex-row align-items-center py-2" style="padding-top: 0px !important;">
                         <div class="col-4 pagedetail-componet-img"><img src="<?= $bv->anhrthumnail; ?>" class=""
                                 alt="Thumbnail"></div>
@@ -28,7 +28,6 @@
                                 <?= $bv->ngaytao; ?>
                             </p>
                         </div>
-
                     </div>
                 </a>
             <?php endforeach; ?>

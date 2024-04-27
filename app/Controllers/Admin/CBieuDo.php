@@ -6,13 +6,14 @@ use App\Controllers\BaseController;
 
 use App\Models\MBieuDo;
 use PhpOffice\PhpSpreadsheet\IOFactory;
-
+use App\Services\CauhinhwebService;
 class CBieuDo extends BaseController
 {
-    
     public function index(): string
     {
-        return view('Admin/BieuDo');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/BieuDo',$data);
     }
     public function import()
     {
@@ -23,10 +24,8 @@ class CBieuDo extends BaseController
                 $reader = IOFactory::createReaderForFile($file);
                 $spreadsheet = $reader->load($file->getPathname());
                 $sheetData = $spreadsheet->getActiveSheet()->toArray(null, true, true, true);
-
                 foreach ($sheetData as $key => $value) {
                     if ($key == 1) continue; // Bỏ qua hàng đầu tiên
-                
                     // Xử lý dữ liệu từ hàng thứ 2 trở đi
                     $data = [
                         'sanluongngay' => $value['A'],
@@ -40,22 +39,18 @@ class CBieuDo extends BaseController
                         'quynhaplieu' => $value['I'],
                         'namnhaplieu' => $value['J']
                     ];
-                
                     $bieudoModel = new MBieuDo();
                     $bieudoModel->insert($data);
                 }
-
                 return redirect()->to(site_url('/admin/bieudo'))->with('success', 'Dữ liệu đã được nhập thành công');
             }
         }
-
         return redirect()->to(site_url('/admin/bieudo'))->with('error', 'Không thể nhập dữ liệu');
     }
     public function getdata()
     {
         $bieudoModel = new MBieuDo();
         $databieudo = $bieudoModel->orderBy('idbieudothuydien', 'DESC')->first();
-
         return $this->response->setJSON($databieudo);
     }
 }

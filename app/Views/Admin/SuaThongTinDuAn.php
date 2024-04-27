@@ -1,7 +1,7 @@
 <?= $this->extend('Admin/Layout/base'); ?>
 <?= $this->section('Admin'); ?>
 <!-- Page wrapper  -->
-
+<p style="display:none;" id="idthongtinduan"><?= $duan['idthongtinduan'] ?></p>
 <!-- ============================================================== -->
 <div class="page-wrapper">
     <!-- Bread crumb and right sidebar toggle -->
@@ -46,7 +46,7 @@
                             <div class="form-group row">
                                 <label for="fname" class="col-sm-3 text-end control-label col-form-label">Tiêu Đề Dự Án</label>
                                 <div class="col-sm-9">
-                                    <input name="tieudebaiviet" type="text" class="form-control" id="fname"
+                                    <input name="tieudethongtinduan" type="text" class="form-control" id="tieudethongtinduan"
                                         placeholder="First Name Here" />
                                 </div>
                             </div>
@@ -56,16 +56,8 @@
                             <div class="col-md-9">
                                 <div class="custom-file">
                                     <input name="anhrthumnail" type="file" class="custom-file-input"
-                                        id="validatedCustomFile" required style="border: 1px solid;" />
+                                        id="anhrthumnail" required style="border: 1px solid;" />
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="email1" class="col-sm-3 text-end control-label col-form-label">Ngày
-                                Đăng</label>
-                            <div class="col-sm-9">
-                                <input type="text" name="ngaydang" class="form-control" id="email1"
-                                    placeholder="Company Name Here" />
                             </div>
                         </div>
                         <div class="form-group row align-items-start">
@@ -76,7 +68,7 @@
                                         <div class="card">
                                             <div class="card-body " style="padding: 5px !important;">
                                                 <h4 class="card-title">Trình Soạn Thảo Văn Bản</h4>
-                                                <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                                                <textarea name="content" id="noidungthongtinduan" cols="30" rows="10"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +77,7 @@
                         </div>
                         <div class="border-top">
                             <div class="card-body text-end">
-                                <button id="dangbai" type="button" class="btn btn-primary" onclick="submitForm()">
+                                <button id="suathongtinduan" type="button" class="btn btn-primary" onclick="submitForm()">
                                     Sửa
                                 </button>
                             </div>

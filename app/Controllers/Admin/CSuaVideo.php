@@ -4,12 +4,15 @@
 
 use App\Controllers\BaseController;
 use App\Models\Mthuvienvideo;
+use App\Services\CauhinhwebService;
 
 class CSuaVideo extends BaseController
 {
     public function index(): string
     {
-        return view('Admin/Home');
+        $cauhinhwebService = service('cauhinhwebService');
+        $data['cauhinhweb'] = $cauhinhwebService->getAllCauhinhweb();
+        return view('Admin/Home',$data);
     }
     public function getvideo($idvideo)
     {

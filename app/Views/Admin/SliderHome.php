@@ -6,6 +6,24 @@
 <?= $this->extend('Admin/Layout/base'); ?>
 <?= $this->section('Admin'); ?>
 <div class="page-wrapper">
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Xác nhận xóa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xóa ảnh slider này không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -76,7 +94,7 @@
                                 data-mdb-ripple-init style="background-color: #ffac44;" role role="button">
                                 Sửa
                             </a></td>
-                        <td><a class="btn Hinhanh-xoa text-white" data-idthuvienanh= "<?= $sl['idsliderhome'] ?>" style="background-color: #dd4b39;"
+                        <td><a class="btn sliderhome-xoa text-white" href="<?= base_url('api/xoasliderhome/' . $sl['idsliderhome']) ?>" data-idsliderhome= "<?= $sl['idsliderhome'] ?>" style="background-color: #dd4b39;"
                                 role="button">
                                 Xóa
                             </a></td>

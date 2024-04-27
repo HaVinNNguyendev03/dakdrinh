@@ -41,17 +41,11 @@
                             </div>
                         </div>
                         <div class="form-group row align-items-start">
-                            <label for="email1" class="col-sm-3 text-end control-label col-form-label">Đăng Ảnh</label>
-                            <div class="col-sm-9">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-body " style="padding: 5px !important;">
-                                                <h4 class="card-title">Trình Soạn Thảo Văn Bản(lưu ý chỉ thêm ảnh)</h4>
-                                                <textarea name="content" id="content" cols="30" rows="10"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <label class="col-sm-3 text-end control-label col-form-label">Ảnh Thư Viện</label>
+                            <div class="col-md-9">
+                                <div class="custom-file">
+                                    <input name="hinhanh" type="file" class="custom-file-input"
+                                        id="validatedCustomFile" required style="border: 1px solid;" />
                                 </div>
                             </div>
                         </div>

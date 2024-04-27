@@ -24,8 +24,10 @@ $(document).ready(function () {
             // Chèn dữ liệu vào các trường input
             $('input[name="tieudebaiviet"]').val(response.tieudebaiviet);
             $('select[name="iddanhmuc"]').val(response.iddanhmuc);
-            $('input[name="tomtatbaiviet"]').val(response.tomtatbaiviet);
+            $('select[name="idmenu"]').val(response.idmenu);
+            // $('input[name="tomtatbaiviet"]').val(response.tomtatbaiviet);
             $('input[name="ngaydang"]').val(response.ngaydang);
+            $('input[name="tinnoibat"]').prop('checked', response.tinnoibat);
             CKEDITOR.instances['content'].setData(response.noidungbaiviet); // Đặt nội dung cho CKEditor
         },
         error: function (error) {
@@ -41,8 +43,10 @@ $('#dangbai').click(function() {
         // Lấy giá trị từ các trường input
         var tieudebaiviet = document.querySelector('input[name="tieudebaiviet"]').value;
         var iddanhmuc = document.querySelector('select[name="iddanhmuc"]').value;
-        var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
+        var idmenu = document.querySelector('select[name="idmenu"]').value;
+        // var tomtatbaiviet = document.querySelector('input[name="tomtatbaiviet"]').value;
         var ngaydang = document.querySelector('input[name="ngaydang"]').value;
+        var tinnoibat = document.querySelector('input[name="tinnoibat"]').checked ? 1 : 0;
         var noidungbaiviet = CKEDITOR.instances['content'].getData(); // Lấy nội dung từ CKEditor
         var anhrthumnailInput = document.querySelector('input[name="anhrthumnail"]');
         var anhrthumnailFile = anhrthumnailInput.files[0]; 
@@ -50,10 +54,12 @@ $('#dangbai').click(function() {
         var formData = new FormData();
         formData.append('tieudebaiviet', tieudebaiviet);
         formData.append('iddanhmuc', iddanhmuc);
-        formData.append('tomtatbaiviet', tomtatbaiviet);
+        // formData.append('tomtatbaiviet', tomtatbaiviet);
         formData.append('ngaydang', ngaydang);
         formData.append('noidungbaiviet', noidungbaiviet);
         formData.append('anhrthumnail', anhrthumnailFile);
+        formData.append('tinnoibat', tinnoibat);
+        formData.append('idmenu', idmenu);
         // Gửi Ajax request
         $.ajax({
             type: 'POST',
@@ -64,7 +70,7 @@ $('#dangbai').click(function() {
             success: function (response) {
                 response = JSON.parse(response);
                 if (response.status === 'success') {
-                    alert('Cập nhật thành công!');
+                   boxshow("sửa tin")
                     
                 } else {
                     alert('Cập nhật thất bại!');
@@ -76,4 +82,28 @@ $('#dangbai').click(function() {
             }
         });
     }
-    
+    function boxshow(params) {
+   
+        const modalHtml = `
+        <div class="modal fade" id="boxshow" tabindex="-1" aria-labelledby="boxshowLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="boxshowLabel">Thông Báo ${params}</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Đã ${params}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        `;
+        // Chèn modal vào body của trang
+        document.body.insertAdjacentHTML('beforeend', modalHtml);
+        // Hiển thị modal
+        $('#boxshow').modal('show');
+    }

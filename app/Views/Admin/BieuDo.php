@@ -1,5 +1,5 @@
-<?= $this->extend('Admin/Layout/base') ;?>
-<?= $this->section('Admin') ;?>
+<?= $this->extend('Admin/Layout/base'); ?>
+<?= $this->section('Admin'); ?>
  <!-- Page wrapper  -->
       <!-- ============================================================== -->
       <div class="page-wrapper">
@@ -48,12 +48,12 @@
                 <div class="card-body">
                   <h5 class="card-title">Biểu Đồ Thủy Điện Ngày 23/02/2024</h5>
                   <div style="height: 100%;"class=" block h-56 m-2  bg-white border-gray-200 bg-gray-100   hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                        <div style="width: 100%;">
-                            <canvas style=" height: 300px;" id="lineChart"></canvas>
-                        </div>
+                    <div id="chart" class="w-100">
+                      <canvas style=" height: 300px;" id="lineChart"></canvas>
                     </div>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
           <!-- ENd chart-1 -->
           <!-- ============================================================== -->
@@ -81,4 +81,4 @@
       <!-- ============================================================== -->
       <!-- End Page wrapper  -->
       <!-- ============================================================== -->
-<?= $this->endSection() ;?>
+<?= $this->endSection(); ?>
